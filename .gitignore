@@ -1,15 +1,15 @@
 
+*.py[cod]
+*$py.class
 
 .atsuo
 *.atsuo
-
-*.o
-*.d
-
-OutputConfig
 [Oo]utput[Cc]onfig*/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
+
+*.o
+*.d
 
