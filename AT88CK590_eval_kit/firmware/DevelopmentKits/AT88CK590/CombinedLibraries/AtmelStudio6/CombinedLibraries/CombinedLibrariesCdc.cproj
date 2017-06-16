@@ -2,7 +2,7 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectVersion>6.2</ProjectVersion>
+    <ProjectVersion>7.0</ProjectVersion>
     <ProjectGuid>{83cd1ea8-7c08-4217-89e9-dd4df881fc82}</ProjectGuid>
     <avrdevice>AT90USB1287</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
@@ -83,7 +83,7 @@
   <documentation help="" />
   <offline-documentation help="" />
   <dependencies>
-    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.10.1" />
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.25.0" />
   </dependencies>
 </framework-data>
     </AsfFrameworkConfig>
@@ -100,57 +100,65 @@
     <OutputFileExtension>.elf</OutputFileExtension>
     <ToolchainSettings>
       <AvrGcc>
-        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-        <avrgcc.common.outputfiles.lss>False</avrgcc.common.outputfiles.lss>
-        <avrgcc.common.outputfiles.eep>False</avrgcc.common.outputfiles.eep>
-        <avrgcc.common.outputfiles.srec>False</avrgcc.common.outputfiles.srec>
-        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
-        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-        <avrgcc.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>AT88CK101STK8</Value>
-            <Value>AT88MICROBASE</Value>
-            <Value>TARGET_BOARD=AT88UBASE</Value>
-            <Value>SHA204_RESPONSE_TIMEOUT=37</Value>
-            <Value>SHA204_SWI_BITBANG</Value>
-            <Value>SHA204</Value>
-            <Value>AES132</Value>
-            <Value>ECC108</Value>
-            <Value>F_CPU=16000000</Value>
-            <Value>I2C</Value>
-            <Value>SPI</Value>
-          </ListValues>
-        </avrgcc.compiler.symbols.DefSymbols>
-        <avrgcc.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>../../../../USB_CDC</Value>
-            <Value>../../../../USB_CDC/usb</Value>
-            <Value>../../../../USB_CDC/lib_mcu</Value>
-            <Value>../../../../USB_CDC/modules/usb/device_chap9</Value>
-            <Value>../../../KitModules</Value>
-            <Value>../../../../../SourceCommon/includes</Value>
-            <Value>../../../../../SourceCommon/ProtocolAscii</Value>
-            <Value>../../../../../../Libraries/utilities</Value>
-            <Value>../../../../../../Libraries/AES1xxLibrary</Value>
-            <Value>../../../../../../Libraries/SHA204Library</Value>
-            <Value>../../../../../../Libraries/ecc108_library</Value>
-            <Value>../../../../../../LibraryExamples/Hardware/AVR_AT</Value>
-            <Value>../../../../../../LibraryExamples/Hardware/Utilities</Value>
-          </ListValues>
-        </avrgcc.compiler.directories.IncludePaths>
-        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
-        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
-        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
-        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-        <avrgcc.linker.general.GenerateMAPFile>False</avrgcc.linker.general.GenerateMAPFile>
-        <avrgcc.linker.libraries.Libraries>
-          <ListValues>
-            <Value>libm</Value>
-          </ListValues>
-        </avrgcc.linker.libraries.Libraries>
-        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
-      </AvrGcc>
+  <avrgcc.common.Device>-mmcu=at90usb1287 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\gcc\dev\at90usb1287"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>False</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>False</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>False</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>AT88CK101STK8</Value>
+      <Value>AT88MICROBASE</Value>
+      <Value>TARGET_BOARD=AT88UBASE</Value>
+      <Value>SHA204_RESPONSE_TIMEOUT=37</Value>
+      <Value>SHA204_SWI_BITBANG</Value>
+      <Value>SHA204</Value>
+      <Value>AES132</Value>
+      <Value>ECC108</Value>
+      <Value>F_CPU=16000000</Value>
+      <Value>I2C</Value>
+      <Value>SPI</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../../../USB_CDC</Value>
+      <Value>../../../../USB_CDC/usb</Value>
+      <Value>../../../../USB_CDC/lib_mcu</Value>
+      <Value>../../../../USB_CDC/modules/usb/device_chap9</Value>
+      <Value>../../../KitModules</Value>
+      <Value>../../../../../SourceCommon/includes</Value>
+      <Value>../../../../../SourceCommon/ProtocolAscii</Value>
+      <Value>../../../../../../Libraries/utilities</Value>
+      <Value>../../../../../../Libraries/AES1xxLibrary</Value>
+      <Value>../../../../../../Libraries/SHA204Library</Value>
+      <Value>../../../../../../Libraries/ecc108_library</Value>
+      <Value>../../../../../../LibraryExamples/Hardware/AVR_AT</Value>
+      <Value>../../../../../../LibraryExamples/Hardware/Utilities</Value>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.general.GenerateMAPFile>False</avrgcc.linker.general.GenerateMAPFile>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
+    </ListValues>
+  </avrgcc.assembler.general.IncludePaths>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
