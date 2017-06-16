@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "sha204_i2c", "sha204_i2c\sha204_i2c.cproj", "{48A8A41D-9A33-41EC-9CB3-D740838B1777}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "sha204_uart", "sha204_uart\sha204_uart.cproj", "{BD527A6B-EB7A-40CB-8335-475EA91316DB}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "sha204_bitbang", "sha204_bitbang\sha204_bitbang.cproj", "{8C50FF87-1B6A-4AF3-B305-24B89C6497FE}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		sha204_bin_i2c|AVR = sha204_bin_i2c|AVR
+		sha204_bitbang|AVR = sha204_bitbang|AVR
+		sha204_uart|AVR = sha204_uart|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48A8A41D-9A33-41EC-9CB3-D740838B1777}.sha204_bin_i2c|AVR.ActiveCfg = sha204_i2c|AVR
+		{48A8A41D-9A33-41EC-9CB3-D740838B1777}.sha204_bin_i2c|AVR.Build.0 = sha204_i2c|AVR
+		{48A8A41D-9A33-41EC-9CB3-D740838B1777}.sha204_bitbang|AVR.ActiveCfg = sha204_i2c|AVR
+		{48A8A41D-9A33-41EC-9CB3-D740838B1777}.sha204_bitbang|AVR.Build.0 = sha204_i2c|AVR
+		{48A8A41D-9A33-41EC-9CB3-D740838B1777}.sha204_uart|AVR.ActiveCfg = sha204_i2c|AVR
+		{48A8A41D-9A33-41EC-9CB3-D740838B1777}.sha204_uart|AVR.Build.0 = sha204_i2c|AVR
+		{BD527A6B-EB7A-40CB-8335-475EA91316DB}.sha204_bin_i2c|AVR.ActiveCfg = sha204_uart|AVR
+		{BD527A6B-EB7A-40CB-8335-475EA91316DB}.sha204_bin_i2c|AVR.Build.0 = sha204_uart|AVR
+		{BD527A6B-EB7A-40CB-8335-475EA91316DB}.sha204_bitbang|AVR.ActiveCfg = sha204_uart|AVR
+		{BD527A6B-EB7A-40CB-8335-475EA91316DB}.sha204_bitbang|AVR.Build.0 = sha204_uart|AVR
+		{BD527A6B-EB7A-40CB-8335-475EA91316DB}.sha204_uart|AVR.ActiveCfg = sha204_uart|AVR
+		{BD527A6B-EB7A-40CB-8335-475EA91316DB}.sha204_uart|AVR.Build.0 = sha204_uart|AVR
+		{8C50FF87-1B6A-4AF3-B305-24B89C6497FE}.sha204_bin_i2c|AVR.ActiveCfg = sha204_bitbang|AVR
+		{8C50FF87-1B6A-4AF3-B305-24B89C6497FE}.sha204_bin_i2c|AVR.Build.0 = sha204_bitbang|AVR
+		{8C50FF87-1B6A-4AF3-B305-24B89C6497FE}.sha204_bitbang|AVR.ActiveCfg = sha204_bitbang|AVR
+		{8C50FF87-1B6A-4AF3-B305-24B89C6497FE}.sha204_bitbang|AVR.Build.0 = sha204_bitbang|AVR
+		{8C50FF87-1B6A-4AF3-B305-24B89C6497FE}.sha204_uart|AVR.ActiveCfg = sha204_bitbang|AVR
+		{8C50FF87-1B6A-4AF3-B305-24B89C6497FE}.sha204_uart|AVR.Build.0 = sha204_bitbang|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

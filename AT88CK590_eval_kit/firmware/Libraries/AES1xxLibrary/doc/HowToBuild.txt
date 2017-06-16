@@ -1,0 +1,84 @@
+/*!@page project_build Building The Projects
+
+******************************************************************************
+
+******************************************************************************
+			\section project_structure Work Space and Project Structure
+******************************************************************************
+
+The source files for the AES132 library are contained in a single folder "aes132_library".
+
+    \subsection hardware_independent Hardware Independent Modules
+    aes132_example_main.c\n
+    aes132_comm.h\n
+    aes132_comm.c\n
+    aes132_lib_return_codes.h
+    aes132_physical.h\n
+    aes132_i2c.c\n
+    aes132_spi.c\n
+    timer_utilities.c\n
+    timer_utilities.h\n
+
+    \subsection hardware_dependent Hardware Dependent Modules
+    Hardware dependent modules are provided that support 8-bit AVR micro-controllers.
+    If you are not using an AVR CPU, either implement the functions listed in aes132_physical.h
+    or choose the appropriate module for the physical implementation of the communication with
+    the device from one of the communication related modules:\n
+    <ul>
+      <li>
+         spi_phys.c: Physical implementation as serial peripheral interface (SPI)
+      </li>
+      <li>
+         i2c_phys.c: Physical implementation as two wire interface (I<SUP>2</SUP>C)
+      </li>
+    </ul>
+
+    \subsection aes132_projects Example Project
+    A solution file is supplied for the AVR Studio 5 IDE.
+    (Solution files have a "sln" extension.)
+    AVR Studio 5 solution files are located in the root folder.
+    Choose the project that fits the communication interface you like to use.\n
+    You can easily create a project under the IDE you are using by following the few
+    steps listed below.
+    <ul>
+      <li>
+         Supply communication interface independent modules by adding
+         aes132_example_main.c and aes132_comm.* to the project.
+         Be aware that all hardware independent modules
+         include aes132_lib_return_codes.h and aes132_physical.h.
+      </li>
+      <li>
+         Supply communication interface hardware independent modules.
+         For SPI add aes132_spi.*, for I<SUP>2</SUP>C add aes132_i2c.*. You might have to
+         also modify aes132_i2c.c, especially for 32-bit CPUs, since their
+         I<SUP>2</SUP>C peripherals implement such functionality in hardware. For instance,
+         they might not support the generation of individual Start and Stop conditions.
+      </li>
+      <li>
+         Supply communication interface hardware dependent modules.
+         If you do not use an AVR CPU, you have to implement the functions in these modules.
+         For SPI add spi_phys.c and for I<SUP>2</SUP>C add i2c_phys.c.
+      </li>
+      <li>
+         Supply a timer utility module. You can either use the one provided, timer_utilities.c,
+         or provide your own. The library uses two delay functions, delay_ms(uint8_t)
+         and delay_10us(uint8_t). These functions do not use hardware timers but loop counters.
+         The supplied module is tuned for an AT90USB1287 CPU running at 16 MHz, but you can
+         easily tune it for other micro-controllers as long as one loop iteration (decrement,
+         compare, and jump) does not take longer than 10 us.
+      </li>
+    </ul>
+
+
+	 <b>Tools</b>\n
+	 AVR Studio 5 Beta
+	 (http://www.atmel.com/dyn/products/tools_card.asp?tool_id=17212)
+
+
+******************************************************************************
+                     \section doxygen Doxygen Generated Documentation
+******************************************************************************
+Important comments (functions, type and macro definitions, etc.) follow a
+syntax that the Doxygen document generator for source code can parse.
+
+*/

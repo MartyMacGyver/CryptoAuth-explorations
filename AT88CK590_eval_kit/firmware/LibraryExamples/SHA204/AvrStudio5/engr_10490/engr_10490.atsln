@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "engr_10490", "engr_10490.cproj", "{C3D466CF-1D11-413C-B8E5-38A545BB0A6A}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "MEGA_GPIO_EXAMPLE", "MEGA_GPIO_EXAMPLE\MEGA_GPIO_EXAMPLE.cproj", "{C7CCF100-876A-11E0-BB03-000C2967FA5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		default|AVR = default|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3D466CF-1D11-413C-B8E5-38A545BB0A6A}.Debug|AVR.ActiveCfg = default|AVR
+		{C3D466CF-1D11-413C-B8E5-38A545BB0A6A}.Debug|AVR.Build.0 = default|AVR
+		{C3D466CF-1D11-413C-B8E5-38A545BB0A6A}.default|AVR.ActiveCfg = default|AVR
+		{C3D466CF-1D11-413C-B8E5-38A545BB0A6A}.default|AVR.Build.0 = default|AVR
+		{C3D466CF-1D11-413C-B8E5-38A545BB0A6A}.Release|AVR.ActiveCfg = default|AVR
+		{C3D466CF-1D11-413C-B8E5-38A545BB0A6A}.Release|AVR.Build.0 = default|AVR
+		{C7CCF100-876A-11E0-BB03-000C2967FA5F}.Debug|AVR.ActiveCfg = Debug|AVR
+		{C7CCF100-876A-11E0-BB03-000C2967FA5F}.Debug|AVR.Build.0 = Debug|AVR
+		{C7CCF100-876A-11E0-BB03-000C2967FA5F}.default|AVR.ActiveCfg = Debug|AVR
+		{C7CCF100-876A-11E0-BB03-000C2967FA5F}.default|AVR.Build.0 = Debug|AVR
+		{C7CCF100-876A-11E0-BB03-000C2967FA5F}.Release|AVR.ActiveCfg = Release|AVR
+		{C7CCF100-876A-11E0-BB03-000C2967FA5F}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

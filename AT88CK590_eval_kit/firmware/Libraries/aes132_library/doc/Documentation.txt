@@ -1,0 +1,35 @@
+/*! \mainpage AES132 Library Source Code
+    \section intro_sec Introduction
+    This library enables a user to more quickly implement an application
+    that uses an Atmel CryptoMemory ATAES132 device.
+
+    The library is distributed as source code. It is licensed according to
+    terms of the included license agreement, which the user agreed to during
+    the installation process.
+
+    The code comes in two layers, Communication and Interface layer.
+
+    The Communication layer handles communication sequences
+    (send command, receive response, sleep, etc.). It retries such
+    sequences in case of certain communication failures.
+
+    The Interface layer puts the command packets on the chosen interface
+    bus, and reads responses from it.
+
+    \section gettingstarted_sec Getting Started
+    The user should be able to use most of the library as is, simply
+    adding the library modules into her C project.
+    Functions in the Interface layer will have to be modified or
+    re-written if the processor is not an eight-bit AVR. Starting values for
+    timeout loop counters have to be adjusted.
+
+    To start development, add the library files to your project,
+    modify / implement the functions in the Interface layer module,
+    and supply values for the timeout loop counters that match
+    the execution time of your CPU (and the interface clock, I<SUP>2</SUP>C or SPI).
+
+    \section waystotalk_sec AES132 Communication Interfaces
+    The device comes in two types of communication interfaces, SPI
+    or I<SUP>2</SUP>C. With the distribution of this library,
+    example configurations are provided for both interfaces.
+*/

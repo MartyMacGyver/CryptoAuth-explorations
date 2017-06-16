@@ -1,0 +1,96 @@
+###############################################################################
+# Makefile for the project AVR_Javan_UART
+###############################################################################
+
+## General Flags
+PROJECT = AVR_Javan_UART
+MCU = at90usb1287
+TARGET = AVR_Javan_UART.elf
+CC = avr-gcc
+
+## Options common to compile, link and assembly rules
+COMMON = -mmcu=$(MCU)
+
+## Compile options common for all C compilation units.
+CFLAGS = $(COMMON)
+CFLAGS += -Wall -gdwarf-2 -std=gnu99 -DF_CPU=16000000UL -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums
+CFLAGS += -MD -MP -MT $(*F).o -MF dep/$(@F).d 
+
+## Assembly specific flags
+ASMFLAGS = $(COMMON)
+ASMFLAGS += $(CFLAGS)
+ASMFLAGS += -x assembler-with-cpp -Wa,-gdwarf2
+
+## Linker flags
+LDFLAGS = $(COMMON)
+LDFLAGS +=  -Wl,-Map=AVR_Javan_UART.map
+
+
+## Intel Hex file production flags
+HEX_FLASH_FLAGS = -R .eeprom -R .fuse -R .lock -R .signature
+
+HEX_EEPROM_FLAGS = -j .eeprom
+HEX_EEPROM_FLAGS += --set-section-flags=.eeprom="alloc,load"
+HEX_EEPROM_FLAGS += --change-section-lma .eeprom=0 --no-change-warnings
+
+
+## Objects that must be built in order to link
+OBJECTS = AVR_Javan_UART.o sha256.o SA_Phys_AVR_uart.o Javan_plus.o SA_Func.o SA_API.o SA_CRC.o SA_Comm.o
+
+## Objects explicitly added by the user
+LINKONLYOBJECTS = 
+
+## Build
+all: $(TARGET) AVR_Javan_UART.hex AVR_Javan_UART.eep AVR_Javan_UART.lss size
+
+## Compile
+AVR_Javan_UART.o: ../AVR_Javan_UART.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
+
+sha256.o: ../sha256.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
+
+Javan_plus.o: ../Javan_plus.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
+
+SA_Func.o: ../SA_Func.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
+
+SA_API.o: ../SA_API.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
+
+SA_CRC.o: ../SA_CRC.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
+
+SA_Comm.o: ../SA_Comm.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
+
+SA_Phys_AVR_uart.o: ../SA_Phys_AVR_uart.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
+
+##Link
+$(TARGET): $(OBJECTS)
+	 $(CC) $(LDFLAGS) $(OBJECTS) $(LINKONLYOBJECTS) $(LIBDIRS) $(LIBS) -o $(TARGET)
+
+%.hex: $(TARGET)
+	avr-objcopy -O ihex $(HEX_FLASH_FLAGS)  $< $@
+
+%.eep: $(TARGET)
+	-avr-objcopy $(HEX_EEPROM_FLAGS) -O ihex $< $@ || exit 0
+
+%.lss: $(TARGET)
+	avr-objdump -h -S $< > $@
+
+size: ${TARGET}
+	@echo
+	@avr-size -C --mcu=${MCU} ${TARGET}
+
+## Clean target
+.PHONY: clean
+clean:
+	-rm -rf $(OBJECTS) AVR_Javan_UART.elf dep/* AVR_Javan_UART.hex AVR_Javan_UART.eep AVR_Javan_UART.lss AVR_Javan_UART.map
+
+
+## Other dependencies
+-include $(shell mkdir dep 2>/dev/null) $(wildcard dep/*)
+

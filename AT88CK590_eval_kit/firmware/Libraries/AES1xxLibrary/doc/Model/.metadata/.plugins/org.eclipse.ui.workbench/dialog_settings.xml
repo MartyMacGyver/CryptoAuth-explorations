@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="67" key="DIALOG_Y_ORIGIN"/>
+		<item value="115" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.topcased.ui.navigator.wizards.TopcasedProjectWizardID" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.topcased.facilities.newWizards"/>
+		</list>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item value="723" key="DIALOG_WIDTH"/>
+		<item value="-293" key="DIALOG_Y_ORIGIN"/>
+		<item value="-20" key="DIALOG_X_ORIGIN"/>
+		<item value="647" key="DIALOG_HEIGHT"/>
+		<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="ShowViewDialog">
+		<item value="280" key="DIALOG_WIDTH"/>
+		<item value="org.topcased.ui.navigator.view" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="309" key="DIALOG_Y_ORIGIN"/>
+		<item value="421" key="DIALOG_HEIGHT"/>
+		<item value="824" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.topcased.facilities.views"/>
+			<item value="org.topcased.simulation.ui.category"/>
+		</list>
+	</section>
+	<section name="FileSystemExportWizard">
+	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.cdt.ui.wizardse.ImportExecutableWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.cdt.ui.importWizardCategory"/>
+		</list>
+	</section>
+</section>

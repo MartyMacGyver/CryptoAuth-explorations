@@ -1,0 +1,12 @@
+#Thu May 20 17:39:26 MDT 2010
+ExceptionHandler\ exceptionType\ Edge\ Object\ Default\ Visibility=false
+Connector\ srcCount\ Edge\ Object\ Default\ Visibility=false
+Package\ Default\ Background\ Color=200,251,183
+outlineShowAction=1
+deleteModelActionConfirm=true
+dragAndDropModelActionConfirm=true
+Comment\ Default\ Background\ Color=252,194,251
+Connector\ targetCount\ Edge\ Object\ Default\ Visibility=false
+org.topcased.modeler.uml.editor.UMLEditor.SnapToGeometry.isEnabled=true
+eclipse.preferences.version=1
+createChildMenuId=org.topcased.modeler.uml.menu.umlEditorMenu

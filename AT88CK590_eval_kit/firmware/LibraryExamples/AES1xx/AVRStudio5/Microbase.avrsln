@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{D1100916-62DA-4D80-A9B4-55A1E7CCEEB3}") = "aes132_library_i2c", "Microbase\aes132_library_i2c.avrgccproj", "{9A84EA8B-322A-465B-9EED-918D887C3D1A}"
+EndProject
+Project("{D1100916-62DA-4D80-A9B4-55A1E7CCEEB3}") = "aes132_library_spi", "Microbase\aes132_library_spi.avrgccproj", "{6D0E3809-FAA0-4233-A47F-0262E0F0A7E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		I2C|AVR = I2C|AVR
+		SPI|AVR = SPI|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A84EA8B-322A-465B-9EED-918D887C3D1A}.I2C|AVR.ActiveCfg = I2C|AVR
+		{9A84EA8B-322A-465B-9EED-918D887C3D1A}.I2C|AVR.Build.0 = I2C|AVR
+		{9A84EA8B-322A-465B-9EED-918D887C3D1A}.SPI|AVR.ActiveCfg = I2C|AVR
+		{9A84EA8B-322A-465B-9EED-918D887C3D1A}.SPI|AVR.Build.0 = I2C|AVR
+		{6D0E3809-FAA0-4233-A47F-0262E0F0A7E0}.I2C|AVR.ActiveCfg = SPI|AVR
+		{6D0E3809-FAA0-4233-A47F-0262E0F0A7E0}.I2C|AVR.Build.0 = SPI|AVR
+		{6D0E3809-FAA0-4233-A47F-0262E0F0A7E0}.SPI|AVR.ActiveCfg = SPI|AVR
+		{6D0E3809-FAA0-4233-A47F-0262E0F0A7E0}.SPI|AVR.Build.0 = SPI|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

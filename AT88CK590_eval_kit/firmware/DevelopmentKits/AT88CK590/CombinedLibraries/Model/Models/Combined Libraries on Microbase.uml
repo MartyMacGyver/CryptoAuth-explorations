@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="Combined Libraries on Microbase">
+    <ownedComment xmi:id="_8_6OkKPSEd-5dLv-GAY_wQ" annotatedElement="_6tlVEKGtEd-74-7bopqinw _xq0UEKGtEd-74-7bopqinw _0XFGAKGtEd-74-7bopqinw">
+      <body>Physical layers of libraries slightly modified to enable interface switching</body>
+    </ownedComment>
+    <ownedComment xmi:id="_RTutEKPTEd-5dLv-GAY_wQ" annotatedElement="_bylnEKGuEd-74-7bopqinw">
+      <body>switches Physical layer of libraries</body>
+    </ownedComment>
+    <ownedComment xmi:id="_YzJsAKPTEd-5dLv-GAY_wQ" annotatedElement="_dVUQAKGsEd-74-7bopqinw">
+      <body>parses requests from host PC and formats response from library or device</body>
+    </ownedComment>
+    <ownedComment xmi:id="_kBUNkKPTEd-5dLv-GAY_wQ" annotatedElement="_noGucKGsEd-74-7bopqinw">
+      <body>communicates with host PC</body>
+    </ownedComment>
+    <ownedComment xmi:id="_-cgdgKPUEd-5dLv-GAY_wQ" annotatedElement="_mqSl4KGtEd-74-7bopqinw _qJ9KsKGtEd-74-7bopqinw">
+      <body>original library modules (layers above Physical layer)</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Class" xmi:id="_dVUQAKGsEd-74-7bopqinw" name="Parser" clientDependency="_1pF1kKGvEd-74-7bopqinw _21PfoKGvEd-74-7bopqinw _Z90y8KGwEd-74-7bopqinw _0tJf1KGxEd-74-7bopqinw _DfiWFKGyEd-74-7bopqinw _6ctdkKPIEd-5dLv-GAY_wQ">
+      <ownedOperation xmi:id="_KpWHcqPNEd-5dLv-GAY_wQ" name="ParseCommand">
+        <ownedParameter xmi:id="_SqrgoKPNEd-5dLv-GAY_wQ" name="return" type="_FNuowKPMEd-5dLv-GAY_wQ" direction="return"/>
+        <ownedParameter xmi:id="_VIow0KPNEd-5dLv-GAY_wQ" name="commandLength" type="_T9zK0KPMEd-5dLv-GAY_wQ"/>
+        <ownedParameter xmi:id="_Xp3XcKPNEd-5dLv-GAY_wQ" name="command" type="_T9zK0KPMEd-5dLv-GAY_wQ"/>
+        <ownedParameter xmi:id="_wQJwsKPNEd-5dLv-GAY_wQ" name="responseLength" type="_T9zK0KPMEd-5dLv-GAY_wQ"/>
+        <ownedParameter xmi:id="_3ehb4KPNEd-5dLv-GAY_wQ" name="response" type="_T9zK0KPMEd-5dLv-GAY_wQ"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_noGucKGsEd-74-7bopqinw" name="Usb">
+      <ownedOperation xmi:id="_5XDLIKPKEd-5dLv-GAY_wQ" name="Usb_Receive" concurrency="concurrent">
+        <ownedParameter xmi:id="_46ECQKPMEd-5dLv-GAY_wQ" name="buffer" type="_T9zK0KPMEd-5dLv-GAY_wQ"/>
+        <ownedParameter xmi:id="_8KFBgKPMEd-5dLv-GAY_wQ" name="return" type="_FNuowKPMEd-5dLv-GAY_wQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_HRFdEKPLEd-5dLv-GAY_wQ" name="Usb_Initialize"/>
+      <ownedOperation xmi:id="_UBhCoqPLEd-5dLv-GAY_wQ" name="Usb_ConvertDataAndSend">
+        <ownedParameter xmi:id="_enNO8KPLEd-5dLv-GAY_wQ" name="length" type="_FNuowKPMEd-5dLv-GAY_wQ"/>
+        <ownedParameter xmi:id="_f27KYKPLEd-5dLv-GAY_wQ" name="buffer" type="_T9zK0KPMEd-5dLv-GAY_wQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WteSkqPLEd-5dLv-GAY_wQ" name="Usb_Send">
+        <ownedParameter xmi:id="_u35PMKPLEd-5dLv-GAY_wQ" name="length" type="_FNuowKPMEd-5dLv-GAY_wQ"/>
+        <ownedParameter xmi:id="_v1SrkKPLEd-5dLv-GAY_wQ" name="buffer" type="_T9zK0KPMEd-5dLv-GAY_wQ"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_mqSl4KGtEd-74-7bopqinw" name="SHA204 Library" clientDependency="_MrtcpaGwEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qJ9KsKGtEd-74-7bopqinw" name="AES132 Library" clientDependency="_NoNhJKGwEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_xq0UEKGtEd-74-7bopqinw" name="TWI Interface" clientDependency="_fDru8KGvEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0XFGAKGtEd-74-7bopqinw" name="SPI Interface" clientDependency="_iGlfQKGvEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6tlVEKGtEd-74-7bopqinw" name="SWI Interface" clientDependency="_Xw1MYKGvEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_bylnEKGuEd-74-7bopqinw" name="Interface Switch" clientDependency="_haZAQKGyEd-74-7bopqinw _ql-mEKGyEd-74-7bopqinw _U_H88KGzEd-74-7bopqinw">
+      <ownedOperation xmi:id="_h0IhIqPPEd-5dLv-GAY_wQ" name="sha204p_set_interface">
+        <ownedParameter xmi:id="_GMbI0KPQEd-5dLv-GAY_wQ" name="interface" type="_m6nSwKPPEd-5dLv-GAY_wQ"/>
+        <ownedParameter xmi:id="_I41EsKPQEd-5dLv-GAY_wQ" name="return" type="_FNuowKPMEd-5dLv-GAY_wQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_NCg24KPQEd-5dLv-GAY_wQ" name="aes132p_set_interface">
+        <ownedParameter xmi:id="_NCg24aPQEd-5dLv-GAY_wQ" name="interface" type="_m6nSwKPPEd-5dLv-GAY_wQ"/>
+        <ownedParameter xmi:id="_NCg24qPQEd-5dLv-GAY_wQ" name="return" type="_FNuowKPMEd-5dLv-GAY_wQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_e_rnEqPQEd-5dLv-GAY_wQ" name="swi_SHAP_OpenChannel">
+        <ownedParameter xmi:id="_outRIKPQEd-5dLv-GAY_wQ" name="return" type="_ld8D8KPQEd-5dLv-GAY_wQ" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_g9ZfEKGuEd-74-7bopqinw" name="AVR GPIO Library"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ocnpsKGuEd-74-7bopqinw" name="AVR TWI Library"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qgMD-KGuEd-74-7bopqinw" name="AVR SPI Library"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Xw1MYKGvEd-74-7bopqinw" name="UsageAvrGpio" supplier="_g9ZfEKGuEd-74-7bopqinw" client="_6tlVEKGtEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_fDru8KGvEd-74-7bopqinw" name="UsageAvrTwi" supplier="_ocnpsKGuEd-74-7bopqinw" client="_xq0UEKGtEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_iGlfQKGvEd-74-7bopqinw" name="UsageAvrSpi" supplier="_qgMD-KGuEd-74-7bopqinw" client="_0XFGAKGtEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_1pF1kKGvEd-74-7bopqinw" name="UsageShaLibrary" supplier="_mqSl4KGtEd-74-7bopqinw" client="_dVUQAKGsEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_21PfoKGvEd-74-7bopqinw" name="UsageAesLibrary" supplier="_qJ9KsKGtEd-74-7bopqinw" client="_dVUQAKGsEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_MrtcpaGwEd-74-7bopqinw" name="UsageIfSwitchSha" supplier="_bylnEKGuEd-74-7bopqinw" client="_mqSl4KGtEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_NoNhJKGwEd-74-7bopqinw" name="UsageIfSwitchAes" supplier="_bylnEKGuEd-74-7bopqinw" client="_qJ9KsKGtEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Z90y8KGwEd-74-7bopqinw" name="UsageIfSwitchParser" supplier="_bylnEKGuEd-74-7bopqinw" client="_dVUQAKGsEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_0tJf1KGxEd-74-7bopqinw" name="UsageIfTwi" supplier="_xq0UEKGtEd-74-7bopqinw" client="_dVUQAKGsEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_DfiWFKGyEd-74-7bopqinw" name="UsageIfSpi" supplier="_0XFGAKGtEd-74-7bopqinw" client="_dVUQAKGsEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_haZAQKGyEd-74-7bopqinw" name="UsageIfSpi" supplier="_0XFGAKGtEd-74-7bopqinw" client="_bylnEKGuEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_ql-mEKGyEd-74-7bopqinw" name="UsageIfTwi" supplier="_xq0UEKGtEd-74-7bopqinw" client="_bylnEKGuEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_U_H88KGzEd-74-7bopqinw" name="UsageIfSwi" supplier="_6tlVEKGtEd-74-7bopqinw" client="_bylnEKGuEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_gWW_wKPIEd-5dLv-GAY_wQ" name="MainLoop" clientDependency="_tgF2IKPIEd-5dLv-GAY_wQ _wvGIwKPIEd-5dLv-GAY_wQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_tgF2IKPIEd-5dLv-GAY_wQ" name="UsageUsb" supplier="_noGucKGsEd-74-7bopqinw" client="_gWW_wKPIEd-5dLv-GAY_wQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_wvGIwKPIEd-5dLv-GAY_wQ" name="UsageParser" supplier="_dVUQAKGsEd-74-7bopqinw" client="_gWW_wKPIEd-5dLv-GAY_wQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_6ctdkKPIEd-5dLv-GAY_wQ" name="UsageIfSwi" supplier="_6tlVEKGtEd-74-7bopqinw" client="_dVUQAKGsEd-74-7bopqinw"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_FNuowKPMEd-5dLv-GAY_wQ" name="uint8_t"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_T9zK0KPMEd-5dLv-GAY_wQ" name="uint8_t*"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_m6nSwKPPEd-5dLv-GAY_wQ" name="interface_id_t">
+      <ownedLiteral xmi:id="_vAktQKPPEd-5dLv-GAY_wQ" name="DEVKIT_IF_UNKNOWN"/>
+      <ownedLiteral xmi:id="_1lrZAqPPEd-5dLv-GAY_wQ" name="DEVKIT_IF_SPI"/>
+      <ownedLiteral xmi:id="_4woSEqPPEd-5dLv-GAY_wQ" name="DEVKIT_IF_TWI"/>
+      <ownedLiteral xmi:id="_7uLBQqPPEd-5dLv-GAY_wQ" name="DEVKIT_IF_SWI"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ld8D8KPQEd-5dLv-GAY_wQ" name="int8_t"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_aWDMsKPUEd-5dLv-GAY_wQ" name="kit_status_t">
+      <ownedLiteral xmi:id="_gVdxcqPUEd-5dLv-GAY_wQ" name="KIT_STATUS_SUCCESS"/>
+      <ownedLiteral xmi:id="_lE24wqPUEd-5dLv-GAY_wQ" name="KIT_STATUS_UNKNOWN_COMMAND"/>
+      <ownedLiteral xmi:id="_nTAyYqPUEd-5dLv-GAY_wQ" name="KIT_STATUS_USB_RX_OVERFLOW"/>
+      <ownedLiteral xmi:id="_p9CvsqPUEd-5dLv-GAY_wQ" name="KIT_STATUS_USB_TX_OVERFLOW"/>
+      <ownedLiteral xmi:id="_sU4w0qPUEd-5dLv-GAY_wQ" name="KIT_STATUS_INVALID_PARAMS"/>
+      <ownedLiteral xmi:id="_uYUBIqPUEd-5dLv-GAY_wQ" name="KIT_STATUS_INVALID_IF_FUNCTION"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

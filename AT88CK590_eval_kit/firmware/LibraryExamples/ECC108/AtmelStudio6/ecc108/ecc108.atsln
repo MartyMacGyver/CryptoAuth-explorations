@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ecc108_i2c", "ecc108_i2c\ecc108_i2c.cproj", "{48A8A41D-9A33-41EC-9CB3-D740838B1777}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ecc108_gpio", "ecc108_gpio\ecc108_gpio.cproj", "{A303BD9D-DD45-44C8-B3CB-937B10B12999}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		ecc108_i2c|AVR = ecc108_i2c|AVR
+		sha204_i2c|AVR = sha204_i2c|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48A8A41D-9A33-41EC-9CB3-D740838B1777}.ecc108_i2c|AVR.ActiveCfg = ecc108_i2c|AVR
+		{48A8A41D-9A33-41EC-9CB3-D740838B1777}.ecc108_i2c|AVR.Build.0 = ecc108_i2c|AVR
+		{48A8A41D-9A33-41EC-9CB3-D740838B1777}.sha204_i2c|AVR.ActiveCfg = ecc108_i2c|AVR
+		{48A8A41D-9A33-41EC-9CB3-D740838B1777}.sha204_i2c|AVR.Build.0 = ecc108_i2c|AVR
+		{A303BD9D-DD45-44C8-B3CB-937B10B12999}.ecc108_i2c|AVR.ActiveCfg = ecc108_gpio|AVR
+		{A303BD9D-DD45-44C8-B3CB-937B10B12999}.ecc108_i2c|AVR.Build.0 = ecc108_gpio|AVR
+		{A303BD9D-DD45-44C8-B3CB-937B10B12999}.sha204_i2c|AVR.ActiveCfg = ecc108_gpio|AVR
+		{A303BD9D-DD45-44C8-B3CB-937B10B12999}.sha204_i2c|AVR.Build.0 = ecc108_gpio|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

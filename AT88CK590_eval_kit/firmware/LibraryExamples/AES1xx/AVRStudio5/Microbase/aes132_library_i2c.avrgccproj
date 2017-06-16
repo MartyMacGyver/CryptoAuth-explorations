@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>1.0</ProjectVersion>
+    <ProjectGuid>{9a84ea8b-322a-465b-9eed-918d887c3d1a}</ProjectGuid>
+    <avrdevice>at90usb1287</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputFile>AES1xxSpi.elf</OutputFile>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AvrGccProjectExtensions>
+    </AvrGccProjectExtensions>
+    <avrtool>com.atmel.avrdbg.tool.jtagicemkii</avrtool>
+    <avrtoolinterface>JTAG</avrtoolinterface>
+    <com_atmel_avrdbg_tool_jtagicemkii>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.jtagicemkii</ToolType>
+      <ToolName xmlns="">JTAGICE mkII</ToolName>
+      <ToolNumber xmlns="">00A000004835</ToolNumber>
+      <Channel xmlns="">
+        <host>127.0.0.1</host>
+        <port>1413</port>
+        <ssl>False</ssl>
+      </Channel>
+      <ToolOptions xmlns="">
+        <InterfaceType>JTAG</InterfaceType>
+        <InterfaceProperties>
+          <JtagDbgClock>2000000</JtagDbgClock>
+          <JtagProgClock>1000000</JtagProgClock>
+          <IspClock>150000</IspClock>
+          <JtagInChain>false</JtagInChain>
+          <JtagDevicesBefore>0</JtagDevicesBefore>
+          <JtagDevicesAfter>0</JtagDevicesAfter>
+          <JtagInstrBitsBefore>0</JtagInstrBitsBefore>
+          <JtagInstrBitsAfter>0</JtagInstrBitsAfter>
+        </InterfaceProperties>
+      </ToolOptions>
+    </com_atmel_avrdbg_tool_jtagicemkii>
+    <Name>aes132_library</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'I2C' ">
+    <MemorySettings>
+      <MemorySegments xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+        <InitialStack IsEnabled="0">
+          <Address>0xfe00</Address>
+        </InitialStack>
+      </MemorySegments>
+    </MemorySettings>
+    <ToolchainSettings>
+      <AvrGcc xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>F_CPU=16000000UL</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>..\..\..\..\..\Libraries\includes</Value>
+            <Value>..\..\..\..\..\Libraries\utilities</Value>
+            <Value>..\..\..\..\..\Libraries\AES1xxLibrary</Value>
+            <Value>..\..\..\..\Hardware\AVR_AT</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Maximum (-g3)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.compiler.miscellaneous.OtherFlags>-gdwarf-2 -std=gnu99 </avrgcc.compiler.miscellaneous.OtherFlags>
+        <avrgcc.assembler.general.AssemblerFlags>-Wall -gdwarf-2 -std=gnu99             -DF_CPU=16000000UL -O1 -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums</avrgcc.assembler.general.AssemblerFlags>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>..\..\AVRStudioSpi\..\..\Hardware\AVR_AT</Value>
+            <Value>..\..\AVRStudioSpi\..\..\..\Libraries\AES1xxLibrary</Value>
+            <Value>..\..\AVRStudioSpi\..\..\..\Libraries\includes</Value>
+            <Value>..\..\AVRStudioSpi\..\..\..\..\..\WinAVR-20100110\avr\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+    <OutputFile>aes132_i2c.elf</OutputFile>
+    <GenerateHexFile>True</GenerateHexFile>
+    <OutputPath>bin\I2C\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\AvrGCC.targets" />
+  <ItemGroup>
+    <Compile Include="..\..\..\..\Libraries\AES1xxLibrary\aes132_comm.h">
+      <SubType>compile</SubType>
+      <Link>aes132_comm.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Libraries\AES1xxLibrary\aes132_commands.h">
+      <SubType>compile</SubType>
+      <Link>aes132_commands.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Libraries\AES1xxLibrary\aes132_i2c.c">
+      <SubType>compile</SubType>
+      <Link>aes132_i2c.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Libraries\AES1xxLibrary\aes132_example_main.c">
+      <SubType>compile</SubType>
+      <Link>aes132_example_main.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Libraries\AES1xxLibrary\aes132_lib_return_codes.h">
+      <SubType>compile</SubType>
+      <Link>aes132_lib_return_codes.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Libraries\AES1xxLibrary\aes132_physical.h">
+      <SubType>compile</SubType>
+      <Link>aes132_physical.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Libraries\utilities\timer_utilities.c">
+      <SubType>compile</SubType>
+      <Link>timer_utilities.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Libraries\utilities\timer_utilities.h">
+      <SubType>compile</SubType>
+      <Link>timer_utilities.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Hardware\AVR_AT\i2c_phys.c">
+      <SubType>compile</SubType>
+      <Link>i2c_phys.c</Link>
+    </Compile>
+    <None Include="..\..\..\Hardware\AVR_AT\i2c_phys.h">
+      <SubType>compile</SubType>
+      <Link>i2c_phys.h</Link>
+    </None>
+    <Compile Include="..\..\..\Hardware\Utilities\hardware.h">
+      <SubType>compile</SubType>
+      <Link>hardware.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Hardware\Utilities\hwAT88CK109STK3withAT88CK109BK3.c">
+      <SubType>compile</SubType>
+      <Link>hwAT88CK109STK3withAT88CK109BK3.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Libraries\AES1xxLibrary\aes132_comm.c">
+      <SubType>compile</SubType>
+      <Link>aes132_comm.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Libraries\AES1xxLibrary\aes132_commands.c">
+      <SubType>compile</SubType>
+      <Link>aes132_commands.c</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

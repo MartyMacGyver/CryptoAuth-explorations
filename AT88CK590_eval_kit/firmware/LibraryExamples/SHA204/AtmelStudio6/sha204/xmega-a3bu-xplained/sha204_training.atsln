@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "sha204_training", "sha204_training\sha204_training.cproj", "{2B0EE1AD-FB34-4502-8859-52C49E73765E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B0EE1AD-FB34-4502-8859-52C49E73765E}.Debug|AVR.ActiveCfg = Debug|AVR
+		{2B0EE1AD-FB34-4502-8859-52C49E73765E}.Debug|AVR.Build.0 = Debug|AVR
+		{2B0EE1AD-FB34-4502-8859-52C49E73765E}.Release|AVR.ActiveCfg = Release|AVR
+		{2B0EE1AD-FB34-4502-8859-52C49E73765E}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

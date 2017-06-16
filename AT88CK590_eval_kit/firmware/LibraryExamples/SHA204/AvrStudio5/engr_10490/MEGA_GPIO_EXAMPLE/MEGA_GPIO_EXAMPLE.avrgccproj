@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>5.0</ProjectVersion>
+    <ProjectGuid>c7ccf100-876a-11e0-bb03-000c2967fa5f</ProjectGuid>
+    <avrdevice>ATmega128</avrdevice>
+    <avrdeviceseries>mega</avrdeviceseries>
+    <OutputFile>$(MSBuildProjectName).elf</OutputFile>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AvrGccProjectExtensions />
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+    <Name>$(MSBuildProjectName)</Name>
+    <RootNamespace>$(MSBuildProjectName)</RootNamespace>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <UseGlobalToolchain>True</UseGlobalToolchain>
+    <GlobalToolchainPath>C:\Program Files\Atmel\AVR Studio 5.0\AVR ToolChain\bin</GlobalToolchainPath>
+    <ToolchainDirPath />
+    <MakeDirPath />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>BOARD=STK600_MEGA</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../src</Value>
+            <Value>../src/asf/common/utils</Value>
+            <Value>../src/asf/mega/applications/mega_gpio_example</Value>
+            <Value>../src/asf/mega/applications/mega_gpio_example/mega128_stk600</Value>
+            <Value>../src/asf/mega/utils</Value>
+            <Value>../src/config</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>../src</Value>
+            <Value>../src/asf/common/utils</Value>
+            <Value>../src/asf/mega/applications/mega_gpio_example</Value>
+            <Value>../src/asf/mega/applications/mega_gpio_example/mega128_stk600</Value>
+            <Value>../src/asf/mega/utils</Value>
+            <Value>../src/config</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <!-- Project configurable options -->
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.linker.miscellaneous.LinkerFlags>-Wl,--relax</avrgcc.linker.miscellaneous.LinkerFlags>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues />
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.linker.libraries.LibrarySearchPaths>
+          <ListValues />
+        </avrgcc.linker.libraries.LibrarySearchPaths>
+        <avrgcc.linker.general.DoNotUseStandardStartFiles />
+        <avrgcc.linker.general.DoNotUseDefaultLibraries />
+        <avrgcc.linker.general.NoStartupOrDefaultLibs />
+        <!-- Fixed options, according to ASF 2 MEGA/XMEGA Makefile -->
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.compiler.optimization.DebugLevel>None</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.linker.optimization.RelaxBranches>True</avrgcc.linker.optimization.RelaxBranches>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>False</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>False</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <avrgcc.linker.optimization.GarbageCollectUnusedSections>True</avrgcc.linker.optimization.GarbageCollectUnusedSections>
+        <avrgcc.compiler.optimization.OtherFlags>-fdata-sections</avrgcc.compiler.optimization.OtherFlags>
+        <avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -mrelax</avrgcc.compiler.miscellaneous.OtherFlags>
+        <avrgcc.assembler.general.AssemblerFlags>-mrelax</avrgcc.assembler.general.AssemblerFlags>
+      </AvrGcc>
+    </ToolchainSettings>
+    <MemorySettings />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>BOARD=STK600_MEGA</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../src</Value>
+            <Value>../src/asf/common/utils</Value>
+            <Value>../src/asf/mega/applications/mega_gpio_example</Value>
+            <Value>../src/asf/mega/applications/mega_gpio_example/mega128_stk600</Value>
+            <Value>../src/asf/mega/utils</Value>
+            <Value>../src/config</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>../src</Value>
+            <Value>../src/asf/common/utils</Value>
+            <Value>../src/asf/mega/applications/mega_gpio_example</Value>
+            <Value>../src/asf/mega/applications/mega_gpio_example/mega128_stk600</Value>
+            <Value>../src/asf/mega/utils</Value>
+            <Value>../src/config</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <!-- Project configurable options -->
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.linker.miscellaneous.LinkerFlags>-Wl,--relax</avrgcc.linker.miscellaneous.LinkerFlags>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues />
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.linker.libraries.LibrarySearchPaths>
+          <ListValues />
+        </avrgcc.linker.libraries.LibrarySearchPaths>
+        <avrgcc.linker.general.DoNotUseStandardStartFiles />
+        <avrgcc.linker.general.DoNotUseDefaultLibraries />
+        <avrgcc.linker.general.NoStartupOrDefaultLibs />
+        <!-- Fixed options, according to ASF 2 MEGA/XMEGA Makefile -->
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.compiler.optimization.DebugLevel>Maximum (-g3)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.linker.optimization.RelaxBranches>True</avrgcc.linker.optimization.RelaxBranches>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>False</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>False</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <avrgcc.linker.optimization.GarbageCollectUnusedSections>True</avrgcc.linker.optimization.GarbageCollectUnusedSections>
+        <avrgcc.compiler.optimization.OtherFlags>-fdata-sections</avrgcc.compiler.optimization.OtherFlags>
+        <avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -mrelax</avrgcc.compiler.miscellaneous.OtherFlags>
+        <avrgcc.assembler.general.AssemblerFlags>-mrelax</avrgcc.assembler.general.AssemblerFlags>
+      </AvrGcc>
+    </ToolchainSettings>
+    <MemorySettings />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="src\asf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\asf\common\utils\interrupt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\asf\common\utils\interrupt\interrupt_avr8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\asf\mega\utils\compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\asf\mega\utils\parts.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\asf\mega\utils\status_codes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\config\conf_example.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\mega_gpio_example.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\asf\common\utils\make\Makefile.avr.in">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\asf\" />
+    <Folder Include="src\asf\common\" />
+    <Folder Include="src\asf\common\utils\" />
+    <Folder Include="src\asf\common\utils\interrupt\" />
+    <Folder Include="src\asf\common\utils\make\" />
+    <Folder Include="src\asf\mega\" />
+    <Folder Include="src\asf\mega\utils\" />
+    <Folder Include="src\config\" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\AvrGCC.targets" />
+</Project>

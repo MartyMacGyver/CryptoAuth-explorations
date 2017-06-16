@@ -1,0 +1,74 @@
+/*! \mainpage ATSHA204 Library Source Code
+    \section intro_sec Introduction
+    This library enables a user to more quickly implement an application
+    that uses an Atmel Crypto-Authentication ATSHA204 device. Although the
+    library targets the ATSHA204 type of Crypto-Authentication device it
+    will also work with devices of the ATSA10xS family.
+    
+    The library is distributed as source code. It is licensed according to
+    terms of the included license agreement.
+    
+    The code comes in three layers, Command Marshaling, Communication and 
+    Physical layer.
+    
+    The Command Marshaling layer assembles command packets from
+    marshaling function parameters, sends them to the device, and returns
+    the response from the device.
+    
+    The Communication layer handles communication sequences 
+    (wake up, send command, receive response, sleep). It retries such
+    sequences in case of certain communication failures.
+    
+    The Physical layer puts the command packets on the chosen interface
+    bus, and reads responses from it.
+    
+    An application has to supply all buffers via pointer arguments. 
+    The library does not provide any buffers.
+    
+    The library contains one behavioral switch: The number of retries
+    if communication fails.
+    
+    You will understand the library code better if you have the
+    ATSHA204 datasheet handy.
+    
+    \section gettingstarted_sec Getting Started
+    The user should be able to use most of the library as is, simply
+    adding the library modules into her C project. 
+    Functions in the Physical layers will have to be modified or
+    re-written if the processor is not an eight-bit AVR. Starting values 
+    for timeout loop counters and timer routines have to be adjusted.
+    
+    To start development add the library files to your project,
+    implement the functions in the Physical layer modules or modify the 
+    modules provided in the example projects, and supply values for the 
+    timeout loop counters that match the execution time of your CPU 
+    (and the I<SUP>2</SUP>C clock if you are using I<SUP>2</SUP>C).
+    
+    \section waystotalk_sec SHA204 Communication Interfaces
+    The ATSHA204 device can be obtained either communicating in SWI 
+    or I<SUP>2</SUP>C mode. If the device is configured for single wire 
+    communication you can use either a UART or a GPIO peripheral:  
+    <ul>
+      <li>
+          The chip will communicate with a UART (or USART) at 230.4 kBaud.
+          No driver chip is required (as in RS-232 or RS-285), the chip will 
+          talk directly to the UART pins.
+      </li>
+      <li>    
+          The chip will communicate with a soft UART, or a "big-banged" pin, at
+          the same speed.
+          
+          Be aware that the actual baud-rate of the ATSHA204 is the baud-rate divided 
+          by 9 (1 start bit, 7 data bits, 1 stop bit). One UART byte is one bit of 
+          information read from or written to the device. Therefore, the actual data 
+          through-put is 230,400 baud / 9 = 25,600 baud.
+      </li>
+      <li>    
+          If the device is configured for I<SUP>2</SUP>C communication the device
+          will communicate using the standard I<SUP>2</SUP>C protocol (also known as
+          two-wire interface or TWI) at speeds of up to 1 MHz.
+      </li>
+    </ul>
+    With the distribution of this library, example projects are provided for all 
+    communication methods.
+*/

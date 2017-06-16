@@ -1,0 +1,79 @@
+/*!@page project_build Building The Projects
+
+******************************************************************************
+
+******************************************************************************
+			\section project_structure Work Space and Project Structure
+******************************************************************************
+
+The source files for the AES132 library are contained in a single folder "aes132_library".
+
+    \subsection interface_independent Interface Independent Modules
+    aes132_example_main.c\n
+    aes132.h\n
+    aes132.c\n
+    \n
+    Function names in aes132.c start with aes132m_ or aes132c_.
+
+    \subsection interface_dependent Interface Dependent Modules
+    Hardware dependent modules are provided that support 8-bit AVR micro-controllers.
+    If you are not using an AVR CPU, either implement the functions listed in aes132_i2c.h
+    or aes132_spi.h,
+    or choose the appropriate module for the communication with
+    the device from one of the communication related modules:\n
+    <ul>
+      <li>
+         aes132_spi.c: implementation as Serial Peripheral Interface (SPI)\n
+         Function names in this module start with aes132p_ or spi_.
+      </li>
+      <li>
+         aes132_i2c.c: implementation as Inter-Integrated Circuit (I<SUP>2</SUP>C)\n
+         Function names in this module start with aes132p_ or i2c_.
+      </li>
+    </ul>
+
+    \subsection aes132_projects Example Project
+    A solution file is supplied for the AVR Studio 5 IDE.
+    (Solution files have an "sln" extension.)
+    AVR Studio 5 solution files are located in the root folder.
+    Choose the project that fits the communication interface you like to use.\n
+    You can easily create a project under the IDE you are using by following the few
+    steps listed below.
+    <ul>
+      <li>
+         Supply communication interface independent modules by adding
+         aes132_example_main.c, aes132.c, and aes132.h to the project.
+      </li>
+      <li>
+         Supply communication interface modules.
+         <ul>
+            <li>SPI:\n 
+               - Add aes132_spi.c and aes132_spi.h.
+               - Define AES132_SPI.
+            </li>
+            <li>I<SUP>2</SUP>C:
+               - Add aes132_i2c.c and aes132_i2c.h.
+               - Define AES132_I2C.
+               - Define F_CPU=16000000.
+            </li>
+          </ul>               
+         You might have to modify the modules, especially for 32-bit CPUs, since their
+         peripherals often implement sophisticated interface functionality in hardware. 
+         For instance, they might not support the generation of individual 
+         I<SUP>2</SUP>C Start and Stop conditions.
+      </li>
+    </ul>
+
+
+	 <b>Tools</b>\n
+	 AVR Studio 5 Beta 2
+	 (http://www.atmel.com/dyn/products/tools_card.asp?tool_id=17212)
+
+
+******************************************************************************
+                     \section doxygen Doxygen Generated Documentation
+******************************************************************************
+Important comments (functions, type and macro definitions, etc.) follow a
+syntax that the Doxygen document generator for source code can parse.
+
+*/

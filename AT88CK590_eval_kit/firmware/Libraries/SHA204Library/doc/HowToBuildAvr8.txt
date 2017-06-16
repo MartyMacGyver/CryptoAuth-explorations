@@ -1,0 +1,170 @@
+/*! 
+\mainpage Building The Projects
+	
+\section project_structure_sec Work Space and Project Structure
+	
+	The source files for the ATSHA204 library are contained in a single folder "src".
+
+\subsection hardware_independent Hardware Independent Modules
+    sha204_example_main.c\n
+    sha204_examples.c\n
+    sha204_examples.h\n
+    sha204_examples.c\n
+    sha204_helper.c\n
+    sha204_helper.h\n
+    sha204_comm_marshaling.c\n
+    sha204_comm_marshaling.h\n
+    sha204_comm.c\n
+    sha204_comm.h\n
+    sha204_i2c.c\n
+    sha204_swi.c\n
+    sha204_lib_return_codes.h\n
+    sha204_config.h\n
+    sha204_physical.h\n
+    timer_utilities.c\n
+    timer_utilities.h
+    
+\subsection hardware_dependent Hardware Dependent Modules
+    Hardware dependent modules are provided that support 8-bit AVR micro-controllers.
+    If you are not using an AVR CPU, either implement the functions listed in sha204_physical.h
+    or choose the appropriate module for the physical implementation of the communication with 
+    the device from one of the communication related modules:\n
+    Since SWI support comes in two flavors, UART and GPIO, a common header file is provided, swi_phys.h.
+    <ul>
+      <li>
+         bitbang_phys.c: Physical implementation as single wire interface (SWI) 
+         using GPIO.
+      </li>
+      <li>
+         uart_phys.c: Physical implementation as single wire interface (SWI) 
+         using a UART (includes avr_compatible.h).
+      </li>
+      <li>
+         i2c_phys.c: Physical implementation as two wire interface (I<SUP>2</SUP>C).
+      </li>
+    </ul>
+    
+\subsection sha204_projects Projects
+    A solution file (.sln)	is supplied for the Atmel Studio 6.1 IDE that contains 
+    three projects (.cproj). This solution file and folders (src, output, etc.) are 
+    located in the SHA204_90USB1287 folder.
+    Choose the project that fits the communication interface you like to use.\n
+    If you don't use Atmel Studio you can easily create a project under the 
+	IDE you are using. You need the following modules and compilation switch depending on the 
+	interface and its implementation, SWI using UART, SWI using GPIO, or I<SUP>2</SUP>C.
+    <ul>
+      <li><b>SWI Using UART</b>\n
+       sha204_example_main.c\n
+	   sha204_examples.c\n
+	   sha204_examples.h\n
+	   sha204_examples.c\n
+	   sha204_helper.c\n
+	   sha204_helper.h\n
+       sha204_comm_marshaling.c\n
+       sha204_comm_marshaling.h\n
+       sha204_comm.c\n
+       sha204_comm.h\n
+       sha204_swi.c\n
+       sha204_lib_return_codes.h\n
+       sha204_config.h\n
+       sha204_physical.h\n
+       swi_phys.h\n
+       avr_compatible.h\n
+       uart_phys.c\n
+       timer_utilities.c\n
+       timer_utilities.h\n\n
+       Compilation switches: SHA204_SWI, SHA204_SWI_UART, F_CPU=[your CPU clock in Hz]
+      </li>
+      <li><b>SWI Using GPIO</b>\n
+       sha204_example_main.c\n
+       sha204_examples.c\n
+       sha204_examples.h\n
+	   sha204_examples.c\n
+	   sha204_helper.c\n
+	   sha204_helper.h\n
+       sha204_comm_marshaling.c\n
+       sha204_comm_marshaling.h\n
+       sha204_comm.c\n
+       sha204_comm.h\n
+       sha204_swi.c\n
+       sha204_lib_return_codes.h\n
+       sha204_config.h\n
+       sha204_physical.h\n
+       timer_utilities.c\n
+       timer_utilities.h\n
+       swi_phys.h\n
+       bitbang_phys.c\n\n
+       Compilation switches: SHA204_SWI, SHA204_SWI_BITBANG, F_CPU=[your CPU clock in Hz]
+      </li>
+      <li><b>I<SUP>2</SUP>C</b>\n
+       sha204_example_main.c\n
+       sha204_examples.c\n
+	   sha204_examples.h\n
+	   sha204_examples.c\n
+	   sha204_helper.c\n
+	   sha204_helper.h\n
+       sha204_comm_marshaling.c\n
+       sha204_comm_marshaling.h\n
+       sha204_comm.c\n
+       sha204_comm.h\n
+       sha204_i2c.c\n
+       sha204_lib_return_codes.h\n
+       sha204_config.h\n
+       sha204_physical.h\n\n
+       i2c_phys.c\n
+       timer_utilities.c\n
+       timer_utilities.h\n\n
+       Compilation switches: SHA204_I2C, F_CPU=[your CPU clock in Hz]
+      </li>
+    </ul>
+    
+    Follow the few steps listed below to build a SHA204 project.
+    <ul>
+      <li>
+		 Supply communication interface independent modules by adding 
+         sha204_example_main.c, sha204_examples.*, sha204_helper.*, and sha204_comm* 
+         to the project. 
+         Be aware that all hardware independent modules
+         include sha204_lib_return_codes.h and sha204_physical.h
+      </li>
+      <li> 
+         Supply communication interface hardware independent modules. 
+         For SWI add sha204_swi.*, for I<SUP>2</SUP>C add sha204_i2c.*. 
+		 You might have to also modify sha204_i2c.c, especially for 32-bit CPUs, since their
+         I<SUP>2</SUP>C peripherals implement such functionality in hardware. For instance,
+         they might not support the generation of individual Start and Stop conditions. 
+      </li>
+      <li> 
+         Supply communication interface hardware dependent modules.
+         If you do not use an AVR CPU, you have to implement the functions in these modules. 
+         For SWI using UART add uart_phys.c, for SWI using GPIO add bitbang_phys.c, and for
+         I<SUP>2</SUP>C add i2c_phys.*. Be aware that uart_phys.c includes avr_compatible.h.
+         Also, both SWI modules include swi_phys.h.
+      </li>
+      <li> 
+         Supply a timer utility module. You can either use the provided timer_utilities.* files 
+         or supply your own. The SHA204 library uses two delay functions, delay_ms(uint8_t)
+         and delay_10us(uint8_t). The delay_ms function is used to determine command response 
+         timeouts. The delay_10us function is used to create a wake-up pulse and wake-up delay.
+         The timer functions do not use hardware timers but loop counters.
+         The supplied module is tuned for an AT90USB1287 CPU running at 16 MHz, but you can
+         easily tune it for other micro-controllers as long as one loop iteration (decrement,
+         compare, and jump) does not take longer than 10 us.
+      </li>
+    </ul>
+     
+
+\section toolchain Tools
+
+\subsection ide Integrated Development Environment
+	Atmel Studio 6.0.1996 - Service Pack 2<BR>
+    AVRGCC - 3.4.1.95, AVR Toolchain 8 Bit, Version: 3.4.1.830 - GCC 4.6.2<BR>
+	http://www.atmel.com/Microsite/atmel_studio6/default.aspx
+
+
+\section doxygen Doxygen Generated Documentation
+	Most comments outside functions (functions, type and macro definitions, 
+	groups, etc.) follow a syntax that the Doxygen document generator for 
+	source code can parse (www.doxygen.org).
+
+*/

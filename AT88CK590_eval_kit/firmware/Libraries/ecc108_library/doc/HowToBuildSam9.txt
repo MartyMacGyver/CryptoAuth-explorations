@@ -1,0 +1,77 @@
+/*!@page project_build Building The Projects
+
+******************************************************************************
+
+******************************************************************************
+			\section project_structure Work Space and Project Structure
+******************************************************************************
+
+The source files for the SHA204 library are contained in a single folder "src".
+
+    \subsection hardware_independent Hardware Independent Modules
+    main.c\n
+    sha204_comm_marshaling.c\n
+    sha204_comm_marshaling.h\n
+    sha204_comm.c\n
+    sha204_comm.h\n
+    sha204_twi_sam9.c\n
+    sha204_lib_return_codes.h\n
+    sha204_config.h\n
+    sha204_physical.h
+    
+    \subsection hardware_dependent Hardware Dependent Modules
+    Hardware dependent modules are provided by the at91lib that support SAM9 CPUs.
+    If you are not using a SAM9  CPU, implement the functions listed in sha204_physical.h.
+    
+    \subsection sha204_projects Example Project
+	    One example project for an ARM9, an AT91SAM9G45 CPU is provided. The project uses 
+	    the Atmel evaluation kit AT91SAM9M10-G45-EK as the target, and a reduced and 
+	    slightly modified version of the AT91 library that comes inside
+	    the at91sam9m10-ek-softpack-1.9 as part of the evaluation kit.\n
+	    You can easily create a project under the IDE you are using by following the few 
+	    steps listed below.
+	    <ul>
+	      <li>
+	         Supply communication interface independent modules by adding 
+	         main.c and sha204_comm* to the project. 
+	         Be aware that all hardware independent modules
+	         include sha204_lib_return_codes.h and sha204_physical.h.
+	      </li>
+	      <li> 
+	         Supply communication interface modules. 
+	         For SWI add sha204_swi.*. For I<SUP>2</SUP>C add drivers\sha204\sha204_twi_sam9.c.
+            You will have to modify this file if you don't use at91lib.	         
+	      </li>
+	      <li> 
+	         Supply communication interface hardware dependent modules.
+	         If you do not use an AT91 CPU, you have to implement the functions in these modules. 
+	         For SWI using UART add peripherals/usart/usart.*, for SWI using GPIO add 
+	         peripherals /pio/pio.*, and for I2C add peripherals/twi/twi.*. 
+	         Be aware that the GPIO version needs hardware or software (loop counters)
+	         timers with tenth of microseconds accuracy.
+	      </li>
+	      <li> 
+	         Modify the current timer utility module or supply your own. The SHA204 library 
+	         uses two delay functions, delay_ms(uint8_t) and delay_10us(uint8_t).
+	      </li>
+	    </ul>
+	     
+	
+		<b>Tools</b>\n
+					compiler suite:
+		yagarto-bu-2.20.1_gcc-4.5.1-c-c++_nl-1.18.0_gdb-7.1_eabi_20100813.exe
+		(http://www.yagarto.de)
+
+					IDE:
+		Eclipse 3.4.2 with CDT (http://www.eclipse.org)
+		ARM plug-in (Eclipse update site at org.eclipse.cdt.cross.arm.gnu.feature.group) 
+
+
+
+******************************************************************************
+                     \section doxygen Doxygen Generated Documentation
+******************************************************************************
+Important comments (functions, type and macro definitions, etc.) follow a
+syntax that the Doxygen document generator for source code can parse.
+
+*/

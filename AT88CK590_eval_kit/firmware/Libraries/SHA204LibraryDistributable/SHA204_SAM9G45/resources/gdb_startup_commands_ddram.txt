@@ -1,0 +1,24 @@
+# SAM-ICE gdb startup commands for SAM7 target in flash
+#monitor reset
+#monitor speed 30
+#monitor speed auto
+#monitor long 0xffffff60 0x00320100
+#monitor long 0xfffffd44 0xa0008000
+#monitor long 0xfffffc20 0xa0000601
+#monitor sleep 100
+#monitor long 0xfffffc2c 0x00480a0e
+#monitor sleep 200
+#monitor long 0xfffffc30 0x7
+#monitor sleep 100
+#monitor long 0xfffffd08 0xa5000401
+#set remote memory-write-packet-size 1024
+#set remote memory-write-packet-size fixed
+#set remote memory-read-packet-size 1024
+#set remote memory-read-packet-size fixed
+#symbol-file SAM9M10_Yagarto.elf
+#continue
+
+##################
+# SAM-ICE gdb startup commands for SAM9 target in DDRAM
+# derived from 
+

@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ProjectGuid>{a0e7d1ca-e660-409d-a828-18f08c9570c6}</ProjectGuid>
+    <avrdevice>AT90USB1287</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AvrGccProjectExtensions>
+    </AvrGccProjectExtensions>
+    <AssemblyName>CombinedLibraries</AssemblyName>
+    <Name>CombinedLibrariesHid</Name>
+    <RootNamespace>CombinedLibraries</RootNamespace>
+    <avrtool>com.atmel.avrdbg.tool.jtagicemk3</avrtool>
+    <com_atmel_avrdbg_tool_jtagicemkii>
+      <ToolType>com.atmel.avrdbg.tool.jtagicemkii</ToolType>
+      <ToolName>JTAGICE mkII</ToolName>
+      <ToolNumber>00A000004F99</ToolNumber>
+      <KeepTimersRunning>true</KeepTimersRunning>
+      <OverrideVtor>false</OverrideVtor>
+      <OverrideVtorValue>
+      </OverrideVtorValue>
+      <Channel>
+        <host>127.0.0.1</host>
+        <port>4472</port>
+        <ssl>False</ssl>
+      </Channel>
+      <ToolOptions>
+        <InterfaceName>JTAG</InterfaceName>
+        <InterfaceProperties>
+          <JtagDbgClock>250000</JtagDbgClock>
+          <JtagProgClock>1000000</JtagProgClock>
+          <IspClock>150000</IspClock>
+          <JtagInChain>false</JtagInChain>
+          <JtagEnableExtResetOnStartSession>false</JtagEnableExtResetOnStartSession>
+          <JtagDevicesBefore>0</JtagDevicesBefore>
+          <JtagDevicesAfter>0</JtagDevicesAfter>
+          <JtagInstrBitsBefore>0</JtagInstrBitsBefore>
+          <JtagInstrBitsAfter>0</JtagInstrBitsAfter>
+        </InterfaceProperties>
+      </ToolOptions>
+    </com_atmel_avrdbg_tool_jtagicemkii>
+    <avrtoolinterface>JTAG</avrtoolinterface>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <AsfVersion>2.11.1</AsfVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <com_atmel_avrdbg_tool_jtagicemk3>
+      <ToolType>com.atmel.avrdbg.tool.jtagicemk3</ToolType>
+      <ToolName>JTAGICE3</ToolName>
+      <ToolNumber>J30200022132</ToolNumber>
+      <StimuliFile>
+      </StimuliFile>
+      <Channel>
+        <host>127.0.0.1</host>
+        <port>56527</port>
+        <ssl>False</ssl>
+      </Channel>
+      <ToolOptions>
+        <InterfaceName>JTAG</InterfaceName>
+        <InterfaceProperties>
+          <JtagDbgClock>32000</JtagDbgClock>
+          <SwdClock>249000</SwdClock>
+          <JtagProgClock>7500000</JtagProgClock>
+          <IspClock>125000</IspClock>
+          <JtagInChain>false</JtagInChain>
+          <JtagEnableExtResetOnStartSession>false</JtagEnableExtResetOnStartSession>
+          <JtagDevicesBefore>0</JtagDevicesBefore>
+          <JtagDevicesAfter>0</JtagDevicesAfter>
+          <JtagInstrBitsBefore>0</JtagInstrBitsBefore>
+          <JtagInstrBitsAfter>0</JtagInstrBitsAfter>
+          <PdiClock>4000000</PdiClock>
+          <AWireMaxBaud>7500000</AWireMaxBaud>
+        </InterfaceProperties>
+      </ToolOptions>
+    </com_atmel_avrdbg_tool_jtagicemk3>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.10.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <CacheFlash>true</CacheFlash>
+    <UncachedRange />
+    <BootSegment>2</BootSegment>
+    <preserveEEPROM>true</preserveEEPROM>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'OutputConfigDefault' ">
+    <OutputType>Executable</OutputType>
+    <OutputFileName>CombinedLibrariesHid</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>False</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>False</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>False</avrgcc.common.outputfiles.srec>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>TARGET_BOARD=AT88UBASE</Value>
+            <Value>AT88CK101STK8</Value>
+            <Value>AT88MICROBASE</Value>
+            <Value>SHA204_RESPONSE_TIMEOUT=37</Value>
+            <Value>SHA204_SWI_BITBANG</Value>
+            <Value>SHA204</Value>
+            <Value>AES132</Value>
+            <Value>ECC108</Value>
+            <Value>F_CPU=16000000</Value>
+            <Value>I2C</Value>
+            <Value>SPI</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../../../KitModules</Value>
+            <Value>../../../../../../Libraries/utilities</Value>
+            <Value>../../../../../../Libraries/AES1xxLibrary</Value>
+            <Value>../../../../../../Libraries/SHA204Library</Value>
+            <Value>../../../../../../Libraries/ecc108_library</Value>
+            <Value>../../../../../../LibraryExamples/Hardware/AVR_AT</Value>
+            <Value>../../../../../../LibraryExamples/Hardware/Utilities</Value>
+            <Value>../../../../../SourceCommon/ProtocolAscii</Value>
+            <Value>../../../../USB</Value>
+            <Value>../../../../USB/conf</Value>
+            <Value>../../../../USB/lib_mcu/usb</Value>
+            <Value>../../../../USB/lib_mcu/util</Value>
+            <Value>../../../../USB/common/lib_mcu</Value>
+            <Value>../../../../USB/modules/usb/device_chap9</Value>
+            <Value>../../../../../SourceCommon/includes</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Maximum (-g3)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.general.GenerateMAPFile>False</avrgcc.linker.general.GenerateMAPFile>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'OutputConfigAT88ubaseECC108' ">
+    <OutputType>Executable</OutputType>
+    <OutputFileName>CombinedLibrariesHidEcc108</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputPath>bin\OutputConfigAT88ubaseECC108\</OutputPath>
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>False</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>False</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>False</avrgcc.common.outputfiles.srec>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>AT88CK101STK8</Value>
+            <Value>AT88MICROBASE</Value>
+            <Value>SHA204_RESPONSE_TIMEOUT=37</Value>
+            <Value>SHA204_SWI_BITBANG</Value>
+            <Value>SHA204</Value>
+            <Value>AES132</Value>
+            <Value>TARGET_BOARD=AT88RHINO_ECC108</Value>
+            <Value>F_CPU=2000000</Value>
+            <Value>I2C</Value>
+            <Value>SPI</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../../../KitModules</Value>
+            <Value>../../../../../../Libraries/utilities</Value>
+            <Value>../../../../../../Libraries/AES1xxLibrary</Value>
+            <Value>../../../../../../Libraries/SHA204Library</Value>
+            <Value>../../../../../../Libraries/ecc108_library</Value>
+            <Value>../../../../../../LibraryExamples/Hardware/AVR_AT</Value>
+            <Value>../../../../../../LibraryExamples/Hardware/Utilities</Value>
+            <Value>../../../../../SourceCommon/ProtocolAscii</Value>
+            <Value>../../../../USB</Value>
+            <Value>../../../../USB/conf</Value>
+            <Value>../../../../USB/lib_mcu/usb</Value>
+            <Value>../../../../USB/lib_mcu/util</Value>
+            <Value>../../../../USB/common/lib_mcu</Value>
+            <Value>../../../../USB/modules/usb/device_chap9</Value>
+            <Value>../../../../../SourceCommon/includes</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Maximum (-g3)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.general.GenerateMAPFile>False</avrgcc.linker.general.GenerateMAPFile>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\..\Libraries\AES1xxLibrary\aes132_comm.c">
+      <SubType>compile</SubType>
+      <Link>AES132\aes132_comm.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\AES1xxLibrary\aes132_comm.h">
+      <SubType>compile</SubType>
+      <Link>AES132\aes132_comm.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\AES1xxLibrary\aes132_commands.c">
+      <SubType>compile</SubType>
+      <Link>AES132\aes132_commands.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\AES1xxLibrary\aes132_commands.h">
+      <SubType>compile</SubType>
+      <Link>AES132\aes132_commands.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\AES1xxLibrary\aes132_lib_return_codes.h">
+      <SubType>compile</SubType>
+      <Link>AES132\aes132_lib_return_codes.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\AES1xxLibrary\aes132_physical.h">
+      <SubType>compile</SubType>
+      <Link>AES132\aes132_physical.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\SHA204Library\sha204_comm.c">
+      <SubType>compile</SubType>
+      <Link>SHA204\sha204_comm.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\SHA204Library\sha204_comm.h">
+      <SubType>compile</SubType>
+      <Link>SHA204\sha204_comm.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\SHA204Library\sha204_comm_marshaling.c">
+      <SubType>compile</SubType>
+      <Link>SHA204\sha204_comm_marshaling.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\SHA204Library\sha204_comm_marshaling.h">
+      <SubType>compile</SubType>
+      <Link>SHA204\sha204_comm_marshaling.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\SHA204Library\sha204_config.h">
+      <SubType>compile</SubType>
+      <Link>SHA204\sha204_config.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\SHA204Library\sha204_helper.c">
+      <SubType>compile</SubType>
+      <Link>SHA204\sha204_helper.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\SHA204Library\sha204_helper.h">
+      <SubType>compile</SubType>
+      <Link>SHA204\sha204_helper.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\SHA204Library\sha204_lib_return_codes.h">
+      <SubType>compile</SubType>
+      <Link>SHA204\sha204_lib_return_codes.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\utilities\timer_utilities.c">
+      <SubType>compile</SubType>
+      <Link>utilities\timer_utilities.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Libraries\utilities\timer_utilities.h">
+      <SubType>compile</SubType>
+      <Link>utilities\timer_utilities.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\LibraryExamples\Hardware\AVR_AT\i2c_phys.c">
+      <SubType>compile</SubType>
+      <Link>Hardware\AVR_AT\i2c_phys.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\LibraryExamples\Hardware\AVR_AT\i2c_phys.h">
+      <SubType>compile</SubType>
+      <Link>Hardware\AVR_AT\i2c_phys.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\LibraryExamples\Hardware\AVR_AT\spi_phys.c">
+      <SubType>compile</SubType>
+      <Link>Hardware\AVR_AT\spi_phys.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\LibraryExamples\Hardware\AVR_AT\spi_phys.h">
+      <SubType>compile</SubType>
+      <Link>Hardware\AVR_AT\spi_phys.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\LibraryExamples\Hardware\Utilities\hwAT88CK109STK3withAT88CK109BK3.c">
+      <SubType>compile</SubType>
+      <Link>Hardware\Utilities\hwAT88CK109STK3withAT88CK109BK3.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\LibraryExamples\Hardware\Utilities\timers.c">
+      <SubType>compile</SubType>
+      <Link>Hardware\Utilities\timers.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\LibraryExamples\Hardware\Utilities\timers.h">
+      <SubType>compile</SubType>
+      <Link>Hardware\Utilities\timers.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\SourceCommon\ProtocolAscii\parser.c">
+      <SubType>compile</SubType>
+      <Link>ProtocolAscii\parser.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\SourceCommon\ProtocolAscii\parserAes.c">
+      <SubType>compile</SubType>
+      <Link>ProtocolAscii\parserAes.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\SourceCommon\ProtocolAscii\parserAscii.h">
+      <SubType>compile</SubType>
+      <Link>ProtocolAscii\parserAscii.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\SourceCommon\ProtocolAscii\parserEcc.c">
+      <SubType>compile</SubType>
+      <Link>ProtocolAscii\parserEcc.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\SourceCommon\ProtocolAscii\parserInterface.c">
+      <SubType>compile</SubType>
+      <Link>ProtocolAscii\parserInterface.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\SourceCommon\ProtocolAscii\parserSha.c">
+      <SubType>compile</SubType>
+      <Link>ProtocolAscii\parserSha.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\SourceCommon\ProtocolAscii\usb.c">
+      <SubType>compile</SubType>
+      <Link>ProtocolAscii\usb.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\SourceCommon\ProtocolAscii\usb.h">
+      <SubType>compile</SubType>
+      <Link>ProtocolAscii\usb.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\SourceCommon\ProtocolAscii\utilities.c">
+      <SubType>compile</SubType>
+      <Link>ProtocolAscii\utilities.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\SourceCommon\ProtocolAscii\utilities.h">
+      <SubType>compile</SubType>
+      <Link>ProtocolAscii\utilities.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\common\lib_mcu\compiler.h">
+      <SubType>compile</SubType>
+      <Link>USB\common\lib_mcu\compiler.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\common\lib_mcu\wdt\wdt_drv.c">
+      <SubType>compile</SubType>
+      <Link>USB\common\lib_mcu\wdt\wdt_drv.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\common\lib_mcu\wdt\wdt_drv.h">
+      <SubType>compile</SubType>
+      <Link>USB\common\lib_mcu\wdt\wdt_drv.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\conf\config.h">
+      <SubType>compile</SubType>
+      <Link>USB\conf\config.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\conf\conf_usb.h">
+      <SubType>compile</SubType>
+      <Link>USB\conf\conf_usb.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\lib_board\at88ubase\at88ubase.h">
+      <SubType>compile</SubType>
+      <Link>USB\lib_board\at88ubase\at88ubase.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\lib_mcu\pll\pll_drv.h">
+      <SubType>compile</SubType>
+      <Link>USB\lib_mcu\pll\pll_drv.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\lib_mcu\power\power_drv.c">
+      <SubType>compile</SubType>
+      <Link>USB\lib_mcu\power\power_drv.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\lib_mcu\power\power_drv.h">
+      <SubType>compile</SubType>
+      <Link>USB\lib_mcu\power\power_drv.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\lib_mcu\usb\usb_drv.c">
+      <SubType>compile</SubType>
+      <Link>USB\lib_mcu\usb\usb_drv.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\lib_mcu\usb\usb_drv.h">
+      <SubType>compile</SubType>
+      <Link>USB\lib_mcu\usb\usb_drv.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\lib_mcu\util\start_boot.c">
+      <SubType>compile</SubType>
+      <Link>USB\lib_mcu\util\start_boot.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\lib_mcu\util\start_boot.h">
+      <SubType>compile</SubType>
+      <Link>USB\lib_mcu\util\start_boot.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\modules\usb\device_chap9\usb_device_task.c">
+      <SubType>compile</SubType>
+      <Link>USB\modules\usb\device_chap9\usb_device_task.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\modules\usb\device_chap9\usb_device_task.h">
+      <SubType>compile</SubType>
+      <Link>USB\modules\usb\device_chap9\usb_device_task.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\modules\usb\device_chap9\usb_standard_request.c">
+      <SubType>compile</SubType>
+      <Link>USB\modules\usb\device_chap9\usb_standard_request.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\modules\usb\device_chap9\usb_standard_request.h">
+      <SubType>compile</SubType>
+      <Link>USB\modules\usb\device_chap9\usb_standard_request.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\modules\usb\USB_COMMUN.H">
+      <SubType>compile</SubType>
+      <Link>USB\modules\usb\USB_COMMUN.H</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\modules\usb\usb_commun_hid.h">
+      <SubType>compile</SubType>
+      <Link>USB\modules\usb\usb_commun_hid.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\modules\usb\usb_task.c">
+      <SubType>compile</SubType>
+      <Link>USB\modules\usb\usb_task.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\modules\usb\usb_task.h">
+      <SubType>compile</SubType>
+      <Link>USB\modules\usb\usb_task.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\usb\usb_descriptors.c">
+      <SubType>compile</SubType>
+      <Link>USB\usb\usb_descriptors.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\usb\usb_descriptors.h">
+      <SubType>compile</SubType>
+      <Link>USB\usb\usb_descriptors.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\usb\usb_specific_request.c">
+      <SubType>compile</SubType>
+      <Link>USB\usb\usb_specific_request.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\USB\usb\usb_specific_request.h">
+      <SubType>compile</SubType>
+      <Link>USB\usb\usb_specific_request.h</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\aes132_spi_unified.c">
+      <SubType>compile</SubType>
+      <Link>KitModules\aes132_spi_unified.c</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\aes132_spi_unified.h">
+      <SubType>compile</SubType>
+      <Link>KitModules\aes132_spi_unified.h</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\aes132_twi_unified.c">
+      <SubType>compile</SubType>
+      <Link>KitModules\aes132_twi_unified.c</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\aes132_twi_unified.h">
+      <SubType>compile</SubType>
+      <Link>KitModules\aes132_twi_unified.h</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\Combined_Discover.c">
+      <SubType>compile</SubType>
+      <Link>KitModules\Combined_Discover.c</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\Combined_Discover.h">
+      <SubType>compile</SubType>
+      <Link>KitModules\Combined_Discover.h</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\Combined_Physical.c">
+      <SubType>compile</SubType>
+      <Link>KitModules\Combined_Physical.c</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\Combined_Physical.h">
+      <SubType>compile</SubType>
+      <Link>KitModules\Combined_Physical.h</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\Combined_UsbMain.c">
+      <SubType>compile</SubType>
+      <Link>KitModules\Combined_UsbMain.c</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\parserKitMicrobaseCombined.c">
+      <SubType>compile</SubType>
+      <Link>KitModules\parserKitMicrobaseCombined.c</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\sha204_bitbang_physical.c">
+      <SubType>compile</SubType>
+      <Link>KitModules\sha204_bitbang_physical.c</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\sha204_bitbang_physical.h">
+      <SubType>compile</SubType>
+      <Link>KitModules\sha204_bitbang_physical.h</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\sha204_swi_comm_interface.h">
+      <SubType>compile</SubType>
+      <Link>KitModules\sha204_swi_comm_interface.h</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\sha204_swi_unified.c">
+      <SubType>compile</SubType>
+      <Link>KitModules\sha204_swi_unified.c</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\sha204_twi_comm_interface.h">
+      <SubType>compile</SubType>
+      <Link>KitModules\sha204_twi_comm_interface.h</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\sha204_twi_physical.h">
+      <SubType>compile</SubType>
+      <Link>KitModules\sha204_twi_physical.h</Link>
+    </Compile>
+    <Compile Include="..\..\KitModules\sha204_twi_unified.c">
+      <SubType>compile</SubType>
+      <Link>KitModules\sha204_twi_unified.c</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AES132" />
+    <Folder Include="Hardware\AVR_AT" />
+    <Folder Include="Hardware\Utilities" />
+    <Folder Include="KitModules" />
+    <Folder Include="Hardware" />
+    <Folder Include="SHA204" />
+    <Folder Include="ProtocolAscii" />
+    <Folder Include="USB" />
+    <Folder Include="USB\common" />
+    <Folder Include="USB\common\lib_mcu" />
+    <Folder Include="USB\common\lib_mcu\wdt" />
+    <Folder Include="USB\conf" />
+    <Folder Include="USB\lib_board" />
+    <Folder Include="USB\lib_board\at88ubase" />
+    <Folder Include="USB\lib_mcu" />
+    <Folder Include="USB\lib_mcu\util" />
+    <Folder Include="USB\lib_mcu\usb" />
+    <Folder Include="USB\lib_mcu\power" />
+    <Folder Include="USB\lib_mcu\pll" />
+    <Folder Include="USB\modules" />
+    <Folder Include="USB\modules\usb" />
+    <Folder Include="USB\modules\usb\device_chap9" />
+    <Folder Include="USB\usb" />
+    <Folder Include="utilities" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\AvrGCC.targets" />
+</Project>

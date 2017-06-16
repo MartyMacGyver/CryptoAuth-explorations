@@ -1,0 +1,31 @@
+<!-- Batch instructions to test SHA204 I2C-to-SWI bridge. -->
+
+<aardvark>
+    <!-- Configure I2C host. -->
+    <configure i2c="1" spi="0" gpio="0" tpower="0" pullups="1"/>
+    <i2c_bitrate khz="400"/>
+
+    <!-- Get firmware version of bridge. -->
+    <i2c_write addr="0x64" radix="16">04 00 03</i2c_write>
+    <i2c_read addr="0x64" count="5"/>
+
+    <!-- Get SHA204 revision (SHA204 DevRev command). -->
+    <i2c_write addr="0x64" radix="16">00 07 07 07 30 00 00 00 03 5D</i2c_write>
+    <sleep ms="3"/>
+    <i2c_read addr="0x64" count="9"/>
+
+    <!-- Read from SHA204 configuration zone. -->
+    <i2c_write addr="0x64" radix="16">00 07 23 07 02 80 08 00 0A 4D</i2c_write>
+    <sleep ms="10"/>
+    <i2c_read addr="0x64" count="37"/>
+
+    <!-- Send a SHA204 Nonce command and receive its response. -->
+    <i2c_write addr="0x64" radix="16">00 1B 23 1B 16 00 00 00 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 98 C6</i2c_write>
+    <sleep ms="20"/>
+    <i2c_read addr="0x64" count="37"/>
+
+    <!-- Send a SHA204 Mac command and receive its response. -->
+    <i2c_write addr="0x64" radix="16">00 27 23 27 08 00 00 00 3C 37 0E 25 98 43 8E 6C E9 8A 9B 1E BD B3 1E 7D 8C BD 38 E3 25 06 BB 40 19 68 9C 34 49 8B 1A 97 68 1B</i2c_write>
+    <sleep ms="20"/>
+    <i2c_read addr="0x64" count="37"/>
+</aardvark>

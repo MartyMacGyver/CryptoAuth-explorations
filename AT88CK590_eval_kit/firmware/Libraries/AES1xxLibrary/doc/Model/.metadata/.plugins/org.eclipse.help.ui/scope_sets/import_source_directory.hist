@@ -1,0 +1,4 @@
+#Thu May 13 09:40:20 MDT 2010
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=import source directory

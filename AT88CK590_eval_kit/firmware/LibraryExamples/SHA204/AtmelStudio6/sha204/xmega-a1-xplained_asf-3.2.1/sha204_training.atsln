@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "sha204_training", "sha204_training\sha204_training.cproj", "{7615D76D-058C-4442-9456-56A91E7EB231}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "sha204_training_swi_uart", "sha204_training_swi_uart\sha204_training_swi_uart.cproj", "{8B6F2BBB-A509-45E8-A789-BED52A6029CD}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "sha204_training_swi_gpio", "sha204_training_swi_gpio\sha204_training_swi_gpio.cproj", "{BB3D3831-940A-4DE5-8F47-27E93CD64569}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7615D76D-058C-4442-9456-56A91E7EB231}.Debug|AVR.ActiveCfg = Debug|AVR
+		{7615D76D-058C-4442-9456-56A91E7EB231}.Debug|AVR.Build.0 = Debug|AVR
+		{7615D76D-058C-4442-9456-56A91E7EB231}.Release|AVR.ActiveCfg = Release|AVR
+		{7615D76D-058C-4442-9456-56A91E7EB231}.Release|AVR.Build.0 = Release|AVR
+		{8B6F2BBB-A509-45E8-A789-BED52A6029CD}.Debug|AVR.ActiveCfg = Debug|AVR
+		{8B6F2BBB-A509-45E8-A789-BED52A6029CD}.Debug|AVR.Build.0 = Debug|AVR
+		{8B6F2BBB-A509-45E8-A789-BED52A6029CD}.Release|AVR.ActiveCfg = Release|AVR
+		{8B6F2BBB-A509-45E8-A789-BED52A6029CD}.Release|AVR.Build.0 = Release|AVR
+		{BB3D3831-940A-4DE5-8F47-27E93CD64569}.Debug|AVR.ActiveCfg = Debug|AVR
+		{BB3D3831-940A-4DE5-8F47-27E93CD64569}.Debug|AVR.Build.0 = Debug|AVR
+		{BB3D3831-940A-4DE5-8F47-27E93CD64569}.Release|AVR.ActiveCfg = Release|AVR
+		{BB3D3831-940A-4DE5-8F47-27E93CD64569}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:sysML="http://www.topcased.org/2.0/sysML" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="idModel" name="AES1xx LibraryModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="idPackage" name="AES1xx LibraryPackage">
+    <packagedElement xmi:type="uml:Component" xmi:id="idComponent" name="AES1xx Library">
+      <ownedComment xmi:id="_IVje-164Ed-k8pRnDEw6og">
+        <body>either TWI or SPI</body>
+      </ownedComment>
+      <ownedComment xmi:id="_xtXkwl7xEd-k8pRnDEw6og" annotatedElement="_hb_hoF7pEd-k8pRnDEw6og">
+        <body>Send Command&#xD;
+Receive Response&#xD;
+Calculate CRC&#xD;
+...</body>
+      </ownedComment>
+      <ownedComment xmi:id="_b8xecF9uEd-WUeygGpHW-A" annotatedElement="_kOcUwF7hEd-k8pRnDEw6og">
+        <body>AES1xx Device(s)</body>
+      </ownedComment>
+      <ownedComment xmi:id="_H1ubMl9vEd-WUeygGpHW-A" annotatedElement="_5Co8NV-AEd-WUeygGpHW-A">
+        <body>Physical&#xD;
+(target hardware specific part of communication)&#xD;
+Initialize Hardware&#xD;
+Chip Select (SPI)&#xD;
+Start / Stop (TWI)&#xD;
+Send / Receive Bytes&#xD;
+...&#xD;
+</body>
+      </ownedComment>
+      <ownedComment xmi:id="_boI1wl9vEd-WUeygGpHW-A" annotatedElement="_SSX7UF7iEd-k8pRnDEw6og">
+        <body>Communication&#xD;
+(protocol specific)&#xD;
+Read / Write Memory&#xD;
+Wait for Status Bit&#xD;
+...</body>
+      </ownedComment>
+      <ownedComment xmi:id="_5AXLol99Ed-WUeygGpHW-A">
+        <body>Legend:&#xD;
+&#xD;
+dashed box: optional&#xD;
+</body>
+      </ownedComment>
+      <ownedComment xmi:id="_YfNJYl-EEd-WUeygGpHW-A">
+        <body>application</body>
+      </ownedComment>
+      <ownedComment xmi:id="_hgVLol-EEd-WUeygGpHW-A">
+        <body>device library</body>
+      </ownedComment>
+      <ownedComment xmi:id="_l622Ml-EEd-WUeygGpHW-A">
+        <body>device driver example</body>
+      </ownedComment>
+      <ownedComment xmi:id="_2WIV0l-EEd-WUeygGpHW-A">
+        <ownedComment xmi:id="_2m0dMF-EEd-WUeygGpHW-A">
+          <body>Legend:&#xD;
+&#xD;
+green: AES1xx library&#xD;
+&#xD;
+orange: target dependent part of device driver&#xD;
+&#xD;
+white: AES1xx device(s)&#xD;
+&#xD;
+dashed box: optional&#xD;
+</body>
+        </ownedComment>
+        <body>AES1xx devices</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_M86MIF7aEd-k8pRnDEw6og" name="AES1xx" type="_6e1SQj6jEd-ZIuAilhJYCA" aggregation="composite">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S48eAF7gEd-k8pRnDEw6og" value="240"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_bxO8FV7aEd-k8pRnDEw6og" name="Physical" type="__YmTAj6iEd-ZIuAilhJYCA" aggregation="composite"/>
+      <ownedAttribute xmi:id="_RcSsEl7bEd-k8pRnDEw6og" name="Communication" type="_7oKjwD6hEd-ZIuAilhJYCA" aggregation="composite"/>
+      <ownedAttribute xmi:id="_Tg9q017hEd-k8pRnDEw6og" name="AES1xx" type="_8jJ6cj6jEd-ZIuAilhJYCA" aggregation="composite"/>
+      <ownedAttribute xmi:id="_kOcUwF7hEd-k8pRnDEw6og" name="AES1xx" type="_8jJ6cj6jEd-ZIuAilhJYCA" aggregation="composite"/>
+      <ownedAttribute xmi:id="_SSX7UF7iEd-k8pRnDEw6og" name="Communication" type="__voIYD6hEd-ZIuAilhJYCA" aggregation="composite"/>
+      <ownedAttribute xmi:id="_hb_hoF7pEd-k8pRnDEw6og" name="Device Commands" type="_8KN9YD6gEd-ZIuAilhJYCA" aggregation="composite"/>
+      <ownedAttribute xmi:id="_qevBIl9wEd-WUeygGpHW-A" name="API" type="_1624Ij6gEd-ZIuAilhJYCA"/>
+      <ownedAttribute xmi:id="_Z4aKQl9_Ed-WUeygGpHW-A" name="System" type="_72pogD6dEd-ZIuAilhJYCA" aggregation="composite"/>
+      <ownedAttribute xmi:id="_kvsc4l9_Ed-WUeygGpHW-A" name="Device Commands" type="_497Agj6gEd-ZIuAilhJYCA"/>
+      <ownedAttribute xmi:id="_5Co8NV-AEd-WUeygGpHW-A" name="Physical" type="_CCxaQj6jEd-ZIuAilhJYCA" aggregation="composite"/>
+      <ownedConnector xmi:id="_YqFIcF7bEd-k8pRnDEw6og" name="Target TWI" isStatic="true" kind="delegation">
+        <end xmi:id="_YqFIcV7bEd-k8pRnDEw6og" role="_RcSsEl7bEd-k8pRnDEw6og">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YqFIcl7bEd-k8pRnDEw6og" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YqFIc17bEd-k8pRnDEw6og" value="1"/>
+        </end>
+        <end xmi:id="_YqFIdF7bEd-k8pRnDEw6og" role="_bxO8FV7aEd-k8pRnDEw6og">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YqFIdV7bEd-k8pRnDEw6og" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YqFIdl7bEd-k8pRnDEw6og" value="1"/>
+        </end>
+      </ownedConnector>
+      <ownedConnector xmi:id="_vHLAmF7bEd-k8pRnDEw6og" name="TWI Protocol" kind="delegation">
+        <end xmi:id="_vHLAmV7bEd-k8pRnDEw6og" role="_SeMAM17WEd-k8pRnDEw6og" partWithPort="_bxO8FV7aEd-k8pRnDEw6og">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vHLAml7bEd-k8pRnDEw6og" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vHLAm17bEd-k8pRnDEw6og" value="1"/>
+        </end>
+        <end xmi:id="_vHLAnF7bEd-k8pRnDEw6og" role="_vCFXI17ZEd-k8pRnDEw6og" partWithPort="_M86MIF7aEd-k8pRnDEw6og">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vHLAnV7bEd-k8pRnDEw6og" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vHLAnl7bEd-k8pRnDEw6og" value="1"/>
+        </end>
+      </ownedConnector>
+      <ownedConnector xmi:id="_-EHYp17pEd-k8pRnDEw6og" name="Comm SPI" kind="delegation">
+        <end xmi:id="_-EHYqF7pEd-k8pRnDEw6og" role="_hb_hoF7pEd-k8pRnDEw6og">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-EHYqV7pEd-k8pRnDEw6og" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-EHYql7pEd-k8pRnDEw6og" value="1"/>
+        </end>
+        <end xmi:id="_-EHYq17pEd-k8pRnDEw6og" role="_SSX7UF7iEd-k8pRnDEw6og">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-EHYrF7pEd-k8pRnDEw6og" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-EHYrV7pEd-k8pRnDEw6og" value="1"/>
+        </end>
+      </ownedConnector>
+      <ownedConnector xmi:id="_IfZEtl7qEd-k8pRnDEw6og" name="Comm TWI" kind="delegation">
+        <end xmi:id="_IfZEt17qEd-k8pRnDEw6og" role="_hb_hoF7pEd-k8pRnDEw6og">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IfZEuF7qEd-k8pRnDEw6og" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IfZEuV7qEd-k8pRnDEw6og" value="1"/>
+        </end>
+        <end xmi:id="_IfZEul7qEd-k8pRnDEw6og" role="_RcSsEl7bEd-k8pRnDEw6og">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IfZEu17qEd-k8pRnDEw6og" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IfZEvF7qEd-k8pRnDEw6og" value="1"/>
+        </end>
+      </ownedConnector>
+      <ownedConnector xmi:id="_r4HRFl9_Ed-WUeygGpHW-A" name="Communication" isStatic="true" kind="delegation">
+        <end xmi:id="_r4HRF19_Ed-WUeygGpHW-A" role="_kvsc4l9_Ed-WUeygGpHW-A">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r4HRGF9_Ed-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r4HRGV9_Ed-WUeygGpHW-A" value="1"/>
+        </end>
+        <end xmi:id="_r4HRGl9_Ed-WUeygGpHW-A" role="_hb_hoF7pEd-k8pRnDEw6og">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r4HRG19_Ed-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r4HRHF9_Ed-WUeygGpHW-A" value="1"/>
+        </end>
+      </ownedConnector>
+      <ownedConnector xmi:id="_ETYtJ1-AEd-WUeygGpHW-A" name="Commands" kind="delegation">
+        <end xmi:id="_ETYtKF-AEd-WUeygGpHW-A" role="_qevBIl9wEd-WUeygGpHW-A">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ETYtKV-AEd-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ETYtKl-AEd-WUeygGpHW-A" value="1"/>
+        </end>
+        <end xmi:id="_ETYtK1-AEd-WUeygGpHW-A" role="_kvsc4l9_Ed-WUeygGpHW-A">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ETYtLF-AEd-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ETYtLV-AEd-WUeygGpHW-A" value="1"/>
+        </end>
+      </ownedConnector>
+      <ownedConnector xmi:id="_GIrlZ1-BEd-WUeygGpHW-A" name="Target SPI" kind="delegation">
+        <end xmi:id="_GIrlaF-BEd-WUeygGpHW-A" role="_SSX7UF7iEd-k8pRnDEw6og">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GI1WYF-BEd-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GI1WYV-BEd-WUeygGpHW-A" value="1"/>
+        </end>
+        <end xmi:id="_GI1WYl-BEd-WUeygGpHW-A" role="_5Co8NV-AEd-WUeygGpHW-A">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GI1WY1-BEd-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GI1WZF-BEd-WUeygGpHW-A" value="1"/>
+        </end>
+      </ownedConnector>
+      <ownedConnector xmi:id="_KoRWKF-BEd-WUeygGpHW-A" name="SPI Protocol" kind="delegation">
+        <end xmi:id="_KoRWKV-BEd-WUeygGpHW-A" role="_xrRYoD6oEd-ZIuAilhJYCA" partWithPort="_5Co8NV-AEd-WUeygGpHW-A">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KoRWKl-BEd-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KoRWK1-BEd-WUeygGpHW-A" value="1"/>
+        </end>
+        <end xmi:id="_KoRWLF-BEd-WUeygGpHW-A" role="_RKqtY17XEd-k8pRnDEw6og" partWithPort="_kOcUwF7hEd-k8pRnDEw6og">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KoRWLV-BEd-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KoRWLl-BEd-WUeygGpHW-A" value="1"/>
+        </end>
+      </ownedConnector>
+      <ownedConnector xmi:id="_8QAap1-BEd-WUeygGpHW-A" name="Application / API" kind="delegation">
+        <end xmi:id="_8QAaqF-BEd-WUeygGpHW-A" role="_Z4aKQl9_Ed-WUeygGpHW-A">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8QAaqV-BEd-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8QAaql-BEd-WUeygGpHW-A" value="1"/>
+        </end>
+        <end xmi:id="_8QAaq1-BEd-WUeygGpHW-A" role="_qevBIl9wEd-WUeygGpHW-A">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8QAarF-BEd-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8QAarV-BEd-WUeygGpHW-A" value="1"/>
+        </end>
+      </ownedConnector>
+      <ownedConnector xmi:id="_oJKLtl-CEd-WUeygGpHW-A" name="Application / Commands" kind="delegation">
+        <end xmi:id="_oJKLt1-CEd-WUeygGpHW-A" role="_Z4aKQl9_Ed-WUeygGpHW-A">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oJKLuF-CEd-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oJKLuV-CEd-WUeygGpHW-A" value="1"/>
+        </end>
+        <end xmi:id="_oJKLul-CEd-WUeygGpHW-A" role="_kvsc4l9_Ed-WUeygGpHW-A">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oJKLu1-CEd-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oJKLvF-CEd-WUeygGpHW-A" value="1"/>
+        </end>
+      </ownedConnector>
+      <ownedConnector xmi:id="_3fBidl-CEd-WUeygGpHW-A" name="Application / Communication" kind="delegation">
+        <end xmi:id="_3fBid1-CEd-WUeygGpHW-A" role="_Z4aKQl9_Ed-WUeygGpHW-A">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3fBieF-CEd-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3fBieV-CEd-WUeygGpHW-A" value="1"/>
+        </end>
+        <end xmi:id="_3fBiel-CEd-WUeygGpHW-A" role="_hb_hoF7pEd-k8pRnDEw6og">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3fBie1-CEd-WUeygGpHW-A" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3fBifF-CEd-WUeygGpHW-A" value="1"/>
+        </end>
+      </ownedConnector>
+      <nestedClassifier xmi:type="uml:Component" xmi:id="_72pogD6dEd-ZIuAilhJYCA" name="Application" clientDependency="_A4db5D6mEd-ZIuAilhJYCA"/>
+      <nestedClassifier xmi:type="uml:Component" xmi:id="_wRyW0D6gEd-ZIuAilhJYCA" name="AES1xx Library">
+        <nestedClassifier xmi:type="uml:Component" xmi:id="_1624Ij6gEd-ZIuAilhJYCA" name="API Layer" clientDependency="_DK4m8z6lEd-ZIuAilhJYCA"/>
+        <nestedClassifier xmi:type="uml:Component" xmi:id="_497Agj6gEd-ZIuAilhJYCA" name="Command Layer" clientDependency="_FY9ypD6mEd-ZIuAilhJYCA"/>
+        <nestedClassifier xmi:type="uml:Component" xmi:id="_8KN9YD6gEd-ZIuAilhJYCA" name="Communication Layer">
+          <eAnnotations xmi:id="_ckxHsD6iEd-ZIuAilhJYCA" source="http://www.topcased.org/documentation">
+            <details xmi:id="_ckxHsT6iEd-ZIuAilhJYCA" key="documentation" value="Function names are the same in the TWI and SPI driver, so that the communication layer module can link to both interchangeably."/>
+          </eAnnotations>
+          <ownedComment xmi:id="_dLNtkD6rEd-ZIuAilhJYCA" annotatedElement="_7oKjwD6hEd-ZIuAilhJYCA __voIYD6hEd-ZIuAilhJYCA">
+            <body>either TWI or SPI</body>
+          </ownedComment>
+          <nestedClassifier xmi:type="uml:Component" xmi:id="_7oKjwD6hEd-ZIuAilhJYCA" name="TWI Driver" clientDependency="_qnnalT6mEd-ZIuAilhJYCA _HCyQtF7SEd-k8pRnDEw6og"/>
+          <nestedClassifier xmi:type="uml:Component" xmi:id="__voIYD6hEd-ZIuAilhJYCA" name="SPI Driver" clientDependency="_-fQd9D6nEd-ZIuAilhJYCA _rHAs5F7SEd-k8pRnDEw6og"/>
+        </nestedClassifier>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Component" xmi:id="_m5ANEj6hEd-ZIuAilhJYCA" name="Device Driver">
+        <eAnnotations xmi:id="_h4xwQD6oEd-ZIuAilhJYCA" source="http://www.topcased.org/documentation">
+          <details xmi:id="_h4xwQT6oEd-ZIuAilhJYCA" key="documentation" value="Device driver template modules with stubbed functions. Hardware dependent actions have to be implemented inside these functions, commonly using register macros supplied by hardware dependent libraries (e.g. avr/io.h). Fully functional drivers for the Microbase board will be fully implemented."/>
+        </eAnnotations>
+        <nestedClassifier xmi:type="uml:Component" xmi:id="__YmTAj6iEd-ZIuAilhJYCA" name="Device Driver TWI">
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_SeMAM17WEd-k8pRnDEw6og" name="Driver Port TWI" clientDependency="__-AsxV7ZEd-k8pRnDEw6og" aggregation="composite"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Component" xmi:id="_CCxaQj6jEd-ZIuAilhJYCA" name="Device Driver SPI">
+          <ownedAttribute xmi:type="uml:Port" xmi:id="_xrRYoD6oEd-ZIuAilhJYCA" name="Driver Port SPI" clientDependency="_r58MZV7XEd-k8pRnDEw6og" aggregation="composite"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Component" xmi:id="_DwAYIj6jEd-ZIuAilhJYCA" name="Device Driver Template TWI"/>
+        <nestedClassifier xmi:type="uml:Component" xmi:id="_6FwuIj6nEd-ZIuAilhJYCA" name="Device Driver Template SPI"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Component" xmi:id="_6e1SQj6jEd-ZIuAilhJYCA" name="Device TWI">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_vCFXI17ZEd-k8pRnDEw6og" name="Device Port TWI" aggregation="composite"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Component" xmi:id="_8jJ6cj6jEd-ZIuAilhJYCA" name="Device SPI">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_RKqtY17XEd-k8pRnDEw6og" name="Device Port SPI" aggregation="composite"/>
+      </nestedClassifier>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_DK4m8z6lEd-ZIuAilhJYCA" name="Command Layer Calls" supplier="_497Agj6gEd-ZIuAilhJYCA" client="_1624Ij6gEd-ZIuAilhJYCA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_A4db5D6mEd-ZIuAilhJYCA" name="API Layer Calls" supplier="_wRyW0D6gEd-ZIuAilhJYCA" client="_72pogD6dEd-ZIuAilhJYCA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_FY9ypD6mEd-ZIuAilhJYCA" name="Communication Layer Calls" supplier="_8KN9YD6gEd-ZIuAilhJYCA" client="_497Agj6gEd-ZIuAilhJYCA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_qnnalT6mEd-ZIuAilhJYCA" name="TWI Device Driver" supplier="__YmTAj6iEd-ZIuAilhJYCA" client="_7oKjwD6hEd-ZIuAilhJYCA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_-fQd9D6nEd-ZIuAilhJYCA" name="SPI Driver Template" supplier="_6FwuIj6nEd-ZIuAilhJYCA" client="__voIYD6hEd-ZIuAilhJYCA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_HCyQtF7SEd-k8pRnDEw6og" name="TWI Driver Template" supplier="_DwAYIj6jEd-ZIuAilhJYCA" client="_7oKjwD6hEd-ZIuAilhJYCA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_rHAs5F7SEd-k8pRnDEw6og" name="SPI Device Driver" supplier="_CCxaQj6jEd-ZIuAilhJYCA" client="__voIYD6hEd-ZIuAilhJYCA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_r58MZV7XEd-k8pRnDEw6og" name="SPI Protocol" supplier="_RKqtY17XEd-k8pRnDEw6og" client="_xrRYoD6oEd-ZIuAilhJYCA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="__-AsxV7ZEd-k8pRnDEw6og" name="TWI Protocol" supplier="_vCFXI17ZEd-k8pRnDEw6og" client="_SeMAM17WEd-k8pRnDEw6og"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ou4-sF-sEd-WUeygGpHW-A" name="SpiPhysAvr" clientDependency="_D8ikg2IfEd-WbZsokXPaxA _djW3lGIoEd-WbZsokXPaxA">
+      <interfaceRealization xmi:id="_D8ikg2IfEd-WbZsokXPaxA" name="SPI Driver Interface" supplier="_ndHzAF-sEd-WUeygGpHW-A" client="_Ou4-sF-sEd-WUeygGpHW-A" contract="_ndHzAF-sEd-WUeygGpHW-A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_ndHzAF-sEd-WUeygGpHW-A" name="SpiPhys">
+      <ownedOperation xmi:id="_JlEIsF-tEd-WUeygGpHW-A" name="SpiEnableDeviceDriver"/>
+      <ownedOperation xmi:id="_SP_Rcl-tEd-WUeygGpHW-A" name="SpiDisableDeviceDriver"/>
+      <ownedOperation xmi:id="_HQivEl-yEd-WUeygGpHW-A" name="SpiSelectSlave"/>
+      <ownedOperation xmi:id="_J5hjgl-yEd-WUeygGpHW-A" name="SpiDeselectSlave"/>
+      <ownedOperation xmi:id="_U5wWwl-yEd-WUeygGpHW-A" name="SpiSendBytes">
+        <ownedParameter xmi:id="_JDWekF-0Ed-WUeygGpHW-A" name="count"/>
+        <ownedParameter xmi:id="_UdrM0F-0Ed-WUeygGpHW-A" name="buffer" effect="create"/>
+        <ownedParameter xmi:id="_7w9pMGIpEd-WbZsokXPaxA" name="status" type="_gSqEgGIqEd-WbZsokXPaxA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WszBsl-yEd-WUeygGpHW-A" name="SpiReceiveBytes">
+        <ownedParameter xmi:id="_zPMZQF-0Ed-WUeygGpHW-A" name="count"/>
+        <ownedParameter xmi:id="_0x13wF-0Ed-WUeygGpHW-A" name="buffer"/>
+        <ownedParameter xmi:id="_AUbNUGIqEd-WbZsokXPaxA" name="status" type="_gSqEgGIqEd-WbZsokXPaxA" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_z-ztwGIkEd-WbZsokXPaxA" name="SpiPhysTemplate" clientDependency="_4jxGtGIkEd-WbZsokXPaxA">
+      <interfaceRealization xmi:id="_4jxGtGIkEd-WbZsokXPaxA" name="SPI Driver Interface Template" supplier="_ndHzAF-sEd-WUeygGpHW-A" client="_z-ztwGIkEd-WbZsokXPaxA" contract="_ndHzAF-sEd-WUeygGpHW-A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PrJ5AGIlEd-WbZsokXPaxA" name="AES1_Spi" clientDependency="_YABSNGIlEd-WbZsokXPaxA _luhMFGIxEd-WbZsokXPaxA">
+      <interfaceRealization xmi:id="_luhMFGIxEd-WbZsokXPaxA" name="Device Driver Interface SPI" supplier="_fmtLMGIvEd-WbZsokXPaxA" client="_PrJ5AGIlEd-WbZsokXPaxA" contract="_fmtLMGIvEd-WbZsokXPaxA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_YABSNGIlEd-WbZsokXPaxA" name="SPI Hardware Dependency" supplier="_ndHzAF-sEd-WUeygGpHW-A" client="_PrJ5AGIlEd-WbZsokXPaxA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_tqkTGGIlEd-WbZsokXPaxA" name="IoLibraryAvr">
+      <ownedAttribute xmi:id="_KVjl8GIoEd-WbZsokXPaxA" name="IO Control Registers"/>
+      <ownedAttribute xmi:id="_U44awmIoEd-WbZsokXPaxA" name="IO Data Register"/>
+      <ownedAttribute xmi:type="sysML:FlowPort" xmi:id="_4TY80GIuEd-WbZsokXPaxA" name="IO Port"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_djW3lGIoEd-WbZsokXPaxA" name="IO Library Dependency" supplier="_tqkTGGIlEd-WbZsokXPaxA" client="_Ou4-sF-sEd-WUeygGpHW-A"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_7GKOIGIoEd-WbZsokXPaxA" name="TwiPhys">
+      <ownedOperation xmi:id="_D79KImIpEd-WbZsokXPaxA" name="TwiEnableDeviceDriver"/>
+      <ownedOperation xmi:id="_GCqX8GIpEd-WbZsokXPaxA" name="TwiDisableDeviceDriver"/>
+      <ownedOperation xmi:id="_Hwo8smIpEd-WbZsokXPaxA" name="TwiSendStart"/>
+      <ownedOperation xmi:id="_I1ed0GIpEd-WbZsokXPaxA" name="TwiSendStop"/>
+      <ownedOperation xmi:id="_LovPomIpEd-WbZsokXPaxA" name="TwiSendBytes">
+        <ownedParameter xmi:id="_b09moGIpEd-WbZsokXPaxA" name="count"/>
+        <ownedParameter xmi:id="_d_Ps4GIpEd-WbZsokXPaxA" name="buffer"/>
+        <ownedParameter xmi:id="_3loRMGIpEd-WbZsokXPaxA" name="status" type="_gSqEgGIqEd-WbZsokXPaxA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_nXBUkmIpEd-WbZsokXPaxA" name="TwiReceiveBytes">
+        <ownedParameter xmi:id="_pV1KoGIpEd-WbZsokXPaxA" name="count"/>
+        <ownedParameter xmi:id="_vaTOgGIpEd-WbZsokXPaxA" name="buffer" direction="out"/>
+        <ownedParameter xmi:id="_zbWCEGIpEd-WbZsokXPaxA" name="status" type="_gSqEgGIqEd-WbZsokXPaxA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_LEHDImIqEd-WbZsokXPaxA" name="TwiWaitForReady">
+        <ownedParameter xmi:id="_NhBxgGIqEd-WbZsokXPaxA" name="status" type="_gSqEgGIqEd-WbZsokXPaxA" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_gSqEgGIqEd-WbZsokXPaxA" name="AES1_Status">
+      <ownedLiteral xmi:id="_7vDIMGIqEd-WbZsokXPaxA" name="AES1_STATUS_SUCCESS"/>
+      <ownedLiteral xmi:id="_ZEv24GIrEd-WbZsokXPaxA" name="AES1_STATUS_BAD_CRC_TX"/>
+      <ownedLiteral xmi:id="_bdoZ0mIrEd-WbZsokXPaxA" name="AES1_STATUS_COMM_FAIL"/>
+      <ownedLiteral xmi:id="_gOzp0mIrEd-WbZsokXPaxA" name="AES1_STATUS_BAD_PARAM"/>
+      <ownedLiteral xmi:id="_kVOFkmIrEd-WbZsokXPaxA" name="AES1_STATUS_TIMEOUT"/>
+      <ownedLiteral xmi:id="_miVdYmIrEd-WbZsokXPaxA" name="AES1_STATUS_HW_FAIL"/>
+      <ownedLiteral xmi:id="_ofNZwmIrEd-WbZsokXPaxA" name="AES1_STATUS_INVALID_ID"/>
+      <ownedLiteral xmi:id="_qU6-MmIrEd-WbZsokXPaxA" name="AES1_STATUS_PARSE_ERROR"/>
+      <ownedLiteral xmi:id="_s1Q0AmIrEd-WbZsokXPaxA" name="AES1_STATUS_SIZE_TOO_SMALL"/>
+      <ownedLiteral xmi:id="_vWVpomIrEd-WbZsokXPaxA" name="AES1_STATUS_SIZE_TOO_LARGE"/>
+      <ownedLiteral xmi:id="_xEKdYmIrEd-WbZsokXPaxA" name="AES1_STATUS_BAD_CRC_RX"/>
+      <ownedLiteral xmi:id="_zEKmQmIrEd-WbZsokXPaxA" name="AES1_STATUS_CMD_ERROR"/>
+      <ownedLiteral xmi:id="_05lPwmIrEd-WbZsokXPaxA" name="AES1_STATUS_RESPONSE_ERROR"/>
+      <ownedLiteral xmi:id="_24P74mIrEd-WbZsokXPaxA" name="AES1_STATUS_ERROR_BIT"/>
+      <ownedLiteral xmi:id="_5nfJUmIrEd-WbZsokXPaxA" name="AES_STATUS_SPI_BUSY"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MbpL6GIsEd-WbZsokXPaxA" name="TwiPhysAvr" clientDependency="_ce7pVGIsEd-WbZsokXPaxA _Lajs5GItEd-WbZsokXPaxA">
+      <interfaceRealization xmi:id="_ce7pVGIsEd-WbZsokXPaxA" name="TWI Driver Interface" supplier="_7GKOIGIoEd-WbZsokXPaxA" client="_MbpL6GIsEd-WbZsokXPaxA" contract="_7GKOIGIoEd-WbZsokXPaxA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_O2BjqGIsEd-WbZsokXPaxA" name="TwiPhysTemplate" clientDependency="_Y2oF5WIsEd-WbZsokXPaxA">
+      <interfaceRealization xmi:id="_Y2oF5WIsEd-WbZsokXPaxA" name="TWI Driver Interface Template" supplier="_7GKOIGIoEd-WbZsokXPaxA" client="_O2BjqGIsEd-WbZsokXPaxA" contract="_7GKOIGIoEd-WbZsokXPaxA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_Lajs5GItEd-WbZsokXPaxA" name="IO Library Dependency" supplier="_tqkTGGIlEd-WbZsokXPaxA" client="_MbpL6GIsEd-WbZsokXPaxA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="__5UMYGIuEd-WbZsokXPaxA" name="AES1_Twi" clientDependency="_KuXqZWIvEd-WbZsokXPaxA _uMeP02IxEd-WbZsokXPaxA">
+      <interfaceRealization xmi:id="_uMeP02IxEd-WbZsokXPaxA" name="Device Driver Interface TWI" supplier="_fmtLMGIvEd-WbZsokXPaxA" client="__5UMYGIuEd-WbZsokXPaxA" contract="_fmtLMGIvEd-WbZsokXPaxA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_KuXqZWIvEd-WbZsokXPaxA" name="TWI Hardware Dependency" supplier="_7GKOIGIoEd-WbZsokXPaxA" client="__5UMYGIuEd-WbZsokXPaxA"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_fmtLMGIvEd-WbZsokXPaxA" name="Device Driver Interface">
+      <ownedOperation xmi:id="_nbYocmIvEd-WbZsokXPaxA" name="AES1P_EnableDeviceDriver"/>
+      <ownedOperation xmi:id="_o81NEGIvEd-WbZsokXPaxA" name="AES1P_DisableDeviceDriver"/>
+      <ownedOperation xmi:id="__nm74mIvEd-WbZsokXPaxA" name="AES1P_ReadStatus">
+        <ownedParameter xmi:id="_IBZRUGIwEd-WbZsokXPaxA" name="deviceStatus" direction="out"/>
+        <ownedParameter xmi:id="_LmRtUGIwEd-WbZsokXPaxA" name="Parameter1" type="_gSqEgGIqEd-WbZsokXPaxA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_QSFVImIwEd-WbZsokXPaxA" name="AES1P_WaitForStatusBit">
+        <ownedParameter xmi:id="_fr8bEGIwEd-WbZsokXPaxA" name="mask"/>
+        <ownedParameter xmi:id="_kYqB0GIwEd-WbZsokXPaxA" name="isSet"/>
+        <ownedParameter xmi:id="_l1MRQGIwEd-WbZsokXPaxA" name="status" type="_gSqEgGIqEd-WbZsokXPaxA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_tj6QcmIwEd-WbZsokXPaxA" name="AES1P_ReadMemory">
+        <ownedParameter xmi:id="_wXnuMGIwEd-WbZsokXPaxA" name="count"/>
+        <ownedParameter xmi:id="_yxGHAGIwEd-WbZsokXPaxA" name="addressHigh"/>
+        <ownedParameter xmi:id="_0LscwGIwEd-WbZsokXPaxA" name="addressLow"/>
+        <ownedParameter xmi:id="_6ZZ8MGIwEd-WbZsokXPaxA" name="buffer" direction="out"/>
+        <ownedParameter xmi:id="_78DasGIwEd-WbZsokXPaxA" name="status" type="_gSqEgGIqEd-WbZsokXPaxA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_LGtnAmIxEd-WbZsokXPaxA" name="AES1P_WriteMemory">
+        <ownedParameter xmi:id="_OubUkGIxEd-WbZsokXPaxA" name="count"/>
+        <ownedParameter xmi:id="_QAFwwGIxEd-WbZsokXPaxA" name="addressHigh"/>
+        <ownedParameter xmi:id="_RgDHoGIxEd-WbZsokXPaxA" name="addressLow"/>
+        <ownedParameter xmi:id="_S6gTcGIxEd-WbZsokXPaxA" name="buffer"/>
+        <ownedParameter xmi:id="_Vd0kwGIxEd-WbZsokXPaxA" name="status" type="_gSqEgGIqEd-WbZsokXPaxA" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Lt8JoWIyEd-WbZsokXPaxA" name="AES1_Comm" clientDependency="_uTVThWI2Ed-WbZsokXPaxA">
+      <ownedAttribute xmi:id="_fNncIGI3Ed-WbZsokXPaxA" name="appendCrc" visibility="private">
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_u8V-0GI3Ed-WbZsokXPaxA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_xr35cGIyEd-WbZsokXPaxA" name="AES1C_SetOptions">
+        <ownedParameter xmi:id="_z4_RQGIyEd-WbZsokXPaxA" name="options" type="_dWQEIGIyEd-WbZsokXPaxA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_--lFomIyEd-WbZsokXPaxA" name="AES1C_ResetIoAddress">
+        <ownedParameter xmi:id="_Fu3GoGIzEd-WbZsokXPaxA" name="status" type="_gSqEgGIqEd-WbZsokXPaxA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_LeLZ4mIzEd-WbZsokXPaxA" name="AES1C_CalculateCrc">
+        <ownedParameter xmi:id="_NZtScGIzEd-WbZsokXPaxA" name="length"/>
+        <ownedParameter xmi:id="_OrXHkGIzEd-WbZsokXPaxA" name="buffer"/>
+        <ownedParameter xmi:id="_P2Kt0GIzEd-WbZsokXPaxA" name="crc" direction="out"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WaO3wmIzEd-WbZsokXPaxA" name="AES1C_SendCommand">
+        <eAnnotations xmi:id="_niAJoGI2Ed-WbZsokXPaxA" source="http://www.topcased.org/documentation">
+          <details xmi:id="_niAJoWI2Ed-WbZsokXPaxA" key="documentation" value="count = buffer[0]&#xD;&#xA;"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_dWll4GIzEd-WbZsokXPaxA" name="buffer"/>
+        <ownedParameter xmi:id="_QERT4GI2Ed-WbZsokXPaxA" name="status" type="_gSqEgGIqEd-WbZsokXPaxA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_X8ulQGIzEd-WbZsokXPaxA" name="AES1C_ReceiveResponse">
+        <ownedParameter xmi:id="_ZuOQsGI2Ed-WbZsokXPaxA" name="count"/>
+        <ownedParameter xmi:id="_a_SP8GI2Ed-WbZsokXPaxA" name="buffer" direction="out"/>
+        <ownedParameter xmi:id="_dasicGI2Ed-WbZsokXPaxA" name="status" type="_gSqEgGIqEd-WbZsokXPaxA" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_dWQEIGIyEd-WbZsokXPaxA" name="AES1C_Options" clientDependency="_LJ4oFGI3Ed-WbZsokXPaxA">
+      <ownedAttribute xmi:id="_l5uhEmIyEd-WbZsokXPaxA" name="appendCrc"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_uTVThWI2Ed-WbZsokXPaxA" name="Device Driver Dependency" supplier="_fmtLMGIvEd-WbZsokXPaxA" client="_Lt8JoWIyEd-WbZsokXPaxA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_LJ4oFGI3Ed-WbZsokXPaxA" name="CommOptions" supplier="_Lt8JoWIyEd-WbZsokXPaxA" client="_dWQEIGIyEd-WbZsokXPaxA"/>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_3EokEGLFEd-pR8SLuHe1Gg" name="ReadStatusSpi">
+      <region xmi:id="_3EokEWLFEd-pR8SLuHe1Gg" name="Read Status">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_ACTpsGLGEd-pR8SLuHe1Gg" name="ReadStatusSpi"/>
+        <subvertex xmi:type="uml:State" xmi:id="_NbjiwGLGEd-pR8SLuHe1Gg" name="Chip Selected"/>
+        <subvertex xmi:type="uml:State" xmi:id="_66HycGLGEd-pR8SLuHe1Gg" name="Sending RDSR Command"/>
+        <subvertex xmi:type="uml:State" xmi:id="_mQ8SgGLHEd-pR8SLuHe1Gg" name="Receiving Status" visibility="public"/>
+        <subvertex xmi:type="uml:State" xmi:id="_6amvcGLHEd-pR8SLuHe1Gg" name="Decrementing Retry Counter"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_YpxcwGLIEd-pR8SLuHe1Gg" name="SPI Status" visibility="public" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_mcpWwGLIEd-pR8SLuHe1Gg" name="Creating Return Value" visibility="public">
+          <exit xmi:type="uml:OpaqueBehavior" xmi:id="_dgOuAGLLEd-pR8SLuHe1Gg" name="CreateReturnValue">
+            <body>if (deviceStatus == BUSY) return success; else return SPI_Status | (deviceStatus &amp; AES1_STATUS_ERROR_BIT)</body>
+          </exit>
+        </subvertex>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_iEgm8GLKEd-pR8SLuHe1Gg" name="ReadStatusReturnSuccess" visibility="public"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_twFdQmLKEd-pR8SLuHe1Gg" name="ReadStatusReturnFail"/>
+        <subvertex xmi:type="uml:State" xmi:id="_XakscmLNEd-pR8SLuHe1Gg" name="Chip Not Selected"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_xGuhkGLNEd-pR8SLuHe1Gg" name="Retries" kind="junction"/>
+        <transition xmi:id="_MDHTtWLHEd-pR8SLuHe1Gg" name="send RDSR command" visibility="public" kind="local" source="_NbjiwGLGEd-pR8SLuHe1Gg" target="_66HycGLGEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_pqMtVWLHEd-pR8SLuHe1Gg" name="receive status" visibility="public" kind="local" source="_66HycGLGEd-pR8SLuHe1Gg" target="_mQ8SgGLHEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_Am0aFWLIEd-pR8SLuHe1Gg" name="retry counter > 0" visibility="public" kind="local" source="_YpxcwGLIEd-pR8SLuHe1Gg" target="_6amvcGLHEd-pR8SLuHe1Gg">
+          <trigger xmi:id="_mWdZwGLJEd-pR8SLuHe1Gg" name="Read Status Failed" event="_qu5ZoGLJEd-pR8SLuHe1Gg"/>
+        </transition>
+        <transition xmi:id="_fzhttGLIEd-pR8SLuHe1Gg" name="check SPI status" visibility="public" kind="local" source="_XakscmLNEd-pR8SLuHe1Gg" target="_YpxcwGLIEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_-pul1WLIEd-pR8SLuHe1Gg" name="create return value" kind="local" source="_YpxcwGLIEd-pR8SLuHe1Gg" target="_mcpWwGLIEd-pR8SLuHe1Gg">
+          <trigger xmi:id="_HNxqgGLJEd-pR8SLuHe1Gg" name="SPI Read" event="_XYMDoGLJEd-pR8SLuHe1Gg"/>
+        </transition>
+        <transition xmi:id="_wM1zk2LKEd-pR8SLuHe1Gg" name="NoRetriesLeft" visibility="public" kind="local" source="_6amvcGLHEd-pR8SLuHe1Gg" target="_twFdQmLKEd-pR8SLuHe1Gg">
+          <trigger xmi:id="_4QHGcGLKEd-pR8SLuHe1Gg" name="no retries left" event="_6r-E4GLKEd-pR8SLuHe1Gg"/>
+        </transition>
+        <transition xmi:id="_HWIDVWLLEd-pR8SLuHe1Gg" name="return success" kind="local" source="_mcpWwGLIEd-pR8SLuHe1Gg" target="_iEgm8GLKEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_deTJdGLNEd-pR8SLuHe1Gg" name="set CS\ high" visibility="public" kind="local" source="_mQ8SgGLHEd-pR8SLuHe1Gg" target="_XakscmLNEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_za_qRGLNEd-pR8SLuHe1Gg" name="enter function" kind="local" source="_ACTpsGLGEd-pR8SLuHe1Gg" target="_xGuhkGLNEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_5k95NGLNEd-pR8SLuHe1Gg" name="set CS\ low" kind="local" source="_xGuhkGLNEd-pR8SLuHe1Gg" target="_NbjiwGLGEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_-cisJGLNEd-pR8SLuHe1Gg" name="retries left" kind="local" source="_6amvcGLHEd-pR8SLuHe1Gg" target="_xGuhkGLNEd-pR8SLuHe1Gg"/>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_XYMDoGLJEd-pR8SLuHe1Gg" name="reading status succeeded"/>
+    <packagedElement xmi:type="uml:ExecutionEvent" xmi:id="_qu5ZoGLJEd-pR8SLuHe1Gg" name="reading status failed"/>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_B2PvsGLKEd-pR8SLuHe1Gg" name="retries left"/>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_6r-E4GLKEd-pR8SLuHe1Gg" name="no retries left"/>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_YkMDEGLREd-pR8SLuHe1Gg" name="WaitForStatusBit">
+      <eAnnotations xmi:id="_-vQLwGLYEd-pR8SLuHe1Gg" source="http://www.topcased.org/documentation">
+        <details xmi:id="_-vQLwWLYEd-pR8SLuHe1Gg" key="documentation" value="Reads the device status a number of retries until it is not 0xFF (upper retry loop).&#xD;&#xA;Then reads the status for a number of retries until a bit in the mask parameter is either set or reset (second parameter)."/>
+      </eAnnotations>
+      <region xmi:id="_YkMDEWLREd-pR8SLuHe1Gg" name="Wait For Status Bit">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_gK2ScWLREd-pR8SLuHe1Gg" name="WaitForStatusBitSpi"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_qu5gAGLREd-pR8SLuHe1Gg" name="WaitForStatusRetry" kind="junction"/>
+        <subvertex xmi:type="uml:State" xmi:id="_FNQ1MGLSEd-pR8SLuHe1Gg" name="Reading Status"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_P5g8gmLSEd-pR8SLuHe1Gg" name="Reading Status Failed"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_a_iOsGLSEd-pR8SLuHe1Gg" name="Checking Status" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_3GpqYGLSEd-pR8SLuHe1Gg" name="Decrementing Retry Count"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_J2PgkGLUEd-pR8SLuHe1Gg" name="WaitForBitRetry" kind="junction"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_cpCRMGLUEd-pR8SLuHe1Gg" name="Check Bit Set" kind="choice"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_rs0ZcGLUEd-pR8SLuHe1Gg" name="Wait For Bit Set" kind="choice"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_y2a5YGLUEd-pR8SLuHe1Gg" name="Wait For Bit Not Set" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_dPZ4MGLVEd-pR8SLuHe1Gg" name="Reading Status">
+          <eAnnotations xmi:id="_le5CIGLVEd-pR8SLuHe1Gg" source="http://www.topcased.org/documentation">
+            <details xmi:id="_le5CIWLVEd-pR8SLuHe1Gg" key="documentation" value="We don't check for a ReadStatus error, because it succeeded in the loop above."/>
+          </eAnnotations>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_rLD6wGLVEd-pR8SLuHe1Gg" name="Decrementing Retry Count"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_lSq5ImLXEd-pR8SLuHe1Gg" name="BitGotReset"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_EOZKcmLYEd-pR8SLuHe1Gg" name="BitGotSet"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_X-a_YGLYEd-pR8SLuHe1Gg" name="no retries"/>
+        <transition xmi:id="_-A1DtmLREd-pR8SLuHe1Gg" name="set retry count" kind="local" source="_gK2ScWLREd-pR8SLuHe1Gg" target="_qu5gAGLREd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_IL_3NWLSEd-pR8SLuHe1Gg" name="read status" kind="local" source="_qu5gAGLREd-pR8SLuHe1Gg" target="_FNQ1MGLSEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_VzPwBWLSEd-pR8SLuHe1Gg" name="failed" kind="local" source="_FNQ1MGLSEd-pR8SLuHe1Gg" target="_X-a_YGLYEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_idspZWLSEd-pR8SLuHe1Gg" name="check status" kind="local" source="_FNQ1MGLSEd-pR8SLuHe1Gg" target="_a_iOsGLSEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_nTCntGLSEd-pR8SLuHe1Gg" name="waking up" kind="local" source="_a_iOsGLSEd-pR8SLuHe1Gg" target="_3GpqYGLSEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_X_1t9GLTEd-pR8SLuHe1Gg" name="no retries" kind="local" source="_3GpqYGLSEd-pR8SLuHe1Gg" target="_P5g8gmLSEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_ozFBpGLTEd-pR8SLuHe1Gg" name="retries left" kind="local" source="_3GpqYGLSEd-pR8SLuHe1Gg" target="_qu5gAGLREd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_TgxsNWLUEd-pR8SLuHe1Gg" name="awake" kind="local" source="_a_iOsGLSEd-pR8SLuHe1Gg" target="_J2PgkGLUEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_wBON5mLUEd-pR8SLuHe1Gg" name="true" kind="local" source="_cpCRMGLUEd-pR8SLuHe1Gg" target="_rs0ZcGLUEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_1jHwNGLUEd-pR8SLuHe1Gg" name="false" kind="local" source="_cpCRMGLUEd-pR8SLuHe1Gg" target="_y2a5YGLUEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_uxIplmLVEd-pR8SLuHe1Gg" name="decrement retry count" kind="local" source="_dPZ4MGLVEd-pR8SLuHe1Gg" target="_rLD6wGLVEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_Hcnr5GLWEd-pR8SLuHe1Gg" name="retries left" kind="local" source="_rLD6wGLVEd-pR8SLuHe1Gg" target="_J2PgkGLUEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_Yns31GLWEd-pR8SLuHe1Gg" name="bit is set" kind="local" source="_y2a5YGLUEd-pR8SLuHe1Gg" target="_dPZ4MGLVEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_87LQ9GLWEd-pR8SLuHe1Gg" name="wait for bit" kind="local" source="_J2PgkGLUEd-pR8SLuHe1Gg" target="_cpCRMGLUEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_MJsChGLXEd-pR8SLuHe1Gg" name="bit is not set" kind="local" source="_rs0ZcGLUEd-pR8SLuHe1Gg" target="_dPZ4MGLVEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_rrs3xWLXEd-pR8SLuHe1Gg" name="bit got reset" kind="local" source="_y2a5YGLUEd-pR8SLuHe1Gg" target="_lSq5ImLXEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_LztWBWLYEd-pR8SLuHe1Gg" name="bit got set" kind="local" source="_rs0ZcGLUEd-pR8SLuHe1Gg" target="_EOZKcmLYEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_aFRXJWLYEd-pR8SLuHe1Gg" name="no retries" kind="local" source="_rLD6wGLVEd-pR8SLuHe1Gg" target="_X-a_YGLYEd-pR8SLuHe1Gg"/>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_wklVAGNVEd-pR8SLuHe1Gg" name="WriteMemorySpi">
+      <region xmi:id="_wklVAWNVEd-pR8SLuHe1Gg" name="Write Memory">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_A0FpgWNWEd-pR8SLuHe1Gg" name="WriteMemorySpi"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_r8-bQGNWEd-pR8SLuHe1Gg" name="Checking Address" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_BGvqUGNXEd-pR8SLuHe1Gg" name="Setting Max Count" visibility="public">
+          <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_zlw8IGNXEd-pR8SLuHe1Gg" name="max count = 64"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="__cOz0GNXEd-pR8SLuHe1Gg" name="Setting Max Count">
+          <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_BjrogGNYEd-pR8SLuHe1Gg" name="max count = 32"/>
+        </subvertex>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_PWnXcGNZEd-pR8SLuHe1Gg" name="Max Count Set" kind="junction"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_nIUSEGNZEd-pR8SLuHe1Gg" name="Checking Arguments" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_yc9PEmNZEd-pR8SLuHe1Gg" name="Invalid Arguments"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_w_5JQGNbEd-pR8SLuHe1Gg" name="Waiting For Device Ready" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_odf08GNcEd-pR8SLuHe1Gg" name="Timeout"/>
+        <subvertex xmi:type="uml:State" xmi:id="_JG8aEGNiEd-pR8SLuHe1Gg" name="Enabling Write">
+          <eAnnotations xmi:id="_wkjd0GNrEd-pR8SLuHe1Gg" source="http://www.topcased.org/documentation">
+            <details xmi:id="_wkjd0WNrEd-pR8SLuHe1Gg" key="documentation" value="We don't need to enable write when writing to I/O, but an if condition would increase code space.&#xD;&#xA;"/>
+          </eAnnotations>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_w5U4IGNkEd-pR8SLuHe1Gg" name="Sending Bytes"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_I3KKQmNlEd-pR8SLuHe1Gg" name="Success"/>
+        <transition xmi:id="_1KnPhmNWEd-pR8SLuHe1Gg" name="check address" kind="local" source="_A0FpgWNWEd-pR8SLuHe1Gg" target="_r8-bQGNWEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_J3za1GNYEd-pR8SLuHe1Gg" name="IO Address" kind="local" source="_r8-bQGNWEd-pR8SLuHe1Gg" target="_BGvqUGNXEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_OmJZRWNYEd-pR8SLuHe1Gg" name="Memory Address" visibility="public" kind="local" source="_r8-bQGNWEd-pR8SLuHe1Gg" target="__cOz0GNXEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_V_AAtWNZEd-pR8SLuHe1Gg" name="Max Count IO Address" kind="local" source="_BGvqUGNXEd-pR8SLuHe1Gg" target="_PWnXcGNZEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_dSmKJGNZEd-pR8SLuHe1Gg" name="Max Count Memory Address" kind="local" source="__cOz0GNXEd-pR8SLuHe1Gg" target="_PWnXcGNZEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_rjvUhGNZEd-pR8SLuHe1Gg" name="check arguments" kind="local" source="_PWnXcGNZEd-pR8SLuHe1Gg" target="_nIUSEGNZEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_3k71hWNZEd-pR8SLuHe1Gg" name="Invalid Arguments" kind="local" source="_nIUSEGNZEd-pR8SLuHe1Gg" target="_yc9PEmNZEd-pR8SLuHe1Gg">
+          <trigger xmi:id="_pnDI4GNaEd-pR8SLuHe1Gg" name="Invalid Arguments" event="_xxezsGNaEd-pR8SLuHe1Gg"/>
+        </transition>
+        <transition xmi:id="_CsYZJWNcEd-pR8SLuHe1Gg" name="wait for ready" kind="local" source="_nIUSEGNZEd-pR8SLuHe1Gg" target="_w_5JQGNbEd-pR8SLuHe1Gg">
+          <trigger xmi:id="_ceYXkGNcEd-pR8SLuHe1Gg" name="Valid Arguments" event="_hq1OUGNcEd-pR8SLuHe1Gg"/>
+        </transition>
+        <transition xmi:id="_sEBPtWNcEd-pR8SLuHe1Gg" name="Timeout" kind="local" source="_w_5JQGNbEd-pR8SLuHe1Gg" target="_odf08GNcEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_R-iF1WNiEd-pR8SLuHe1Gg" name="set CS\ low" kind="local" source="_w_5JQGNbEd-pR8SLuHe1Gg" target="_JG8aEGNiEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_1BHM5GNkEd-pR8SLuHe1Gg" name="toggle CS\" kind="local" source="_JG8aEGNiEd-pR8SLuHe1Gg" target="_w5U4IGNkEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_UhoNVWNlEd-pR8SLuHe1Gg" name="set CS\ high" kind="local" source="_w5U4IGNkEd-pR8SLuHe1Gg" target="_I3KKQmNlEd-pR8SLuHe1Gg"/>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_xxezsGNaEd-pR8SLuHe1Gg" name="count == 0 || count > maxCount"/>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_hq1OUGNcEd-pR8SLuHe1Gg" name="count > 0 &amp;&amp; count &lt;= maxCount"/>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_6oKfgGNlEd-pR8SLuHe1Gg" name="ReadMemorySpi">
+      <region xmi:id="_cEOxMGNnEd-pR8SLuHe1Gg" name="Read Memory">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_cEOxMWNnEd-pR8SLuHe1Gg" name="ReadMemorySpi"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_cEOxMmNnEd-pR8SLuHe1Gg" name="Checking Address" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_cEOxM2NnEd-pR8SLuHe1Gg" name="Setting Max Count" visibility="public">
+          <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_cEOxNGNnEd-pR8SLuHe1Gg" name="max count = 64"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_cEOxNWNnEd-pR8SLuHe1Gg" name="Setting Max Count">
+          <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_cEOxNmNnEd-pR8SLuHe1Gg" name="max count = 32"/>
+        </subvertex>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_cEOxN2NnEd-pR8SLuHe1Gg" name="Max Count Set" kind="junction"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_cEOxOGNnEd-pR8SLuHe1Gg" name="Checking Arguments" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_cEOxOWNnEd-pR8SLuHe1Gg" name="Invalid Arguments"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_cEOxOmNnEd-pR8SLuHe1Gg" name="Waiting For Device Ready" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_cEOxO2NnEd-pR8SLuHe1Gg" name="Timeout"/>
+        <subvertex xmi:type="uml:State" xmi:id="_cEOxPWNnEd-pR8SLuHe1Gg" name="Sending Bytes"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_cEOxPmNnEd-pR8SLuHe1Gg" name="Success"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_Yr38AGNsEd-pR8SLuHe1Gg" name="Checking Address" kind="choice"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_fTAgsGNvEd-pR8SLuHe1Gg" name="Waiting For Response Ready" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_VAtVAGNwEd-pR8SLuHe1Gg" name="Timeout"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_2mNE8GNwEd-pR8SLuHe1Gg" name="Reading Memory" kind="junction"/>
+        <subvertex xmi:type="uml:State" xmi:id="_4hURUGNxEd-pR8SLuHe1Gg" name="Receiving Bytes"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_jdF0ImNyEd-pR8SLuHe1Gg" name="Return Read Status"/>
+        <transition xmi:id="_cEOxP2NnEd-pR8SLuHe1Gg" name="check address" kind="local" source="_cEOxMWNnEd-pR8SLuHe1Gg" target="_cEOxMmNnEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_cEOxQGNnEd-pR8SLuHe1Gg" name="IO Address" kind="local" source="_cEOxMmNnEd-pR8SLuHe1Gg" target="_cEOxM2NnEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_cEOxQWNnEd-pR8SLuHe1Gg" name="Memory Address" visibility="public" kind="local" source="_cEOxMmNnEd-pR8SLuHe1Gg" target="_cEOxNWNnEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_cEOxQmNnEd-pR8SLuHe1Gg" name="Max Count IO Address" kind="local" source="_cEOxM2NnEd-pR8SLuHe1Gg" target="_cEOxN2NnEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_cEOxQ2NnEd-pR8SLuHe1Gg" name="Max Count Memory Address" kind="local" source="_cEOxNWNnEd-pR8SLuHe1Gg" target="_cEOxN2NnEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_cEOxRGNnEd-pR8SLuHe1Gg" name="check arguments" kind="local" source="_cEOxN2NnEd-pR8SLuHe1Gg" target="_cEOxOGNnEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_cEOxRWNnEd-pR8SLuHe1Gg" name="Invalid Arguments" kind="local" source="_cEOxOGNnEd-pR8SLuHe1Gg" target="_cEOxOWNnEd-pR8SLuHe1Gg">
+          <trigger xmi:id="_cEOxRmNnEd-pR8SLuHe1Gg" name="Invalid Arguments" event="_xxezsGNaEd-pR8SLuHe1Gg"/>
+        </transition>
+        <transition xmi:id="_cEOxR2NnEd-pR8SLuHe1Gg" name="Memory Address" kind="local" source="_Yr38AGNsEd-pR8SLuHe1Gg" target="_cEOxOmNnEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_cEOxSWNnEd-pR8SLuHe1Gg" name="Timeout" kind="local" source="_cEOxOmNnEd-pR8SLuHe1Gg" target="_cEOxO2NnEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_rOTVZWNsEd-pR8SLuHe1Gg" name="check address" kind="local" source="_cEOxOGNnEd-pR8SLuHe1Gg" target="_Yr38AGNsEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_pD9dZWNvEd-pR8SLuHe1Gg" name="IO Address" kind="local" source="_Yr38AGNsEd-pR8SLuHe1Gg" target="_fTAgsGNvEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_aI-2ZWNwEd-pR8SLuHe1Gg" name="Timeout" kind="local" source="_fTAgsGNvEd-pR8SLuHe1Gg" target="_VAtVAGNwEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_8c0TBWNwEd-pR8SLuHe1Gg" name="read response" kind="local" source="_fTAgsGNvEd-pR8SLuHe1Gg" target="_2mNE8GNwEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_Ho0RZGNxEd-pR8SLuHe1Gg" name="read response" kind="local" source="_cEOxOmNnEd-pR8SLuHe1Gg" target="_2mNE8GNwEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_xQ_eVGNxEd-pR8SLuHe1Gg" name="set CS\ low" kind="local" source="_2mNE8GNwEd-pR8SLuHe1Gg" target="_cEOxPWNnEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_9LycZWNxEd-pR8SLuHe1Gg" name="receive bytes" kind="local" source="_cEOxPWNnEd-pR8SLuHe1Gg" target="_4hURUGNxEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_stQ_BGNyEd-pR8SLuHe1Gg" name="set CS\ high" kind="local" source="_4hURUGNxEd-pR8SLuHe1Gg" target="_jdF0ImNyEd-pR8SLuHe1Gg"/>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_VMsuUGOLEd-pR8SLuHe1Gg" name="SendCommand">
+      <region xmi:id="_VMsuUWOLEd-pR8SLuHe1Gg" name="Region">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_iAmeoGOLEd-pR8SLuHe1Gg" name="SendCommand"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_oycJYGOMEd-pR8SLuHe1Gg" name="Checking Byte Count" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_wvyacmOMEd-pR8SLuHe1Gg" name="Invalid Argument"/>
+        <subvertex xmi:type="uml:State" xmi:id="_R6EOAGONEd-pR8SLuHe1Gg" name="Resetting IO Address"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_gErSkmONEd-pR8SLuHe1Gg" name="Reset Failed"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_EDr3kGOOEd-pR8SLuHe1Gg" name="Checking appendCrc flag" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_NKK68GOOEd-pR8SLuHe1Gg" name="Appending CRC"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_tymlsGOOEd-pR8SLuHe1Gg" name="Retry Loop" kind="junction"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_BcRT8GOPEd-pR8SLuHe1Gg" name="Checking Retry Count" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_HDsPcmOPEd-pR8SLuHe1Gg" name="no retries left"/>
+        <subvertex xmi:type="uml:State" xmi:id="_gDLy4GOPEd-pR8SLuHe1Gg" name="Sending Command"/>
+        <subvertex xmi:type="uml:State" xmi:id="_xBfHEGOPEd-pR8SLuHe1Gg" name="Reading Status"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_MzDwkGOQEd-pR8SLuHe1Gg" name="Checking Status" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_gKZYsmOQEd-pR8SLuHe1Gg" name="Success"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_yN1wAGOQEd-pR8SLuHe1Gg" name="Checking CRC Error" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_Txo6AGOVEd-pR8SLuHe1Gg" name="Timeout"/>
+        <transition xmi:id="_53e-wGOMEd-pR8SLuHe1Gg" name="count > 64" kind="local" source="_oycJYGOMEd-pR8SLuHe1Gg" target="_wvyacmOMEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_-vX6xWOMEd-pR8SLuHe1Gg" name="set retry count" kind="local" source="_iAmeoGOLEd-pR8SLuHe1Gg" target="_oycJYGOMEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_Vf_y5WONEd-pR8SLuHe1Gg" name="reset IO address" kind="local" source="_oycJYGOMEd-pR8SLuHe1Gg" target="_R6EOAGONEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_j1eqtWONEd-pR8SLuHe1Gg" name="failed" kind="local" source="_R6EOAGONEd-pR8SLuHe1Gg" target="_gErSkmONEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_PgOzZGOOEd-pR8SLuHe1Gg" name="append CRC" kind="local" source="_EDr3kGOOEd-pR8SLuHe1Gg" target="_NKK68GOOEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_T_FkVGOOEd-pR8SLuHe1Gg" name="check appendCrc flag" kind="local" source="_R6EOAGONEd-pR8SLuHe1Gg" target="_EDr3kGOOEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_ygzaNWOOEd-pR8SLuHe1Gg" name="do not append CRC" kind="local" source="_EDr3kGOOEd-pR8SLuHe1Gg" target="_tymlsGOOEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_32CZhGOOEd-pR8SLuHe1Gg" name="set retries" kind="local" source="_NKK68GOOEd-pR8SLuHe1Gg" target="_tymlsGOOEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_I9u6RWOPEd-pR8SLuHe1Gg" name="decrement retry count" kind="local" source="_yN1wAGOQEd-pR8SLuHe1Gg" target="_BcRT8GOPEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_Owne5WOPEd-pR8SLuHe1Gg" name="no retries left" kind="local" source="_BcRT8GOPEd-pR8SLuHe1Gg" target="_HDsPcmOPEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_AgucRmOQEd-pR8SLuHe1Gg" name="read status" kind="local" source="_gDLy4GOPEd-pR8SLuHe1Gg" target="_xBfHEGOPEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_jaIEFmOQEd-pR8SLuHe1Gg" name="busy" kind="local" source="_MzDwkGOQEd-pR8SLuHe1Gg" target="_gKZYsmOQEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_1GeKBWOQEd-pR8SLuHe1Gg" name="check CRC error" kind="local" source="_MzDwkGOQEd-pR8SLuHe1Gg" target="_yN1wAGOQEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_6NQdpGOQEd-pR8SLuHe1Gg" name="check status" kind="local" source="_xBfHEGOPEd-pR8SLuHe1Gg" target="_MzDwkGOQEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_-YSTpGOQEd-pR8SLuHe1Gg" name="send command" kind="local" source="_tymlsGOOEd-pR8SLuHe1Gg" target="_gDLy4GOPEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_XHHdhGOUEd-pR8SLuHe1Gg" name="retry" kind="local" source="_BcRT8GOPEd-pR8SLuHe1Gg" target="_tymlsGOOEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_X7x_NWOVEd-pR8SLuHe1Gg" name="timeout or invalid arguments" kind="local" source="_gDLy4GOPEd-pR8SLuHe1Gg" target="_Txo6AGOVEd-pR8SLuHe1Gg"/>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_4RnooGOWEd-pR8SLuHe1Gg" name="ReceiveResponse">
+      <region xmi:id="_4RnooWOWEd-pR8SLuHe1Gg" name="Region">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_8N5Q8GOWEd-pR8SLuHe1Gg" name="ReceiveResponse"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_TBQXMGObEd-pR8SLuHe1Gg" name="Checking Byte Count" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_iufsImObEd-pR8SLuHe1Gg" name="Invalid Argument"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_9QWaMGObEd-pR8SLuHe1Gg" name="Retry Loop" kind="junction"/>
+        <subvertex xmi:type="uml:State" xmi:id="_i1aXAGOcEd-pR8SLuHe1Gg" name="Reading Response"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_vYbysmOcEd-pR8SLuHe1Gg" name="Read Failed"/>
+        <subvertex xmi:type="uml:State" xmi:id="_oMy18GOdEd-pR8SLuHe1Gg" name="Checking CRC"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_8WpgIGOdEd-pR8SLuHe1Gg" name="Checking Response Status Byte" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_Ud-FcmOeEd-pR8SLuHe1Gg" name="Success"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_gY6NcmOeEd-pR8SLuHe1Gg" name="Response Error"/>
+        <subvertex xmi:type="uml:State" xmi:id="_taQHYGOfEd-pR8SLuHe1Gg" name="Resetting IO Address"/>
+        <subvertex xmi:type="uml:State" xmi:id="_W9OrQGOgEd-pR8SLuHe1Gg" name="Decrementing Retry Count"/>
+        <transition xmi:id="_dgadtmObEd-pR8SLuHe1Gg" name="set retry count" kind="local" source="_8N5Q8GOWEd-pR8SLuHe1Gg" target="_TBQXMGObEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_nT5xBWObEd-pR8SLuHe1Gg" name="count > 64" kind="local" source="_TBQXMGObEd-pR8SLuHe1Gg" target="_iufsImObEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_GZESMGOcEd-pR8SLuHe1Gg" name="enter retry loop" kind="local" source="_TBQXMGObEd-pR8SLuHe1Gg" target="_9QWaMGObEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_nWMalGOcEd-pR8SLuHe1Gg" name="read response" kind="local" source="_9QWaMGObEd-pR8SLuHe1Gg" target="_i1aXAGOcEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_0db9pGOcEd-pR8SLuHe1Gg" name="failed" kind="local" source="_i1aXAGOcEd-pR8SLuHe1Gg" target="_vYbysmOcEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_CiRU5mOeEd-pR8SLuHe1Gg" name="success" kind="local" source="_oMy18GOdEd-pR8SLuHe1Gg" target="_8WpgIGOdEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_WlH_NGOeEd-pR8SLuHe1Gg" name="return success" kind="local" source="_8WpgIGOdEd-pR8SLuHe1Gg" target="_Ud-FcmOeEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_vapHRWOeEd-pR8SLuHe1Gg" name="return response error" kind="local" source="_8WpgIGOdEd-pR8SLuHe1Gg" target="_gY6NcmOeEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_i_agNGOfEd-pR8SLuHe1Gg" name="check CRC" kind="local" source="_i1aXAGOcEd-pR8SLuHe1Gg" target="_oMy18GOdEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_yfPrRWOfEd-pR8SLuHe1Gg" name="fail" kind="local" source="_oMy18GOdEd-pR8SLuHe1Gg" target="_taQHYGOfEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_KnwjYGOgEd-pR8SLuHe1Gg" name="failed" kind="local" source="_taQHYGOfEd-pR8SLuHe1Gg" target="_vYbysmOcEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_caN4ZWOgEd-pR8SLuHe1Gg" name="no retries left" kind="local" source="_W9OrQGOgEd-pR8SLuHe1Gg" target="_vYbysmOcEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_f4_FVGOgEd-pR8SLuHe1Gg" name="retry" kind="local" source="_W9OrQGOgEd-pR8SLuHe1Gg" target="_9QWaMGObEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_kpkfdGOgEd-pR8SLuHe1Gg" name="decrement retry count" kind="local" source="_taQHYGOfEd-pR8SLuHe1Gg" target="_W9OrQGOgEd-pR8SLuHe1Gg"/>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_yO75wGQgEd-pR8SLuHe1Gg" name="ReadStatusTwi">
+      <region xmi:id="_kmOL4GQhEd-pR8SLuHe1Gg" name="Read Status">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_N3cb8GQjEd-pR8SLuHe1Gg" name="Read Status"/>
+        <subvertex xmi:type="uml:State" xmi:id="_RLj4EGQjEd-pR8SLuHe1Gg" name="Sending Start"/>
+        <subvertex xmi:type="uml:State" xmi:id="_cmlw8GQjEd-pR8SLuHe1Gg" name="Sending TWI Address"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_nilkcGQjEd-pR8SLuHe1Gg" name="Checking Ack" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_3c6TImQjEd-pR8SLuHe1Gg" name="Nack">
+          <eAnnotations xmi:id="_PtSt0GQkEd-pR8SLuHe1Gg" source="http://www.topcased.org/documentation">
+            <details xmi:id="_PtSt0WQkEd-pR8SLuHe1Gg" key="documentation" value="Device is not ready. Supply the virtual status value 0xFF to match the SPI case."/>
+          </eAnnotations>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_-HlbYGQjEd-pR8SLuHe1Gg" name="Supplying 0xFF"/>
+        <subvertex xmi:type="uml:State" xmi:id="_il_SIGQkEd-pR8SLuHe1Gg" name="Sending RREAD"/>
+        <subvertex xmi:type="uml:State" xmi:id="_wH4UYGQlEd-pR8SLuHe1Gg" name="Reading Status"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_Kfm2EGQmEd-pR8SLuHe1Gg" name="Retry" kind="junction"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_9JFEYGQmEd-pR8SLuHe1Gg" name="Checking Retries" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_FvFQ4mQnEd-pR8SLuHe1Gg" name="Timeout"/>
+        <subvertex xmi:type="uml:State" xmi:id="_gHsjYGQnEd-pR8SLuHe1Gg" name="Sending Stop"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_vQ4JAGQnEd-pR8SLuHe1Gg" name="Nack" kind="junction"/>
+        <transition xmi:id="_SzTR9mQjEd-pR8SLuHe1Gg" name="send start" kind="local" source="_Kfm2EGQmEd-pR8SLuHe1Gg" target="_RLj4EGQjEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_hIcylWQjEd-pR8SLuHe1Gg" name="send TWI address" kind="local" source="_RLj4EGQjEd-pR8SLuHe1Gg" target="_cmlw8GQjEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_vtYbpWQjEd-pR8SLuHe1Gg" name="check ack" kind="local" source="_cmlw8GQjEd-pR8SLuHe1Gg" target="_nilkcGQjEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_Fd6ItmQkEd-pR8SLuHe1Gg" name="success" kind="local" source="_-HlbYGQjEd-pR8SLuHe1Gg" target="_3c6TImQjEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_Rp3vRGQkEd-pR8SLuHe1Gg" name="nack" kind="local" source="_nilkcGQjEd-pR8SLuHe1Gg" target="_-HlbYGQjEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_myqt9WQkEd-pR8SLuHe1Gg" name="send RREAD" kind="local" source="_nilkcGQjEd-pR8SLuHe1Gg" target="_il_SIGQkEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_zfNclWQlEd-pR8SLuHe1Gg" name="read status" kind="local" source="_il_SIGQkEd-pR8SLuHe1Gg" target="_wH4UYGQlEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_Pw04FGQmEd-pR8SLuHe1Gg" name="set retry count" kind="local" source="_N3cb8GQjEd-pR8SLuHe1Gg" target="_Kfm2EGQmEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_exgpBGQmEd-pR8SLuHe1Gg" name="retry" kind="local" source="_il_SIGQkEd-pR8SLuHe1Gg" target="_vQ4JAGQnEd-pR8SLuHe1Gg">
+          <trigger xmi:id="_izmlcGQmEd-pR8SLuHe1Gg" name="Nack" event="_sev1EGQmEd-pR8SLuHe1Gg"/>
+        </transition>
+        <transition xmi:id="_MjinRWQnEd-pR8SLuHe1Gg" name="no retries left" kind="local" source="_9JFEYGQmEd-pR8SLuHe1Gg" target="_FvFQ4mQnEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_QsyUlGQnEd-pR8SLuHe1Gg" name="decrement retry count" kind="local" source="_9JFEYGQmEd-pR8SLuHe1Gg" target="_Kfm2EGQmEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_jSpcdWQnEd-pR8SLuHe1Gg" name="nack and stop" kind="local" source="_wH4UYGQlEd-pR8SLuHe1Gg" target="_gHsjYGQnEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_2iFs1GQnEd-pR8SLuHe1Gg" name="check retries" kind="local" source="_vQ4JAGQnEd-pR8SLuHe1Gg" target="_9JFEYGQmEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_6RsyJGQnEd-pR8SLuHe1Gg" name="nack" kind="local" source="_wH4UYGQlEd-pR8SLuHe1Gg" target="_vQ4JAGQnEd-pR8SLuHe1Gg">
+          <trigger xmi:id="_AGrogGQoEd-pR8SLuHe1Gg" event="_sev1EGQmEd-pR8SLuHe1Gg"/>
+        </transition>
+        <transition xmi:id="_LWtLRGQoEd-pR8SLuHe1Gg" name="success" kind="local" source="_gHsjYGQnEd-pR8SLuHe1Gg" target="_3c6TImQjEd-pR8SLuHe1Gg"/>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_sev1EGQmEd-pR8SLuHe1Gg" name="Nack"/>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_NAxOcGQqEd-pR8SLuHe1Gg" name="ReadMemoryTwi">
+      <region xmi:id="_mLmfMGQqEd-pR8SLuHe1Gg" name="Read Memory">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_mLmfMWQqEd-pR8SLuHe1Gg" name="ReadMemory"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_mLmfMmQqEd-pR8SLuHe1Gg" name="Checking Address" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_mLmfM2QqEd-pR8SLuHe1Gg" name="Setting Max Count" visibility="public">
+          <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_mLmfNGQqEd-pR8SLuHe1Gg" name="max count = 64"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_mLmfNWQqEd-pR8SLuHe1Gg" name="Setting Max Count">
+          <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_mLmfNmQqEd-pR8SLuHe1Gg" name="max count = 32"/>
+        </subvertex>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_mLmfN2QqEd-pR8SLuHe1Gg" name="Max Count Set" kind="junction"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_mLmfOGQqEd-pR8SLuHe1Gg" name="Checking Arguments" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_mLmfOWQqEd-pR8SLuHe1Gg" name="Invalid Arguments"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_mLmfOmQqEd-pR8SLuHe1Gg" name="Waiting For Device Ready" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_mLmfO2QqEd-pR8SLuHe1Gg" name="Timeout"/>
+        <subvertex xmi:type="uml:State" xmi:id="_mLmfPGQqEd-pR8SLuHe1Gg" name="Enabling Write"/>
+        <subvertex xmi:type="uml:State" xmi:id="_mLmfPWQqEd-pR8SLuHe1Gg" name="Sending Bytes"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_mLmfPmQqEd-pR8SLuHe1Gg" name="Success"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_mLmfP2QqEd-pR8SLuHe1Gg" name="Checking Address" kind="choice"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_mLmfQGQqEd-pR8SLuHe1Gg" name="Waiting For Response Ready" kind="choice"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_mLmfQWQqEd-pR8SLuHe1Gg" name="Timeout"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_mLmfQmQqEd-pR8SLuHe1Gg" name="Reading Response" kind="junction"/>
+        <subvertex xmi:type="uml:State" xmi:id="_mLmfQ2QqEd-pR8SLuHe1Gg" name="Receiving Bytes"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_mLmfRGQqEd-pR8SLuHe1Gg" name="Return Read Status"/>
+        <transition xmi:id="_mLmfRWQqEd-pR8SLuHe1Gg" name="check address" kind="local" source="_mLmfMWQqEd-pR8SLuHe1Gg" target="_mLmfMmQqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfRmQqEd-pR8SLuHe1Gg" name="IO Address" kind="local" source="_mLmfMmQqEd-pR8SLuHe1Gg" target="_mLmfM2QqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfR2QqEd-pR8SLuHe1Gg" name="Memory Address" visibility="public" kind="local" source="_mLmfMmQqEd-pR8SLuHe1Gg" target="_mLmfNWQqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfSGQqEd-pR8SLuHe1Gg" name="Max Count IO Address" kind="local" source="_mLmfM2QqEd-pR8SLuHe1Gg" target="_mLmfN2QqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfSWQqEd-pR8SLuHe1Gg" name="Max Count Memory Address" kind="local" source="_mLmfNWQqEd-pR8SLuHe1Gg" target="_mLmfN2QqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfSmQqEd-pR8SLuHe1Gg" name="check arguments" kind="local" source="_mLmfN2QqEd-pR8SLuHe1Gg" target="_mLmfOGQqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfS2QqEd-pR8SLuHe1Gg" name="Invalid Arguments" kind="local" source="_mLmfOGQqEd-pR8SLuHe1Gg" target="_mLmfOWQqEd-pR8SLuHe1Gg">
+          <trigger xmi:id="_mLmfTGQqEd-pR8SLuHe1Gg" name="Invalid Arguments" event="_xxezsGNaEd-pR8SLuHe1Gg"/>
+        </transition>
+        <transition xmi:id="_mLmfTWQqEd-pR8SLuHe1Gg" name="Memory Address" kind="local" source="_mLmfP2QqEd-pR8SLuHe1Gg" target="_mLmfOmQqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfTmQqEd-pR8SLuHe1Gg" name="Timeout" kind="local" source="_mLmfOmQqEd-pR8SLuHe1Gg" target="_mLmfO2QqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfT2QqEd-pR8SLuHe1Gg" name="check address" kind="local" source="_mLmfOGQqEd-pR8SLuHe1Gg" target="_mLmfP2QqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfUGQqEd-pR8SLuHe1Gg" name="IO Address" kind="local" source="_mLmfP2QqEd-pR8SLuHe1Gg" target="_mLmfQGQqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfUWQqEd-pR8SLuHe1Gg" name="Timeout" kind="local" source="_mLmfQGQqEd-pR8SLuHe1Gg" target="_mLmfQWQqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfUmQqEd-pR8SLuHe1Gg" name="read response" kind="local" source="_mLmfQGQqEd-pR8SLuHe1Gg" target="_mLmfQmQqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfU2QqEd-pR8SLuHe1Gg" name="read response" kind="local" source="_mLmfOmQqEd-pR8SLuHe1Gg" target="_mLmfQmQqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfVGQqEd-pR8SLuHe1Gg" name="set CS\ low" kind="local" source="_mLmfQmQqEd-pR8SLuHe1Gg" target="_mLmfPWQqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfVWQqEd-pR8SLuHe1Gg" name="receive bytes" kind="local" source="_mLmfPWQqEd-pR8SLuHe1Gg" target="_mLmfQ2QqEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_mLmfVmQqEd-pR8SLuHe1Gg" name="set CS\ high" kind="local" source="_mLmfQ2QqEd-pR8SLuHe1Gg" target="_mLmfRGQqEd-pR8SLuHe1Gg"/>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_BazmAGQsEd-pR8SLuHe1Gg" name="ReadMemoryTemp">
+      <region xmi:id="_LmIxkGQsEd-pR8SLuHe1Gg" name="ReadMemorySpi">
+        <subvertex xmi:type="uml:State" xmi:id="_LmIxnWQsEd-pR8SLuHe1Gg" name="Sending Bytes"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_LmIxnmQsEd-pR8SLuHe1Gg" name="Success"/>
+        <subvertex xmi:type="uml:State" xmi:id="_LmIxo2QsEd-pR8SLuHe1Gg" name="Receiving Bytes"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_9GaRQGQuEd-pR8SLuHe1Gg" name="ReadMemorySpi"/>
+        <subvertex xmi:type="uml:State" xmi:id="_BoiYoGQvEd-pR8SLuHe1Gg" name="Preparing For Read"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_bCRBAGQvEd-pR8SLuHe1Gg" name="Fail"/>
+        <transition xmi:id="_LmIxtWQsEd-pR8SLuHe1Gg" name="receive bytes" kind="local" source="_LmIxnWQsEd-pR8SLuHe1Gg" target="_LmIxo2QsEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_NaPsJmQvEd-pR8SLuHe1Gg" name="prepare" kind="local" source="_9GaRQGQuEd-pR8SLuHe1Gg" target="_BoiYoGQvEd-pR8SLuHe1Gg">
+          <eAnnotations xmi:id="_SH2DsGQvEd-pR8SLuHe1Gg" source="http://www.topcased.org/documentation">
+            <details xmi:id="_SH2DsWQvEd-pR8SLuHe1Gg" key="documentation" value="Check arguments and wait for device ready.&#xD;&#xA;"/>
+          </eAnnotations>
+        </transition>
+        <transition xmi:id="_S_k89GQvEd-pR8SLuHe1Gg" name="set CS\ low" kind="local" source="_BoiYoGQvEd-pR8SLuHe1Gg" target="_LmIxnWQsEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_eUrM9WQvEd-pR8SLuHe1Gg" name="fail" kind="local" source="_BoiYoGQvEd-pR8SLuHe1Gg" target="_bCRBAGQvEd-pR8SLuHe1Gg"/>
+        <transition xmi:id="_Lt97FWQwEd-pR8SLuHe1Gg" name="set CS\ high" kind="local" source="_LmIxo2QsEd-pR8SLuHe1Gg" target="_LmIxnmQsEd-pR8SLuHe1Gg"/>
+      </region>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_CYockKGrEd-74-7bopqinw" activeDiagram="_CYockaGrEd-74-7bopqinw">
+  <model href="Combined%20Libraries%20on%20Microbase.uml#_w8IxIM37EdqwVrslYOdUDA"/>
+  <diagrams xmi:id="_CYockaGrEd-74-7bopqinw" position="0,0" size="100,100" name="Combined Libraries on Microbase" viewport="0,0">
+    <property xmi:id="_CfLwgKGrEd-74-7bopqinw" key="pageFormatName" value="Letter"/>
+    <property xmi:id="_CfLwgaGrEd-74-7bopqinw" key="diagramWidth" value="850"/>
+    <property xmi:id="_CfLwgqGrEd-74-7bopqinw" key="diagramHeight" value="1100"/>
+    <property xmi:id="_CfLwg6GrEd-74-7bopqinw" key="pageMarginName" value="Small Margin"/>
+    <property xmi:id="_CfLwhKGrEd-74-7bopqinw" key="diagramTopMargin" value="20"/>
+    <property xmi:id="_CfLwhaGrEd-74-7bopqinw" key="diagramBottomMargin" value="20"/>
+    <property xmi:id="_CfLwhqGrEd-74-7bopqinw" key="diagramLeftMargin" value="20"/>
+    <property xmi:id="_CfLwh6GrEd-74-7bopqinw" key="diagramRightMargin" value="20"/>
+    <property xmi:id="_CfLwiKGrEd-74-7bopqinw" key="orientation" value="portrait"/>
+    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_CYockqGrEd-74-7bopqinw" presentation="org.topcased.modeler.uml.classdiagram">
+      <element href="Combined%20Libraries%20on%20Microbase.uml#_w8IxIM37EdqwVrslYOdUDA"/>
+    </semanticModel>
+    <contained xsi:type="di:GraphNode" xmi:id="_dQZ60KGsEd-74-7bopqinw" position="67,250" size="714,-1">
+      <anchorage xmi:id="_iSJg8aGtEd-74-7bopqinw" graphEdge="_1o8roaGvEd-74-7bopqinw _208ksaGvEd-74-7bopqinw _Z9rB8KGwEd-74-7bopqinw _0tJf0KGxEd-74-7bopqinw _DfiWEKGyEd-74-7bopqinw _wuzN0KPIEd-5dLv-GAY_wQ _6caioKPIEd-5dLv-GAY_wQ _b4wyEaPTEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_dQZ60aGsEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_dVUQAKGsEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_dQZ60qGsEd-74-7bopqinw">
+        <property xmi:id="_dQZ606GsEd-74-7bopqinw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_dQZ61KGsEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_dVUQAKGsEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_dQZ61aGsEd-74-7bopqinw">
+        <property xmi:id="_dQZ61qGsEd-74-7bopqinw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_dQZ616GsEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_dVUQAKGsEd-74-7bopqinw"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_KpWHcKPNEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_KpWHcaPNEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_KpWHcqPNEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_nn89cKGsEd-74-7bopqinw" position="67,85" size="366,-1">
+      <anchorage xmi:id="_tfy7MaPIEd-5dLv-GAY_wQ" graphEdge="_tfy7MqPIEd-5dLv-GAY_wQ _omwHoaPTEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_nn89caGsEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_noGucKGsEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_nn89cqGsEd-74-7bopqinw">
+        <property xmi:id="_nn89c6GsEd-74-7bopqinw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_nn89dKGsEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_noGucKGsEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_nn89daGsEd-74-7bopqinw">
+        <property xmi:id="_nn89dqGsEd-74-7bopqinw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_nn89d6GsEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_noGucKGsEd-74-7bopqinw"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_5WTkQKPKEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_5WTkQaPKEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_5XDLIKPKEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_HQ8TIKPLEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_HQ8TIaPLEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_HRFdEKPLEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_UBhCoKPLEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_UBhCoaPLEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_UBhCoqPLEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_WteSkKPLEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_WteSkaPLEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_WteSkqPLEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_mqJb8KGtEd-74-7bopqinw" position="67,401" size="123,-1">
+      <property xmi:id="_fG-z0KPOEd-5dLv-GAY_wQ" key="backgroundColor" value="184,241,165"/>
+      <anchorage xmi:id="_1o8roKGvEd-74-7bopqinw" graphEdge="_1o8roaGvEd-74-7bopqinw _MrtcoaGwEd-74-7bopqinw __5Cs8aPUEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_mqJb8aGtEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_mqSl4KGtEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_mqJb8qGtEd-74-7bopqinw">
+        <property xmi:id="_mqJb86GtEd-74-7bopqinw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_mqJb9KGtEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_mqSl4KGtEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_mqJb9aGtEd-74-7bopqinw">
+        <property xmi:id="_mqJb9qGtEd-74-7bopqinw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_mqJb96GtEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_mqSl4KGtEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_qJ0AwKGtEd-74-7bopqinw" position="218,401" size="119,-1">
+      <property xmi:id="_fG-z0aPOEd-5dLv-GAY_wQ" key="backgroundColor" value="184,241,165"/>
+      <anchorage xmi:id="_208ksKGvEd-74-7bopqinw" graphEdge="_208ksaGvEd-74-7bopqinw _NoNhIKGwEd-74-7bopqinw _AZrU0KPVEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_qJ0AwaGtEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_qJ9KsKGtEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_qJ0AwqGtEd-74-7bopqinw">
+        <property xmi:id="_qJ0Aw6GtEd-74-7bopqinw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_qJ0AxKGtEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_qJ9KsKGtEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_qJ0AxaGtEd-74-7bopqinw">
+        <property xmi:id="_qJ0AxqGtEd-74-7bopqinw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_qJ0Ax6GtEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_qJ9KsKGtEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_xqrKIKGtEd-74-7bopqinw" position="447,743" size="119,-1">
+      <property xmi:id="_Sc3U0aPSEd-5dLv-GAY_wQ" key="backgroundColor" value="213,253,206"/>
+      <anchorage xmi:id="_fDY0AKGvEd-74-7bopqinw" graphEdge="_fDY0AqGvEd-74-7bopqinw _0tJf0KGxEd-74-7bopqinw _ql01EKGyEd-74-7bopqinw _OFU3YKPTEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_xqrKIaGtEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_xq0UEKGtEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_xqrKIqGtEd-74-7bopqinw">
+        <property xmi:id="_xqrKI6GtEd-74-7bopqinw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_xqrKJKGtEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_xq0UEKGtEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_xqrKJaGtEd-74-7bopqinw">
+        <property xmi:id="_xqrKJqGtEd-74-7bopqinw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_xqrKJ6GtEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_xq0UEKGtEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_0W7VAKGtEd-74-7bopqinw" position="591,743" size="107,-1">
+      <property xmi:id="_Sc3U0qPSEd-5dLv-GAY_wQ" key="backgroundColor" value="213,253,206"/>
+      <anchorage xmi:id="_iGSkUKGvEd-74-7bopqinw" graphEdge="_iGSkUqGvEd-74-7bopqinw _DfiWEKGyEd-74-7bopqinw _haGFUKGyEd-74-7bopqinw _OpFrwKPTEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_0W7VAaGtEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_0XFGAKGtEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_0W7VAqGtEd-74-7bopqinw">
+        <property xmi:id="_0W7VA6GtEd-74-7bopqinw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_0W7VBKGtEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_0XFGAKGtEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_0W7VBaGtEd-74-7bopqinw">
+        <property xmi:id="_0W7VBqGtEd-74-7bopqinw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_0W7VB6GtEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_0XFGAKGtEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_6tbkEKGtEd-74-7bopqinw" position="293,743" size="127,-1">
+      <property xmi:id="_Sc3U0KPSEd-5dLv-GAY_wQ" key="backgroundColor" value="213,253,206"/>
+      <anchorage xmi:id="_XwrbYKGvEd-74-7bopqinw" graphEdge="_XwrbYqGvEd-74-7bopqinw _U-1CAKGzEd-74-7bopqinw _6caioKPIEd-5dLv-GAY_wQ _NfxTQKPTEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6tbkEaGtEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_6tlVEKGtEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_6tbkEqGtEd-74-7bopqinw">
+        <property xmi:id="_6tbkE6GtEd-74-7bopqinw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6tbkFKGtEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_6tlVEKGtEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_6tbkFaGtEd-74-7bopqinw">
+        <property xmi:id="_6tbkFqGtEd-74-7bopqinw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6tbkF6GtEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_6tlVEKGtEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_byb2EKGuEd-74-7bopqinw" position="78,579" size="361,-1">
+      <anchorage xmi:id="_MrtcoKGwEd-74-7bopqinw" graphEdge="_MrtcoaGwEd-74-7bopqinw _NoNhIKGwEd-74-7bopqinw _Z9rB8KGwEd-74-7bopqinw _haGFUKGyEd-74-7bopqinw _ql01EKGyEd-74-7bopqinw _U-1CAKGzEd-74-7bopqinw _WoaSwaPTEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_byb2EaGuEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_bylnEKGuEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_byb2EqGuEd-74-7bopqinw">
+        <property xmi:id="_byb2E6GuEd-74-7bopqinw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_byb2FKGuEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_bylnEKGuEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_byb2FaGuEd-74-7bopqinw">
+        <property xmi:id="_byb2FqGuEd-74-7bopqinw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_byb2F6GuEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_bylnEKGuEd-74-7bopqinw"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_h0IhIKPPEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_h0IhIaPPEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_h0IhIqPPEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_R6ZL0KPQEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_R6ZL0aPQEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_NCg24KPQEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_e_rnEKPQEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_e_rnEaPQEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_e_rnEqPQEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_g9F9EKGuEd-74-7bopqinw" position="293,912" size="130,-1">
+      <anchorage xmi:id="_XwrbYaGvEd-74-7bopqinw" graphEdge="_XwrbYqGvEd-74-7bopqinw"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_g9F9EaGuEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_g9ZfEKGuEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_g9F9EqGuEd-74-7bopqinw">
+        <property xmi:id="_g9F9E6GuEd-74-7bopqinw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_g9F9FKGuEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_g9ZfEKGuEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_g9F9FaGuEd-74-7bopqinw">
+        <property xmi:id="_g9F9FqGuEd-74-7bopqinw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_g9F9F6GuEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_g9ZfEKGuEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_ocd4sKGuEd-74-7bopqinw" position="453,912" size="113,-1">
+      <anchorage xmi:id="_fDY0AaGvEd-74-7bopqinw" graphEdge="_fDY0AqGvEd-74-7bopqinw"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ocd4saGuEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_ocnpsKGuEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_ocd4sqGuEd-74-7bopqinw">
+        <property xmi:id="_ocd4s6GuEd-74-7bopqinw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ocd4tKGuEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_ocnpsKGuEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_ocd4taGuEd-74-7bopqinw">
+        <property xmi:id="_ocd4tqGuEd-74-7bopqinw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ocd4t6GuEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_ocnpsKGuEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_qgMD8KGuEd-74-7bopqinw" position="591,912" size="107,-1">
+      <anchorage xmi:id="_iGSkUaGvEd-74-7bopqinw" graphEdge="_iGSkUqGvEd-74-7bopqinw"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_qgMD8aGuEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_qgMD-KGuEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_qgMD8qGuEd-74-7bopqinw">
+        <property xmi:id="_qgMD86GuEd-74-7bopqinw" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_qgMD9KGuEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_qgMD-KGuEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_qgMD9aGuEd-74-7bopqinw">
+        <property xmi:id="_qgMD9qGuEd-74-7bopqinw" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_qgMD96GuEd-74-7bopqinw" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_qgMD-KGuEd-74-7bopqinw"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_XwrbYqGvEd-74-7bopqinw" anchor="_XwrbYKGvEd-74-7bopqinw _XwrbYaGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_XwrbY6GvEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_Xw1MYKGvEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_XwrbZKGvEd-74-7bopqinw" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_XwrbZaGvEd-74-7bopqinw" id="middleNameEdgeObject" offset="2,37"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_fDY0AqGvEd-74-7bopqinw" anchor="_fDY0AKGvEd-74-7bopqinw _fDY0AaGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_fDY0A6GvEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_fDru8KGvEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_fDY0BKGvEd-74-7bopqinw" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_fDY0BaGvEd-74-7bopqinw" id="middleNameEdgeObject" offset="2,36"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_iGSkUqGvEd-74-7bopqinw" anchor="_iGSkUKGvEd-74-7bopqinw _iGSkUaGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_iGSkU6GvEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_iGlfQKGvEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_iGSkVKGvEd-74-7bopqinw" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_iGSkVaGvEd-74-7bopqinw" id="middleNameEdgeObject" offset="1,36"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_1o8roaGvEd-74-7bopqinw" anchor="_iSJg8aGtEd-74-7bopqinw _1o8roKGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_1o8roqGvEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_1pF1kKGvEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_1o8ro6GvEd-74-7bopqinw" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_1o8rpKGvEd-74-7bopqinw" id="middleNameEdgeObject" offset="62,-7"/>
+      <waypoints>[-296, 45, 0, -101]</waypoints>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_208ksaGvEd-74-7bopqinw" anchor="_iSJg8aGtEd-74-7bopqinw _208ksKGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_208ksqGvEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_21PfoKGvEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_208ks6GvEd-74-7bopqinw" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_208ktKGvEd-74-7bopqinw" id="middleNameEdgeObject" offset="-9,11"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_MrtcoaGwEd-74-7bopqinw" anchor="_1o8roKGvEd-74-7bopqinw _MrtcoKGwEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_MrtcoqGwEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_MrtcpaGwEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_Mrtco6GwEd-74-7bopqinw" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_MrtcpKGwEd-74-7bopqinw" id="middleNameEdgeObject" offset="-7,-5"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_NoNhIKGwEd-74-7bopqinw" anchor="_208ksKGvEd-74-7bopqinw _MrtcoKGwEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_NoNhIaGwEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_NoNhJKGwEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_NoNhIqGwEd-74-7bopqinw" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_NoNhI6GwEd-74-7bopqinw" id="middleNameEdgeObject" offset="4,-5"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_Z9rB8KGwEd-74-7bopqinw" anchor="_iSJg8aGtEd-74-7bopqinw _MrtcoKGwEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Z9rB8aGwEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_Z90y8KGwEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_Z9rB8qGwEd-74-7bopqinw" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_Z9rB86GwEd-74-7bopqinw" id="middleNameEdgeObject" offset="-24,32"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_0tJf0KGxEd-74-7bopqinw" anchor="_iSJg8aGtEd-74-7bopqinw _fDY0AKGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_0tJf0aGxEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_0tJf1KGxEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_0tJf0qGxEd-74-7bopqinw" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_0tJf06GxEd-74-7bopqinw" id="middleNameEdgeObject" offset="5,20"/>
+      <waypoints>[82, 134, 0, -354]</waypoints>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_DfiWEKGyEd-74-7bopqinw" anchor="_iSJg8aGtEd-74-7bopqinw _iGSkUKGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_DfiWEaGyEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_DfiWFKGyEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_DfiWEqGyEd-74-7bopqinw" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_DfiWE6GyEd-74-7bopqinw" id="middleNameEdgeObject" offset="2,17"/>
+      <waypoints>[220, 142, 0, -346]</waypoints>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_haGFUKGyEd-74-7bopqinw" anchor="_MrtcoKGwEd-74-7bopqinw _iGSkUKGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_haGFUaGyEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_haZAQKGyEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_haGFUqGyEd-74-7bopqinw" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_haGFU6GyEd-74-7bopqinw" id="middleNameEdgeObject" offset="116,73"/>
+      <waypoints>[210, 0, -227, -144]</waypoints>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_ql01EKGyEd-74-7bopqinw" anchor="_MrtcoKGwEd-74-7bopqinw _fDY0AKGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ql01EaGyEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_ql-mEKGyEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_ql01EqGyEd-74-7bopqinw" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_ql01E6GyEd-74-7bopqinw" id="middleNameEdgeObject" offset="-9,-9"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_U-1CAKGzEd-74-7bopqinw" anchor="_MrtcoKGwEd-74-7bopqinw _XwrbYKGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_U-1CAaGzEd-74-7bopqinw" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_U_H88KGzEd-74-7bopqinw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_U-1CAqGzEd-74-7bopqinw" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_U-1CA6GzEd-74-7bopqinw" id="middleNameEdgeObject" offset="-18,-10"/>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_gVxJ4aPIEd-5dLv-GAY_wQ" position="271,6" size="211,-1">
+      <anchorage xmi:id="_tfy7MKPIEd-5dLv-GAY_wQ" graphEdge="_tfy7MqPIEd-5dLv-GAY_wQ _wuzN0KPIEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_gVxJ4qPIEd-5dLv-GAY_wQ" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_gWW_wKPIEd-5dLv-GAY_wQ"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_gVxJ46PIEd-5dLv-GAY_wQ">
+        <property xmi:id="_gVxJ5KPIEd-5dLv-GAY_wQ" key="eStructuralFeatureID" value="37"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_gVxJ5aPIEd-5dLv-GAY_wQ" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_gWW_wKPIEd-5dLv-GAY_wQ"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_gVxJ5qPIEd-5dLv-GAY_wQ">
+        <property xmi:id="_gVxJ56PIEd-5dLv-GAY_wQ" key="eStructuralFeatureID" value="47 50 "/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_gVxJ6KPIEd-5dLv-GAY_wQ" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_gWW_wKPIEd-5dLv-GAY_wQ"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_tfy7MqPIEd-5dLv-GAY_wQ" anchor="_tfy7MKPIEd-5dLv-GAY_wQ _tfy7MaPIEd-5dLv-GAY_wQ">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_tfy7M6PIEd-5dLv-GAY_wQ" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_tgF2IKPIEd-5dLv-GAY_wQ"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_tfy7NKPIEd-5dLv-GAY_wQ" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_tfy7NaPIEd-5dLv-GAY_wQ" id="middleNameEdgeObject" offset="-9,7"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_wuzN0KPIEd-5dLv-GAY_wQ" anchor="_tfy7MKPIEd-5dLv-GAY_wQ _iSJg8aGtEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_wuzN0aPIEd-5dLv-GAY_wQ" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_wvGIwKPIEd-5dLv-GAY_wQ"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_wuzN0qPIEd-5dLv-GAY_wQ" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_wuzN06PIEd-5dLv-GAY_wQ" id="middleNameEdgeObject" offset="-6,27"/>
+      <waypoints>[112, 86, 64, -131]</waypoints>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_6caioKPIEd-5dLv-GAY_wQ" anchor="_iSJg8aGtEd-74-7bopqinw _XwrbYKGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_6caioaPIEd-5dLv-GAY_wQ" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_6ctdkKPIEd-5dLv-GAY_wQ"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_6caioqPIEd-5dLv-GAY_wQ" id="stereotypeEdgeObject"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_6caio6PIEd-5dLv-GAY_wQ" id="middleNameEdgeObject" offset="-33,-254"/>
+      <waypoints>[45, 409, 113, -79]</waypoints>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_m53r4KPPEd-5dLv-GAY_wQ" position="78,671" size="155,-1">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m53r4aPPEd-5dLv-GAY_wQ" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_m6nSwKPPEd-5dLv-GAY_wQ"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_m53r4qPPEd-5dLv-GAY_wQ">
+        <property xmi:id="_m53r46PPEd-5dLv-GAY_wQ" key="eStructuralFeatureID" value="39"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_m53r5KPPEd-5dLv-GAY_wQ" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_m6nSwKPPEd-5dLv-GAY_wQ"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_vARyUKPPEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_vARyUaPPEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_vAktQKPPEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_1lrZAKPPEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_1lrZAaPPEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_1lrZAqPPEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_4woSEKPPEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_4woSEaPPEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_4woSEqPPEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_7uLBQKPPEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_7uLBQaPPEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_7uLBQqPPEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_87u5MKPSEd-5dLv-GAY_wQ" position="370,790" size="130,74">
+      <anchorage xmi:id="_NfoJUKPTEd-5dLv-GAY_wQ" graphEdge="_NfxTQKPTEd-5dLv-GAY_wQ _OFU3YKPTEd-5dLv-GAY_wQ _OpFrwKPTEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_87u5MaPSEd-5dLv-GAY_wQ" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_8_6OkKPSEd-5dLv-GAY_wQ"/>
+      </semanticModel>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_NfxTQKPTEd-5dLv-GAY_wQ" anchor="_NfoJUKPTEd-5dLv-GAY_wQ _XwrbYKGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:SimpleSemanticModelElement" xmi:id="_NfxTQaPTEd-5dLv-GAY_wQ" presentation="default" typeInfo="CommentLink"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_OFU3YKPTEd-5dLv-GAY_wQ" anchor="_NfoJUKPTEd-5dLv-GAY_wQ _fDY0AKGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:SimpleSemanticModelElement" xmi:id="_OFU3YaPTEd-5dLv-GAY_wQ" presentation="default" typeInfo="CommentLink"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_OpFrwKPTEd-5dLv-GAY_wQ" anchor="_NfoJUKPTEd-5dLv-GAY_wQ _iGSkUKGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:SimpleSemanticModelElement" xmi:id="_OpFrwaPTEd-5dLv-GAY_wQ" presentation="default" typeInfo="CommentLink"/>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_RTSBIKPTEd-5dLv-GAY_wQ" position="78,527" size="122,41">
+      <anchorage xmi:id="_WoaSwKPTEd-5dLv-GAY_wQ" graphEdge="_WoaSwaPTEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_RTSBIaPTEd-5dLv-GAY_wQ" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_RTutEKPTEd-5dLv-GAY_wQ"/>
+      </semanticModel>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_WoaSwaPTEd-5dLv-GAY_wQ" anchor="_WoaSwKPTEd-5dLv-GAY_wQ _MrtcoKGwEd-74-7bopqinw">
+      <semanticModel xsi:type="di:SimpleSemanticModelElement" xmi:id="_WoaSwqPTEd-5dLv-GAY_wQ" presentation="default" typeInfo="CommentLink"/>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_YytAEKPTEd-5dLv-GAY_wQ" position="67,203" size="255,40">
+      <anchorage xmi:id="_b4wyEKPTEd-5dLv-GAY_wQ" graphEdge="_b4wyEaPTEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_YytAEaPTEd-5dLv-GAY_wQ" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_YzJsAKPTEd-5dLv-GAY_wQ"/>
+      </semanticModel>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_b4wyEaPTEd-5dLv-GAY_wQ" anchor="_b4wyEKPTEd-5dLv-GAY_wQ _iSJg8aGtEd-74-7bopqinw">
+      <semanticModel xsi:type="di:SimpleSemanticModelElement" xmi:id="_b4wyEqPTEd-5dLv-GAY_wQ" presentation="default" typeInfo="CommentLink"/>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_kA3hoKPTEd-5dLv-GAY_wQ" position="67,31" size="109,40">
+      <anchorage xmi:id="_omwHoKPTEd-5dLv-GAY_wQ" graphEdge="_omwHoaPTEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_kA3hoaPTEd-5dLv-GAY_wQ" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_kBUNkKPTEd-5dLv-GAY_wQ"/>
+      </semanticModel>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_omwHoaPTEd-5dLv-GAY_wQ" anchor="_omwHoKPTEd-5dLv-GAY_wQ _tfy7MaPIEd-5dLv-GAY_wQ">
+      <semanticModel xsi:type="di:SimpleSemanticModelElement" xmi:id="_omwHoqPTEd-5dLv-GAY_wQ" presentation="default" typeInfo="CommentLink"/>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_aVmgwKPUEd-5dLv-GAY_wQ" position="533,85" size="248,-1">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_aVmgwaPUEd-5dLv-GAY_wQ" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_aWDMsKPUEd-5dLv-GAY_wQ"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_aVmgwqPUEd-5dLv-GAY_wQ">
+        <property xmi:id="_aVmgw6PUEd-5dLv-GAY_wQ" key="eStructuralFeatureID" value="39"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_aVmgxKPUEd-5dLv-GAY_wQ" presentation="default">
+          <element href="Combined%20Libraries%20on%20Microbase.uml#_aWDMsKPUEd-5dLv-GAY_wQ"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_gVdxcKPUEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_gVdxcaPUEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_gVdxcqPUEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_lE24wKPUEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_lE24waPUEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_lE24wqPUEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_nTAyYKPUEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_nTAyYaPUEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_nTAyYqPUEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_p9CvsKPUEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_p9CvsaPUEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_p9CvsqPUEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_sU4w0KPUEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_sU4w0aPUEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_sU4w0qPUEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_uYUBIKPUEd-5dLv-GAY_wQ" position="0,0" size="-1,-1">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_uYUBIaPUEd-5dLv-GAY_wQ" presentation="default">
+            <element href="Combined%20Libraries%20on%20Microbase.uml#_uYUBIqPUEd-5dLv-GAY_wQ"/>
+          </semanticModel>
+        </contained>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_-b6AkKPUEd-5dLv-GAY_wQ" position="134,324" size="148,61">
+      <anchorage xmi:id="__5Cs8KPUEd-5dLv-GAY_wQ" graphEdge="__5Cs8aPUEd-5dLv-GAY_wQ _AZrU0KPVEd-5dLv-GAY_wQ"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_-b6AkaPUEd-5dLv-GAY_wQ" presentation="default">
+        <element href="Combined%20Libraries%20on%20Microbase.uml#_-cgdgKPUEd-5dLv-GAY_wQ"/>
+      </semanticModel>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="__5Cs8aPUEd-5dLv-GAY_wQ" anchor="__5Cs8KPUEd-5dLv-GAY_wQ _1o8roKGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:SimpleSemanticModelElement" xmi:id="__5Cs8qPUEd-5dLv-GAY_wQ" presentation="default" typeInfo="CommentLink"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_AZrU0KPVEd-5dLv-GAY_wQ" anchor="__5Cs8KPUEd-5dLv-GAY_wQ _208ksKGvEd-74-7bopqinw">
+      <semanticModel xsi:type="di:SimpleSemanticModelElement" xmi:id="_AZrU0aPVEd-5dLv-GAY_wQ" presentation="default" typeInfo="CommentLink"/>
+    </contained>
+  </diagrams>
+</diagrams:Diagrams>

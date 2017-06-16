@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>AES1xx Library</name>
+	<comment></comment>
+	<projects>
+		<project>AES1xx Library</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>edu.cmu.sei.osate.core.aadlbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.topcased.modeler.org.topcased.modeler.builders.todoNoteBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.topcased.adele.core.ADELEBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.topcased.core.topcasednature</nature>
+		<nature>org.topcased.adele.core.ADELENature</nature>
+		<nature>edu.cmu.sei.osate.core.aadlnature</nature>
+	</natures>
+</projectDescription>

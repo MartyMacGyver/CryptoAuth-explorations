@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "CombinedLibrariesHid", "CombinedLibrariesHid.cproj", "{A0E7D1CA-E660-409D-A828-18F08C9570C6}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "CombinedLibrariesCdc", "CombinedLibrariesCdc.cproj", "{83CD1EA8-7C08-4217-89E9-DD4DF881FC82}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		OutputConfigAT88ubaseECC108|AVR = OutputConfigAT88ubaseECC108|AVR
+		OutputConfigDefault|AVR = OutputConfigDefault|AVR
+		OutputConfigDefaultCdc|AVR = OutputConfigDefaultCdc|AVR
+		SolutionDefault|AVR = SolutionDefault|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0E7D1CA-E660-409D-A828-18F08C9570C6}.OutputConfigAT88ubaseECC108|AVR.ActiveCfg = OutputConfigDefault|AVR
+		{A0E7D1CA-E660-409D-A828-18F08C9570C6}.OutputConfigAT88ubaseECC108|AVR.Build.0 = OutputConfigDefault|AVR
+		{A0E7D1CA-E660-409D-A828-18F08C9570C6}.OutputConfigDefault|AVR.ActiveCfg = OutputConfigDefault|AVR
+		{A0E7D1CA-E660-409D-A828-18F08C9570C6}.OutputConfigDefault|AVR.Build.0 = OutputConfigDefault|AVR
+		{A0E7D1CA-E660-409D-A828-18F08C9570C6}.OutputConfigDefaultCdc|AVR.ActiveCfg = OutputConfigDefault|AVR
+		{A0E7D1CA-E660-409D-A828-18F08C9570C6}.OutputConfigDefaultCdc|AVR.Build.0 = OutputConfigDefault|AVR
+		{A0E7D1CA-E660-409D-A828-18F08C9570C6}.SolutionDefault|AVR.ActiveCfg = OutputConfigDefault|AVR
+		{A0E7D1CA-E660-409D-A828-18F08C9570C6}.SolutionDefault|AVR.Build.0 = OutputConfigDefault|AVR
+		{83CD1EA8-7C08-4217-89E9-DD4DF881FC82}.OutputConfigAT88ubaseECC108|AVR.ActiveCfg = OutputConfigDefaultCdc|AVR
+		{83CD1EA8-7C08-4217-89E9-DD4DF881FC82}.OutputConfigAT88ubaseECC108|AVR.Build.0 = OutputConfigDefaultCdc|AVR
+		{83CD1EA8-7C08-4217-89E9-DD4DF881FC82}.OutputConfigDefault|AVR.ActiveCfg = OutputConfigDefaultCdc|AVR
+		{83CD1EA8-7C08-4217-89E9-DD4DF881FC82}.OutputConfigDefault|AVR.Build.0 = OutputConfigDefaultCdc|AVR
+		{83CD1EA8-7C08-4217-89E9-DD4DF881FC82}.OutputConfigDefaultCdc|AVR.ActiveCfg = OutputConfigDefaultCdc|AVR
+		{83CD1EA8-7C08-4217-89E9-DD4DF881FC82}.OutputConfigDefaultCdc|AVR.Build.0 = OutputConfigDefaultCdc|AVR
+		{83CD1EA8-7C08-4217-89E9-DD4DF881FC82}.SolutionDefault|AVR.ActiveCfg = OutputConfigDefaultCdc|AVR
+		{83CD1EA8-7C08-4217-89E9-DD4DF881FC82}.SolutionDefault|AVR.Build.0 = OutputConfigDefaultCdc|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
