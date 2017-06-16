@@ -41,6 +41,6 @@ device_type_t GetDeviceType(uint8_t index);
 //Select one or none of these.  Defaults to AT88CK490 if none are defined
 //#define ECCROOT
 //#define ECCSIGNER
-//#define CK590
+#define CK590
 
 #endif

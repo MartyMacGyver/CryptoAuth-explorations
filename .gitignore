@@ -2,3 +2,6 @@
 
 .atsuo
 *.atsuo
+
+*.o
+*.d

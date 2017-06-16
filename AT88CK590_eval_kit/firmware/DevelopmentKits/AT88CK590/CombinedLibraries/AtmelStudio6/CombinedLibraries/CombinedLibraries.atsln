@@ -11,9 +11,9 @@ Global
 		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		OutputConfigAT88ubaseECC108|AVR = OutputConfigAT88ubaseECC108|AVR
 		OutputConfigDefault|AVR = OutputConfigDefault|AVR
 		OutputConfigDefaultCdc|AVR = OutputConfigDefaultCdc|AVR
+		OutputConfigAT88ubaseECC108|AVR = OutputConfigAT88ubaseECC108|AVR
 		SolutionDefault|AVR = SolutionDefault|AVR
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
