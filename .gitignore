@@ -5,3 +5,11 @@
 
 *.o
 *.d
+
+OutputConfig
+[Oo]utput[Cc]onfig*/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+
