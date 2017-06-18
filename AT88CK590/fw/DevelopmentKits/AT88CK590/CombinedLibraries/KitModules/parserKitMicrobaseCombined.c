@@ -30,10 +30,15 @@
 #include "parserAscii.h"          // definitions for ASCII parser functions
 #include "Combined_Discover.h"    // definitions for device discovery functions
 
+#include "../lib_mcu/wdt/wdt_drv.h"
+#include "../lib_mcu/util/start_boot.h"
+#include "delay_x.h"
+#include "hardware.h"            // Microbase related functions (LED, buzzer, button)
+
 
 /** \brief version of development kit firmware
  *         that contains AES132 and SHA204 library */
-const char VersionKit[] PROGMEM = {1, 0, 5};
+const char VersionKit[] PROGMEM = {1, 2, 0};
 
 //! version of SHA204 library
 const char VersionSha204[] PROGMEM = {1, 3, 0};
@@ -74,6 +79,13 @@ const char StringEcc108[] PROGMEM = "ECC108 ";      //!< ECC108 string
 #endif	    
 
 
+typedef enum {
+	DEVKIT_NEXTSTATE_RUNNING,
+	DEVKIT_NEXTSTATE_RESTART,
+	DEVKIT_NEXTSTATE_DFU,
+} command_type_t;
+
+static command_type_t Commanded_NextState = DEVKIT_NEXTSTATE_RUNNING;
 
 //! indicates whether discovery should run at intervals
 uint8_t isDiscoveryEnabled = TRUE;
@@ -283,6 +295,23 @@ uint8_t ParseBoardCommands(uint16_t commandLength, uint8_t *command, uint16_t *r
 		}
 		break;
 
+
+	case 'c':
+		// command mode
+		// ---- "b[oard]:c(md)(<number, 1 byte>)" ----------
+		status = ExtractDataLoad(pToken, &dataLength, rxData);
+		dataLength ++;
+		strcpy((char *) response, "Command received ");
+		responseIndex = strlen((char *) response);
+		uint16_t command_in = *rxData[0];
+		if ((command_in == DEVKIT_NEXTSTATE_RESTART) ||
+			(command_in == DEVKIT_NEXTSTATE_DFU)) {
+			Commanded_NextState = command_in;
+		}
+		response[responseIndex + 1] = Commanded_NextState;
+		// Will transmit back: b'Command received 00(00)\n\x00'
+		break;
+
 	default:
 		status = KIT_STATUS_UNKNOWN_COMMAND;
 		break;
@@ -290,6 +319,32 @@ uint8_t ParseBoardCommands(uint16_t commandLength, uint8_t *command, uint16_t *r
 	// Append <status>(<data>).
 	response[responseIndex] = status;
 	*responseLength = CreateUsbPacket(dataLength, &response[responseIndex]) + responseIndex;
+	
+	if (Commanded_NextState == DEVKIT_NEXTSTATE_RESTART) {
+		Commanded_NextState = DEVKIT_NEXTSTATE_RUNNING;
+		_delay_ms(500);
+		wdtdrv_enable(WDTO_500MS);
+		while(1);
+	}
+	else if (Commanded_NextState == DEVKIT_NEXTSTATE_DFU) {
+		Commanded_NextState = DEVKIT_NEXTSTATE_RUNNING;
+		//Led_On(); //Led_Off();
+		Led1(0); Led2(0); Led3(0);
+		for (int i = 0; i < 4; i++)
+		{
+			Led3(1);
+			_delay_ms(200);
+			Led1(1);
+			_delay_ms(200);
+			Led2(1);
+			_delay_ms(400);
+			Led1(0); Led2(0); Led3(0);
+			_delay_ms(100);
+		}
+		start_boot();
+		// Implementation details are in
+		// DevelopmentKits\AT88CK590\USB\lib_mcu\util\start_boot.h
+	}
 	return status;
 }
 
