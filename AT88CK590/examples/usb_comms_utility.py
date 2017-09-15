@@ -31,6 +31,12 @@ def init_device(vendor_id, product_id):
     device = usb.core.find(idVendor=vendor_id, idProduct=product_id)
     if device is None:
         raise ValueError('Device not found')
+
+    if sys.platform.startswith('linux'):
+        if device.is_kernel_driver_active(0):
+            device.detach_kernel_driver(0)
+        usb.util.claim_interface(device, 0)
+
     usb.util.dispose_resources(device)
     # set the active configuration. With no arguments, the first
     # configuration will be the active one
