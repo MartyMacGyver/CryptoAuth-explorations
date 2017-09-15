@@ -63,15 +63,15 @@ def get_endpoint_dir(interface, direction):
     return usb_endpoint
 
 def send_bytes(endp_out, out_bytes, soften_errors=False):
-    print(f"Send: {out_bytes}")
+    print("Send: {}".format(out_bytes))
     try:
         endp_out.write(list(out_bytes))
     except usb.core.USBError as e:
         if soften_errors:
-            print(f"USB Error: {str(e)}")
+            print("USB Error: {}".format(str(e)))
             return
         else:
-            raise IOError(f"USB Error: {str(e)}")
+            raise IOError("USB Error: {}".format(str(e)))
 
 def recv_bytes(endp_in, soften_errors=False):
     resp = ''
@@ -83,10 +83,10 @@ def recv_bytes(endp_in, soften_errors=False):
             if str(e).find("timeout") >= 0:
                 pass
             elif soften_errors:
-                print(f"USB Error: {str(e)}")
+                print("USB Error: {}".format(str(e)))
                 return
             else:
-                raise IOError(f"USB Error: {str(e)}")
+                raise IOError("USB Error: {}".format(str(e)))
     # Trim trailing NUL chars, if any
     i = len(resp) + 1
     for c in reversed(resp):
@@ -94,9 +94,9 @@ def recv_bytes(endp_in, soften_errors=False):
             break
         i -= 1
     if i > len(resp):
-        print(f"Recv: {resp.tobytes()}")
+        print("Recv: {}".format(resp.tobytes()))
     else:
-        print(f"Recv: {resp[0:i-1].tobytes()}...")
+        print("Recv: {}...".format(resp[0:i-1].tobytes()))
 
 def scanner(dev):
     #for i in range(0, 256):
@@ -132,11 +132,11 @@ def test_and_reset():
     iface = get_endpoint_iface(dev, cfg)
 
     usb_endpoint_in  = get_endpoint_dir(iface, usb.util.ENDPOINT_IN)
-    print(f"Endpoint (IN) : 0x{usb_endpoint_in.bEndpointAddress:02x}")
+    print("Endpoint (IN) : 0x{0:02x}".format(usb_endpoint_in.bEndpointAddress))
     #print(usb_endpoint_in)
     print()
     usb_endpoint_out = get_endpoint_dir(iface, usb.util.ENDPOINT_OUT)
-    print(f"Endpoint (OUT): 0x{usb_endpoint_out.bEndpointAddress:02x}")
+    print("Endpoint (OUT): 0x{0:02x}".format(usb_endpoint_out.bEndpointAddress))
     #print(usb_endpoint_out)
     print()
 
